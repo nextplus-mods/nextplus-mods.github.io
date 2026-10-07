@@ -107,5 +107,35 @@
     <a href="https://www.youtube.com/@NEXTPLUSMods">YouTube：NEXT PLUS Mods</a>
   </footer>
 </div>
+<script>
+  // The server sends .ini as text/plain, so some browsers save it as "NPJH50107.ini.txt".
+  // Re-wrap it as a generic binary file so the name stays "NPJH50107.ini". Falls back to the normal link on error.
+  document.querySelectorAll('a.dl').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (!window.fetch || !window.Blob || !window.URL) return;
+      e.preventDefault();
+      fetch(a.href, { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); })
+        .then(function (buf) {
+          var url = URL.createObjectURL(new Blob([buf], { type: 'application/octet-stream' }));
+          var tmp = document.createElement('a');
+          tmp.href = url;
+          tmp.download = a.getAttribute('download');
+          document.body.appendChild(tmp);
+          tmp.click();
+          tmp.remove();
+          setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+        })
+        .catch(function () {
+          var tmp = document.createElement('a');
+          tmp.href = a.href;
+          tmp.download = a.getAttribute('download');
+          document.body.appendChild(tmp);
+          tmp.click();
+          tmp.remove();
+        });
+    });
+  });
+</script>
 </body>
 </html>
