@@ -37,6 +37,7 @@
   header p { margin: 0; font-size: 13px; color: var(--sub); }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
   .card + .card { margin-top: 20px; }
+  .card[id] { scroll-margin-top: 16px; }
   h3.first { margin-top: 0; }
   .note { margin: 10px 0 0; font-size: 13px; color: var(--sub); }
   .card img.hero { display: block; width: 100%; height: auto; }
@@ -79,7 +80,7 @@
     </div>
   </header>
 
-  <section class="card">
+  <section class="card" id="reborns">
     <img class="hero" src="reborns.jpg" alt="リボーンズガンダム（EXVS風改造）" width="960" height="540">
     <div class="body">
       <p class="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
@@ -92,7 +93,7 @@
     </div>
   </section>
 
-  <section class="card">
+  <section class="card" id="nu">
     <img class="hero" src="nu.jpg" alt="νガンダム（EXVS風改造）" width="960" height="540" loading="lazy">
     <div class="body">
       <p class="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
