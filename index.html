@@ -35,6 +35,10 @@
   header h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 1px; }
   header h1 span { color: var(--gold); }
   header p { margin: 0; font-size: 13px; color: var(--sub); }
+  .lang { margin-left: auto; align-self: flex-start; display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; flex: none; }
+  .lang button { font: inherit; font-size: 12px; font-weight: 700; color: var(--sub); background: none; border: 0; padding: 5px 11px; cursor: pointer; }
+  .lang button[aria-pressed="true"] { background: var(--gold); color: #111; }
+  .lang button:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
   .card + .card { margin-top: 20px; }
   .card[id] { scroll-margin-top: 16px; }
@@ -62,7 +66,9 @@
   footer { margin-top: 28px; font-size: 12px; color: var(--sub); text-align: center; }
   footer a { color: var(--sub); }
   @media (max-width: 480px) {
-    .wrap { padding-top: 22px; }
+    .wrap { padding-top: 22px; position: relative; }
+    header { padding-top: 34px; }
+    .lang { position: absolute; top: 14px; right: 16px; }
     header h1 { font-size: 22px; }
     .body { padding: 18px 16px 20px; }
     .card h2 { font-size: 19px; }
@@ -76,60 +82,117 @@
     <img src="icon.png" alt="">
     <div>
       <h1>NEXT PLUS <span>Mods</span></h1>
-      <p>ガンダムVS.ガンダムNEXT PLUS（PSP）の改造コード</p>
+      <p data-i18n="tagline">ガンダムVS.ガンダムNEXT PLUS（PSP）の改造コード</p>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ja" aria-pressed="true">日本語</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
     </div>
   </header>
 
   <section class="card" id="reborns">
-    <img class="hero" src="reborns.jpg" alt="リボーンズガンダム（EXVS風改造）" width="960" height="540">
+    <img class="hero" src="reborns.jpg" alt="リボーンズガンダム（EXVS風改造）" data-i18n-alt="altReborns" width="960" height="540">
     <div class="body">
-      <p class="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2>エクバ風リボーンズガンダム</h2>
+      <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
+      <h2 data-i18n="reborns">エクバ風リボーンズガンダム</h2>
       <a class="dl" href="/reborns-gundam-exvs/NPJH50107.ini" download="NPJH50107.ini">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-        NPJH50107.ini をダウンロード
+        <span data-i18n="download">NPJH50107.ini をダウンロード</span>
       </a>
-      <p class="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
+      <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
     </div>
   </section>
 
   <section class="card" id="nu">
-    <img class="hero" src="nu.jpg" alt="νガンダム（EXVS風改造）" width="960" height="540" loading="lazy">
+    <img class="hero" src="nu.jpg" alt="νガンダム（EXVS風改造）" data-i18n-alt="altNu" width="960" height="540" loading="lazy">
     <div class="body">
-      <p class="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2>エクバ風νガンダム</h2>
+      <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
+      <h2 data-i18n="nu">エクバ風νガンダム</h2>
       <a class="dl" href="/nu-gundam-exvs/NPJH50107.ini" download="NPJH50107.ini">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-        NPJH50107.ini をダウンロード
+        <span data-i18n="download">NPJH50107.ini をダウンロード</span>
       </a>
-      <p class="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
+      <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
     </div>
   </section>
 
   <section class="card">
     <div class="body">
-      <h3 class="first">使い方</h3>
+      <h3 class="first" data-i18n="howto">使い方</h3>
       <ol>
-        <li>PPSSPP の「設定」→「システム」で「チートを有効化」を ON にする</li>
-        <li>ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
-        <li>ゲームを起動し、メニューの「チート」で ON になっているか確かめる</li>
+        <li data-i18n="step1">PPSSPP の「設定」→「システム」で「チートを有効化」を ON にする</li>
+        <li data-i18n="step2">ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
+        <li data-i18n="step3">ゲームを起動し、メニューの「チート」で ON になっているか確かめる</li>
       </ol>
-      <p class="note">リボーンズガンダム用と νガンダム用は同じ名前のファイルです。<code>PSP/Cheats</code> に置けるのはどちらか1つです</p>
+      <p class="note" data-i18n="oneFile">リボーンズガンダム用と νガンダム用は同じ名前のファイルです。<code>PSP/Cheats</code> に置けるのはどちらか1つです</p>
 
-      <h3>注意</h3>
+      <h3 data-i18n="notes">注意</h3>
       <ul>
-        <li>使用は自己責任でお願いします。CPU 戦（ひとりプレイ）でのみお使いください</li>
-        <li>ゲーム本体の配布はしていません</li>
-        <li>非公式のコードです。メーカー・権利者の方々とは一切関係ありません</li>
+        <li data-i18n="note1">使用は自己責任でお願いします。CPU 戦（ひとりプレイ）でのみお使いください</li>
+        <li data-i18n="note2">ゲーム本体の配布はしていません</li>
+        <li data-i18n="note3">非公式のコードです。メーカー・権利者の方々とは一切関係ありません</li>
       </ul>
     </div>
   </section>
 
   <footer>
-    <a href="https://www.youtube.com/@NEXTPLUSMods">YouTube：NEXT PLUS Mods</a>
+    <a href="https://www.youtube.com/@NEXTPLUSMods" data-i18n="youtube">YouTube：NEXT PLUS Mods</a>
   </footer>
 </div>
 <script>
+  // Language switch (日本語 / English). The Japanese text is the HTML itself; English comes from EN below.
+  // First visit: ?lang=ja|en, else the saved choice, else English unless the browser language is Japanese.
+  (function () {
+    var EN = {
+      tagline: 'Cheat codes for Gundam vs. Gundam NEXT PLUS (PSP)',
+      game: 'Mobile Suit Gundam: Gundam vs. Gundam NEXT PLUS (NPJH50107)',
+      reborns: 'EXVS-Style Reborns Gundam',
+      nu: 'EXVS-Style Nu Gundam',
+      download: 'Download NPJH50107.ini',
+      meta: 'CWCheat format / Tested on PPSSPP v1.20.4 (Windows)',
+      howto: 'How to use',
+      step1: 'In PPSSPP, go to Settings → System and turn on “Enable Cheats”',
+      step2: 'Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
+      step3: 'Start the game and check in the “Cheats” menu that the cheats are turned on',
+      oneFile: 'The Reborns Gundam file and the Nu Gundam file have the same name. Only one of them can be in <code>PSP/Cheats</code> at a time',
+      notes: 'Notes',
+      note1: 'Use at your own risk. Please use them only in CPU battles (single player)',
+      note2: 'The game itself is not distributed here',
+      note3: 'These are unofficial codes and are not affiliated with the developer, publisher, or any rights holders',
+      youtube: 'YouTube: NEXT PLUS Mods',
+      altReborns: 'Reborns Gundam (EXVS-style mod)',
+      altNu: 'Nu Gundam (EXVS-style mod)'
+    };
+    var JA = {};
+    var texts = document.querySelectorAll('[data-i18n]');
+    var alts = document.querySelectorAll('[data-i18n-alt]');
+    texts.forEach(function (el) { JA[el.getAttribute('data-i18n')] = el.innerHTML; });
+    alts.forEach(function (el) { JA[el.getAttribute('data-i18n-alt')] = el.getAttribute('alt'); });
+    var buttons = document.querySelectorAll('.lang button');
+    function apply(lang) {
+      var d = lang === 'en' ? EN : JA;
+      texts.forEach(function (el) { var k = el.getAttribute('data-i18n'); if (d[k] != null) el.innerHTML = d[k]; });
+      alts.forEach(function (el) { var k = el.getAttribute('data-i18n-alt'); if (d[k] != null) el.setAttribute('alt', d[k]); });
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+    }
+    var lang = null;
+    try { lang = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    if (lang !== 'ja' && lang !== 'en') { try { lang = localStorage.getItem('lang'); } catch (e) {} }
+    if (lang !== 'ja' && lang !== 'en') {
+      var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      lang = /^ja/i.test(nav) ? 'ja' : 'en';
+    }
+    apply(lang);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var l = b.getAttribute('data-lang');
+        apply(l);
+        try { localStorage.setItem('lang', l); } catch (e) {}
+      });
+    });
+  })();
+
   // The server sends .ini as text/plain, so some browsers save it as "NPJH50107.ini.txt".
   // Re-wrap it as a generic binary file so the name stays "NPJH50107.ini". Falls back to the normal link on error.
   document.querySelectorAll('a.dl').forEach(function (a) {
