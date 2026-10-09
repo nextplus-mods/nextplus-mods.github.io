@@ -36,6 +36,9 @@
   header h1 span { color: var(--gold); }
   header p { margin: 0; font-size: 13px; color: var(--sub); }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .card + .card { margin-top: 20px; }
+  h3.first { margin-top: 0; }
+  .note { margin: 10px 0 0; font-size: 13px; color: var(--sub); }
   .card img.hero { display: block; width: 100%; height: auto; }
   .body { padding: 22px 22px 24px; }
   .game { margin: 0 0 4px; font-size: 13px; color: var(--sub); }
@@ -86,13 +89,31 @@
         NPJH50107.ini をダウンロード
       </a>
       <p class="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
+    </div>
+  </section>
 
-      <h3>使い方</h3>
+  <section class="card">
+    <img class="hero" src="nu.jpg" alt="νガンダム（EXVS風改造）" width="960" height="540" loading="lazy">
+    <div class="body">
+      <p class="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
+      <h2>エクバ風νガンダム</h2>
+      <a class="dl" href="/nu-gundam-exvs/NPJH50107.ini" download="NPJH50107.ini">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+        NPJH50107.ini をダウンロード
+      </a>
+      <p class="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="body">
+      <h3 class="first">使い方</h3>
       <ol>
         <li>PPSSPP の「設定」→「システム」で「チートを有効化」を ON にする</li>
         <li>ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
         <li>ゲームを起動し、メニューの「チート」で ON になっているか確かめる</li>
       </ol>
+      <p class="note">リボーンズガンダム用と νガンダム用は同じ名前のファイルです。<code>PSP/Cheats</code> に置けるのはどちらか1つです</p>
 
       <h3>注意</h3>
       <ul>
