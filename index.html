@@ -95,7 +95,7 @@
     <div class="body">
       <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
       <h2 data-i18n="reborns">エクバ風リボーンズガンダム</h2>
-      <a class="dl" href="/reborns-gundam-exvs/NPJH50107.ini" download="NPJH50107.ini">
+      <a class="dl" href="/reborns-gundam-exvs/NPJH50107.ini" data-href-en="/reborns-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
         <span data-i18n="download">NPJH50107.ini をダウンロード</span>
       </a>
@@ -108,7 +108,7 @@
     <div class="body">
       <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
       <h2 data-i18n="nu">エクバ風νガンダム</h2>
-      <a class="dl" href="/nu-gundam-exvs/NPJH50107.ini" download="NPJH50107.ini">
+      <a class="dl" href="/nu-gundam-exvs/NPJH50107.ini" data-href-en="/nu-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
         <span data-i18n="download">NPJH50107.ini をダウンロード</span>
       </a>
@@ -169,10 +169,14 @@
     texts.forEach(function (el) { JA[el.getAttribute('data-i18n')] = el.innerHTML; });
     alts.forEach(function (el) { JA[el.getAttribute('data-i18n-alt')] = el.getAttribute('alt'); });
     var buttons = document.querySelectorAll('.lang button');
+    // Download links: the English page gets the file with English cheat names (data-href-en), same code inside.
+    var links = document.querySelectorAll('a.dl[data-href-en]');
+    links.forEach(function (a) { a.setAttribute('data-href-ja', a.getAttribute('href')); });
     function apply(lang) {
       var d = lang === 'en' ? EN : JA;
       texts.forEach(function (el) { var k = el.getAttribute('data-i18n'); if (d[k] != null) el.innerHTML = d[k]; });
       alts.forEach(function (el) { var k = el.getAttribute('data-i18n-alt'); if (d[k] != null) el.setAttribute('alt', d[k]); });
+      links.forEach(function (a) { a.setAttribute('href', a.getAttribute(lang === 'en' ? 'data-href-en' : 'data-href-ja')); });
       document.documentElement.lang = lang;
       buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
     }
