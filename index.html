@@ -5,98 +5,205 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NEXT PLUS Mods</title>
 <meta name="description" content="ガンダムVS.ガンダムNEXT PLUS（PSP）用の CWCheat コードの配布ページです。">
+<meta name="theme-color" content="#07090C">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Murecho:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Murecho:wght@500;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0B0D10;
-    --panel: #14181E;
-    --line: #262C35;
+    --bg: #07090C;
+    --panel: #10141A;
+    --panel-2: #0C0F14;
+    --line: #232A33;
+    --line-hi: #3A4350;
     --text: #F2F2F0;
-    --sub: #A9AFB8;
+    --sub: #A3AAB4;
     --gold: #E6B240;
-    --gold-hi: #F2C65A;
-    --red: #FF3B4E;
+    --gold-hi: #F7CF6A;
+    --nu: #B9A2FF;
+    --oo: #5CC8F5;
+    --reb: #6FD49C;
+    --cut: 16px;
+    --latin: "Rajdhani", "Murecho", sans-serif;
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    background: var(--bg);
     color: var(--text);
     font-family: "Murecho", "Yu Gothic", "Hiragino Sans", sans-serif;
     line-height: 1.7;
+    background:
+      radial-gradient(1100px 520px at 50% -220px, rgba(230, 178, 64, .16), transparent 70%),
+      linear-gradient(rgba(255, 255, 255, .028) 1px, transparent 1px) 0 0 / 32px 32px,
+      linear-gradient(90deg, rgba(255, 255, 255, .028) 1px, transparent 1px) 0 0 / 32px 32px,
+      var(--bg);
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 56px; }
-  header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
-  header img { width: 56px; height: 56px; border-radius: 50%; background: #fff; }
-  header h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 1px; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 30px 20px 56px; }
+
+  /* header */
+  header { display: flex; align-items: center; gap: 16px; }
+  header img { width: 56px; height: 56px; border-radius: 50%; background: #fff; flex: none; box-shadow: 0 0 0 2px var(--gold), 0 0 22px rgba(230, 178, 64, .35); }
+  header h1 { margin: 0; font-family: var(--latin); font-size: 34px; font-weight: 700; line-height: 1.1; letter-spacing: 1px; }
   header h1 span { color: var(--gold); }
-  header p { margin: 0; font-size: 13px; color: var(--sub); }
-  .lang { margin-left: auto; align-self: flex-start; display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; flex: none; }
-  .lang button { font: inherit; font-size: 12px; font-weight: 700; color: var(--sub); background: none; border: 0; padding: 5px 11px; cursor: pointer; }
+  header p { margin: 2px 0 0; font-size: 13px; color: var(--sub); }
+  .lang { margin-left: auto; align-self: flex-start; display: flex; border: 1px solid var(--line-hi); border-radius: 4px; overflow: hidden; flex: none; }
+  .lang button { font: inherit; font-size: 12px; font-weight: 700; color: var(--sub); background: none; border: 0; padding: 5px 12px; cursor: pointer; }
   .lang button[aria-pressed="true"] { background: var(--gold); color: #111; }
   .lang button:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-  .card + .card { margin-top: 20px; }
-  .card[id] { scroll-margin-top: 16px; }
-  h3.first { margin-top: 0; }
-  .note { margin: 10px 0 0; font-size: 13px; color: var(--sub); }
-  .card img.hero { display: block; width: 100%; height: auto; }
-  .body { padding: 22px 22px 24px; }
-  .game { margin: 0 0 4px; font-size: 13px; color: var(--sub); }
-  .card h2 { margin: 0 0 16px; font-size: 22px; font-weight: 800; }
-  .dl {
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    width: 100%; padding: 16px 20px; border-radius: 10px;
-    background: linear-gradient(180deg, var(--gold-hi), var(--gold));
-    color: #111; font-weight: 800; font-size: 18px; text-decoration: none;
+  .rule { height: 2px; margin: 18px 0 14px; background: linear-gradient(90deg, var(--gold), rgba(230, 178, 64, .25) 45%, transparent); }
+  .spec { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 34px; padding: 0; list-style: none; }
+  .spec li { padding: 3px 14px; font-size: 12px; font-weight: 700; color: var(--sub); background: #161B22; clip-path: polygon(7px 0, 100% 0, calc(100% - 7px) 100%, 0 100%); }
+  .spec li:first-child { color: #111; background: var(--gold); }
+
+  /* section headings */
+  .sec { display: flex; align-items: center; gap: 12px; margin: 44px 0 16px; }
+  .sec-en { font-family: var(--latin); font-size: 14px; font-weight: 700; letter-spacing: .22em; color: var(--gold); white-space: nowrap; }
+  .sec-en::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 8px; background: var(--gold); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .sec h2 { margin: 0; font-size: 18px; font-weight: 800; white-space: nowrap; }
+  .sec::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line-hi), transparent); }
+  .common { margin: -4px 0 18px; padding: 12px 16px; font-size: 13px; color: var(--sub); background: rgba(16, 20, 26, .8); border-left: 3px solid var(--gold); }
+  .common b { color: var(--text); font-weight: 700; }
+
+  /* cut-corner frames: outer = border colour, inner = panel */
+  .frame {
+    height: 100%;
+    padding: 1px;
+    background: var(--line-hi);
+    clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
   }
-  .dl:hover { filter: brightness(1.06); }
-  .dl:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-  .dl svg { width: 22px; height: 22px; flex: none; }
-  .meta { margin: 8px 0 0; text-align: center; font-size: 12px; color: var(--sub); }
-  h3 { margin: 24px 0 8px; font-size: 15px; font-weight: 700; color: var(--gold); }
-  ol, ul { margin: 0; padding-left: 1.4em; font-size: 14px; }
-  li { margin: 2px 0; }
-  code { font-family: Consolas, "Courier New", monospace; font-size: 13px; background: #0E1116; border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; overflow-wrap: anywhere; }
-  .warn { font-weight: 700; }
-  .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); }
+  .in {
+    height: 100%;
+    background: var(--panel);
+    clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+  }
+  section[id], article[id] { scroll-margin-top: 16px; }
+
+  /* All Units Combined */
+  .feature .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 28%, var(--line-hi) 72%, var(--gold)); }
+  .trio { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #000; }
   .trio img { display: block; width: 100%; height: auto; }
-  .lead { margin: -8px 0 16px; font-size: 14px; color: var(--sub); }
-  details { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 14px; }
-  summary { cursor: pointer; color: var(--gold); font-weight: 700; }
+  .trio::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
+  .fb { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: center; padding: 24px 28px 4px; }
+  .badge { display: inline-block; padding: 1px 14px; font-family: var(--latin); font-size: 13px; font-weight: 700; letter-spacing: .18em; color: #111; background: var(--gold); clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+  .fb h2 { margin: 8px 0 6px; font-size: 26px; font-weight: 800; line-height: 1.35; }
+  .lead { margin: 0; font-size: 14px; color: var(--sub); }
+  .feature details { margin: 16px 28px 0; padding-bottom: 24px; }
+
+  /* download button */
+  .dl {
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 14px 18px;
+    background: linear-gradient(180deg, var(--gold-hi), var(--gold));
+    color: #111; font-weight: 800; font-size: 16px; line-height: 1.4; text-decoration: none;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: filter .15s;
+  }
+  .dl::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .5) 50%, transparent 70%); transform: translateX(-110%); transition: transform .6s; }
+  .dl:hover { filter: brightness(1.06); }
+  .dl:hover::after { transform: translateX(110%); }
+  .dl:focus-visible { outline: none; box-shadow: inset 0 0 0 3px #111; }
+  .dl svg { width: 20px; height: 20px; flex: none; }
+  .feature .dl { padding: 18px 20px; font-size: 18px; }
+  .meta { margin: 8px 0 0; text-align: center; font-size: 12px; color: var(--sub); }
+
+  /* unit cards */
+  .units { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .unit { transition: transform .2s, filter .2s; }
+  .unit:hover { transform: translateY(-3px); filter: drop-shadow(0 0 14px color-mix(in srgb, var(--u) 38%, transparent)); }
+  .unit .frame { background: linear-gradient(160deg, var(--u), var(--line-hi) 32%, var(--line-hi) 68%, var(--u)); }
+  .unit .in { display: flex; flex-direction: column; }
+  .shot { position: relative; overflow: hidden; background: #000; }
+  .shot img { display: block; width: 100%; height: auto; transition: transform .4s; }
+  .unit:hover .shot img { transform: scale(1.04); }
+  .shot::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--u); box-shadow: 0 0 14px var(--u); }
+  .ub { flex: 1; display: flex; flex-direction: column; padding: 16px 18px 20px; }
+  .ub .grow { flex: 1; }
+  .series { margin: 0; font-size: 12px; font-weight: 700; color: var(--u); }
+  .ub h3 { margin: 2px 0 14px; font-size: 18px; font-weight: 800; line-height: 1.45; }
+
+  /* details */
+  details { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; }
+  summary { cursor: pointer; color: var(--gold); font-weight: 700; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: ""; display: inline-block; margin-right: 8px; border-left: 7px solid currentColor; border-top: 5px solid transparent; border-bottom: 5px solid transparent; vertical-align: 1px; transition: transform .15s; }
+  details[open] > summary::before { transform: rotate(90deg); }
   summary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
   details ul { margin-top: 8px; }
-  .date { color: var(--sub); font-weight: 500; font-size: 12px; margin-left: 6px; }
-  .log { margin-top: 14px; }
-  .ent { position: relative; padding: 0 0 22px 22px; border-left: 2px solid var(--line); margin-left: 5px; }
-  .ent:last-child { padding-bottom: 0; border-left-color: transparent; }
-  .ent::before { content: ""; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--panel); border: 2px solid var(--sub); }
-  .ent:first-child::before { background: var(--gold); border-color: var(--gold); }
-  .ent .d { margin: 0 0 8px; font-size: 15px; font-weight: 800; line-height: 1.4; }
-  .ent:first-child .d { color: var(--gold); }
+
+  ol, ul { margin: 0; padding-left: 1.4em; font-size: 14px; }
+  li { margin: 2px 0; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 13px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; overflow-wrap: anywhere; }
+  .warn { font-weight: 700; color: var(--gold-hi); }
+  .note { margin: 10px 0 0; font-size: 13px; color: var(--sub); }
+
+  /* how to use */
+  .panel { padding: 26px 28px 28px; }
+  .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  .steps li { position: relative; counter-increment: step; margin: 0; padding: 12px 0 12px 58px; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .steps li:last-child { border-bottom: 0; }
+  .steps li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 7px; font-family: var(--latin); font-size: 30px; font-weight: 700; line-height: 1.2; color: var(--gold); }
+  .subs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+  .sub { padding: 16px 18px; background: var(--panel-2); border: 1px solid var(--line); border-top: 2px solid var(--gold); }
+  .sub h3 { margin: 0 0 8px; font-size: 15px; font-weight: 700; color: var(--gold); }
+  .sub ul { font-size: 13px; }
+  .sub li { margin: 4px 0; }
+
+  /* update log */
+  .log .ent { position: relative; margin-left: 5px; padding: 0 0 22px 22px; border-left: 2px solid var(--line-hi); }
+  .log .ent:last-child { padding-bottom: 0; border-left-color: transparent; }
+  .log .ent::before { content: ""; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; background: var(--panel); border: 2px solid var(--sub); transform: rotate(45deg); }
+  .log > .ent:first-child::before { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 10px var(--gold); }
+  .ent .d { margin: 0 0 8px; font-family: var(--latin); font-size: 18px; font-weight: 700; line-height: 1.3; letter-spacing: .05em; }
+  .log > .ent:first-child .d { color: var(--gold); }
   .grp { margin-top: 10px; }
   .grp ul { margin-top: 4px; }
   .grp li { margin: 3px 0; }
-  .tag { display: inline-block; margin-right: 6px; padding: 0 10px; border: 1px solid currentColor; border-radius: 999px; font-size: 12px; font-weight: 700; line-height: 1.8; }
+  .tag { display: inline-block; margin-right: 6px; padding: 0 10px; border: 1px solid currentColor; border-radius: 3px; font-size: 12px; font-weight: 700; line-height: 1.8; }
   .tag.all { color: var(--gold); }
-  .tag.oo { color: #5CC8F5; }
-  .tag.nu { color: #B9A2FF; }
-  .tag.reb { color: #6FD49C; }
-  .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 4px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
-  footer { margin-top: 28px; font-size: 12px; color: var(--sub); text-align: center; }
-  footer a { color: var(--sub); }
+  .tag.oo { color: var(--oo); }
+  .tag.nu { color: var(--nu); }
+  .tag.reb { color: var(--reb); }
+  .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 3px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
+  .log .older { margin: 0; padding: 0; border: 0; }
+  .log .older > summary { margin: 0 0 0 5px; padding: 0 0 18px 22px; border-left: 2px solid var(--line-hi); font-size: 14px; }
+  .log .older[open] > summary { padding-bottom: 22px; }
+
+  footer { margin-top: 36px; text-align: center; }
+  .yt { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none; border: 1px solid var(--line-hi); border-radius: 4px; }
+  .yt:hover { border-color: #FF3B4E; }
+  .yt:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  .yt svg { width: 20px; height: 20px; flex: none; }
+
+  @media (max-width: 860px) {
+    .subs { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .units { grid-template-columns: 1fr; }
+    .fb { grid-template-columns: 1fr; gap: 18px; }
+  }
   @media (max-width: 480px) {
-    .wrap { padding-top: 22px; position: relative; }
-    header { padding-top: 34px; }
+    :root { --cut: 12px; }
+    .wrap { padding: 20px 16px 48px; position: relative; }
+    header { padding-top: 34px; gap: 12px; }
+    header img { width: 48px; height: 48px; }
+    header h1 { font-size: 28px; }
     .lang { position: absolute; top: 14px; right: 16px; }
-    header h1 { font-size: 22px; }
-    .body { padding: 18px 16px 20px; }
-    .card h2 { font-size: 19px; }
-    .dl { font-size: 16px; }
+    .spec { margin-bottom: 26px; }
+    .sec { margin-top: 36px; }
+    .fb { padding: 18px 18px 2px; }
+    .fb h2 { font-size: 22px; }
+    .feature details { margin: 14px 18px 0; padding-bottom: 20px; }
+    .feature .dl { font-size: 16px; }
+    .panel { padding: 20px 18px 22px; }
+    .steps li { padding-left: 48px; font-size: 14px; }
+    .steps li::before { font-size: 26px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .unit, .shot img, .dl, .dl::after, summary::before { transition: none; }
+    .unit:hover { transform: none; }
   }
 </style>
 </head>
@@ -113,132 +220,159 @@
       <button type="button" data-lang="en" aria-pressed="false">English</button>
     </div>
   </header>
+  <div class="rule"></div>
+  <ul class="spec">
+    <li data-i18n="chipGame">NPJH50107（日本版）</li>
+    <li data-i18n="chipFormat">CWCheat 形式</li>
+    <li data-i18n="meta">PPSSPP v1.20.4（Windows）で確認</li>
+  </ul>
 
-  <section class="card" id="all">
-    <div class="trio">
-      <img src="nu.jpg" alt="" width="960" height="540">
-      <img src="oo.jpg" alt="" width="960" height="540">
-      <img src="reborns.jpg" alt="" width="960" height="540">
-    </div>
-    <div class="body">
-      <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2 data-i18n="all">全機体統合版</h2>
-      <p class="lead" data-i18n="allLead">νガンダム・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
-      <a class="dl" href="/all/NPJH50107.ini" data-href-en="/all/en/NPJH50107.ini" download="NPJH50107.ini">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-        <span data-i18n="download">NPJH50107.ini をダウンロード</span>
-      </a>
-      <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
+  <section class="feature" id="all">
+    <div class="frame"><div class="in">
+      <div class="trio">
+        <img src="nu.jpg" alt="" width="960" height="540">
+        <img src="oo.jpg" alt="" width="960" height="540">
+        <img src="reborns.jpg" alt="" width="960" height="540">
+      </div>
+      <div class="fb">
+        <div>
+          <span class="badge">ALL UNITS</span>
+          <h2 data-i18n="all">全機体統合版</h2>
+          <p class="lead" data-i18n="allLead">νガンダム・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
+        </div>
+        <div>
+          <a class="dl" href="/all/NPJH50107.ini" data-href-en="/all/en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="download">NPJH50107.ini をダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updAll">更新 2026-10-16</p>
+        </div>
+      </div>
       <details>
-        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updAll">更新 2026-10-16</span></summary>
+        <summary><span data-i18n="contents">入っているチート</span></summary>
         <ul data-i18n="listAll">
           <li>EXVSシステム ／ カメラ視野角変更</li>
           <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
           <li>νガンダム用 1個・ダブルオーライザー用 1個・リボーンズガンダム用 1個（中身は下の機体ごとのファイルと同じです）</li>
         </ul>
       </details>
-    </div>
+    </div></div>
   </section>
 
-  <section class="card" id="nu">
-    <img class="hero" src="nu.jpg" alt="νガンダム（EXVS風）" data-i18n-alt="altNu" width="960" height="540" loading="lazy">
-    <div class="body">
-      <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2 data-i18n="nu">エクバ風νガンダム</h2>
-      <a class="dl" href="/nu-gundam-exvs/NPJH50107.ini" data-href-en="/nu-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-        <span data-i18n="download">NPJH50107.ini をダウンロード</span>
-      </a>
-      <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
-      <details>
-        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updNu">更新 2026-10-15</span></summary>
-        <ul data-i18n="listNu">
-          <li>EXVSシステム ／ カメラ視野角変更</li>
-          <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
-          <li>νガンダム (EXVS風)（メイン射撃の見た目変更・射撃CS強化・フィンファンネル強化・フィンファンネルの位置矯正・格闘強化・後特格でフィンファンネルバリア展開 を1つにまとめたもの）</li>
-        </ul>
-      </details>
-    </div>
-  </section>
+  <div class="sec"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
+  <p class="common" data-i18n="common">どのファイルにも <b>EXVSシステム</b>・<b>カメラ視野角変更</b>・<b>覚醒無限 (覚醒技撃ち放題)</b>（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）が入っています</p>
+  <div class="units">
+    <article class="unit" id="nu" style="--u: var(--nu)">
+      <div class="frame"><div class="in">
+        <div class="shot"><img src="nu.jpg" alt="νガンダム（EXVS風）" data-i18n-alt="altNu" width="960" height="540" loading="lazy"></div>
+        <div class="ub">
+          <div class="grow">
+            <p class="series" data-i18n="seriesNu">機動戦士ガンダム 逆襲のシャア</p>
+            <h3 data-i18n="nu">エクバ風νガンダム</h3>
+          </div>
+          <a class="dl" href="/nu-gundam-exvs/NPJH50107.ini" data-href-en="/nu-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updNu">更新 2026-10-15</p>
+          <details>
+            <summary><span data-i18n="contents">入っているチート</span></summary>
+            <ul data-i18n="listNu">
+              <li>νガンダム (EXVS風)（メイン射撃の見た目変更・射撃CS強化・フィンファンネル強化・フィンファンネルの位置矯正・格闘強化・後特格でフィンファンネルバリア展開 を1つにまとめたもの）</li>
+            </ul>
+          </details>
+        </div>
+      </div></div>
+    </article>
 
-  <section class="card" id="00raiser">
-    <img class="hero" src="oo.jpg" alt="ダブルオーライザー（EXVS風）" data-i18n-alt="altOo" width="960" height="540" loading="lazy">
-    <div class="body">
-      <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2 data-i18n="oo">エクバ風ダブルオーライザー</h2>
-      <a class="dl" href="/00-raiser-exvs/NPJH50107.ini" data-href-en="/00-raiser-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-        <span data-i18n="download">NPJH50107.ini をダウンロード</span>
-      </a>
-      <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
-      <details>
-        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updOo">更新 2026-10-15</span></summary>
-        <ul data-i18n="listOo">
-          <li>EXVSシステム ／ カメラ視野角変更</li>
-          <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
-          <li>ダブルオーライザー (EXVS風)（GNソードIIIモード強化・格闘強化・TRANS-AM20秒・TRANS-AM強化・TRANS-AMのガードにGNフィールド・機体各部の発光 を1つにまとめたもの）</li>
-        </ul>
-      </details>
-    </div>
-  </section>
+    <article class="unit" id="00raiser" style="--u: var(--oo)">
+      <div class="frame"><div class="in">
+        <div class="shot"><img src="oo.jpg" alt="ダブルオーライザー（EXVS風）" data-i18n-alt="altOo" width="960" height="540" loading="lazy"></div>
+        <div class="ub">
+          <div class="grow">
+            <p class="series" data-i18n="series00">機動戦士ガンダム00</p>
+            <h3 data-i18n="oo">エクバ風ダブルオーライザー</h3>
+          </div>
+          <a class="dl" href="/00-raiser-exvs/NPJH50107.ini" data-href-en="/00-raiser-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updOo">更新 2026-10-15</p>
+          <details>
+            <summary><span data-i18n="contents">入っているチート</span></summary>
+            <ul data-i18n="listOo">
+              <li>ダブルオーライザー (EXVS風)（GNソードIIIモード強化・格闘強化・TRANS-AM20秒・TRANS-AM強化・TRANS-AMのガードにGNフィールド・機体各部の発光 を1つにまとめたもの）</li>
+            </ul>
+          </details>
+        </div>
+      </div></div>
+    </article>
 
-  <section class="card" id="reborns">
-    <img class="hero" src="reborns.jpg" alt="リボーンズガンダム（EXVS風）" data-i18n-alt="altReborns" width="960" height="540" loading="lazy">
-    <div class="body">
-      <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2 data-i18n="reborns">エクバ風リボーンズガンダム</h2>
-      <a class="dl" href="/reborns-gundam-exvs/NPJH50107.ini" data-href-en="/reborns-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-        <span data-i18n="download">NPJH50107.ini をダウンロード</span>
-      </a>
-      <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
-      <details>
-        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updReborns">更新 2026-10-16</span></summary>
-        <ul data-i18n="listReborns">
-          <li>EXVSシステム ／ カメラ視野角変更</li>
-          <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
-          <li>リボーンズガンダム (EXVS風)（耐久620→650・射撃強化・格闘強化・機体各部を発光させる・勝利ポーズを後格闘に を1つにまとめたもの）</li>
-        </ul>
-      </details>
-    </div>
-  </section>
+    <article class="unit" id="reborns" style="--u: var(--reb)">
+      <div class="frame"><div class="in">
+        <div class="shot"><img src="reborns.jpg" alt="リボーンズガンダム（EXVS風）" data-i18n-alt="altReborns" width="960" height="540" loading="lazy"></div>
+        <div class="ub">
+          <div class="grow">
+            <p class="series" data-i18n="series00">機動戦士ガンダム00</p>
+            <h3 data-i18n="reborns">エクバ風リボーンズガンダム</h3>
+          </div>
+          <a class="dl" href="/reborns-gundam-exvs/NPJH50107.ini" data-href-en="/reborns-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updReborns">更新 2026-10-16</p>
+          <details>
+            <summary><span data-i18n="contents">入っているチート</span></summary>
+            <ul data-i18n="listReborns">
+              <li>リボーンズガンダム (EXVS風)（耐久620→650・射撃強化・格闘強化・機体各部を発光させる・勝利ポーズを後格闘に を1つにまとめたもの）</li>
+            </ul>
+          </details>
+        </div>
+      </div></div>
+    </article>
+  </div>
 
-  <section class="card" id="howto">
-    <div class="body">
-      <h3 class="first" data-i18n="howto">使い方</h3>
-      <ol>
+  <div class="sec"><span class="sec-en" aria-hidden="true">HOW TO USE</span><h2 data-i18n="howto">使い方</h2></div>
+  <section id="howto">
+    <div class="frame"><div class="in panel">
+      <ol class="steps">
         <li data-i18n="step1">PPSSPP の「設定」→「システム」で「チートを有効化」を ON にする</li>
         <li data-i18n="step2">ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる（フォルダがなければ作る）<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
         <li data-i18n="step3">ゲームを起動し、メニューの「チート」で ON になっているか確かめる</li>
         <li data-i18n="step4">使いたい機体を <b>1P</b> で選んで試合を始める（チートは1Pの機体にだけ効きます）</li>
       </ol>
-
-      <h3 data-i18n="where">PSP/Cheats フォルダの場所</h3>
-      <ul>
-        <li data-i18n="whereWin">Windows：ふつうは <code>ドキュメント\PPSSPP\PSP\Cheats</code></li>
-        <li data-i18n="whereAndroid">Android：PPSSPP のメモリースティックのフォルダ（はじめて起動したときに選んだ場所）の中の <code>PSP/Cheats</code></li>
-      </ul>
-
-      <h3 data-i18n="tips">うまく動かないとき</h3>
-      <ul>
-        <li data-i18n="tip1">チートの ON/OFF を切り替えたら、試合を最初から始め直してください。試合の途中で切り替えると、正しく動かないことがあります</li>
-        <li data-i18n="tip2">ファイル名が <code>NPJH50107.ini.txt</code> などになっていないか確かめてください</li>
-        <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）であることを確かめてください。ほかの版では動きません</li>
-      </ul>
-      <p class="note" data-i18n="oneFile">どのファイルも同じ名前です。<code>PSP/Cheats</code> に置けるのはどれか1つなので、全部の機体を使うときは「全機体統合版」を選んでください</p>
-
-      <h3 data-i18n="notes">注意</h3>
-      <ul>
-        <li data-i18n="note1">使用は自己責任でお願いします。CPU 戦（ひとりプレイ）でのみお使いください</li>
-        <li data-i18n="note2">ゲーム本体の配布はしていません</li>
-        <li data-i18n="note3">非公式のコードです。メーカー・権利者の方々とは一切関係ありません</li>
-      </ul>
-    </div>
+      <div class="subs">
+        <div class="sub">
+          <h3 data-i18n="where">PSP/Cheats フォルダの場所</h3>
+          <ul>
+            <li data-i18n="whereWin">Windows：ふつうは <code>ドキュメント\PPSSPP\PSP\Cheats</code></li>
+            <li data-i18n="whereAndroid">Android：PPSSPP のメモリースティックのフォルダ（はじめて起動したときに選んだ場所）の中の <code>PSP/Cheats</code></li>
+          </ul>
+        </div>
+        <div class="sub">
+          <h3 data-i18n="tips">うまく動かないとき</h3>
+          <ul>
+            <li data-i18n="tip1">チートの ON/OFF を切り替えたら、試合を最初から始め直してください。試合の途中で切り替えると、正しく動かないことがあります</li>
+            <li data-i18n="tip2">ファイル名が <code>NPJH50107.ini.txt</code> などになっていないか確かめてください</li>
+            <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）であることを確かめてください。ほかの版では動きません</li>
+          </ul>
+          <p class="note" data-i18n="oneFile">どのファイルも同じ名前です。<code>PSP/Cheats</code> に置けるのはどれか1つなので、全部の機体を使うときは「全機体統合版」を選んでください</p>
+        </div>
+        <div class="sub">
+          <h3 data-i18n="notes">注意</h3>
+          <ul>
+            <li data-i18n="note1">使用は自己責任でお願いします。CPU 戦（ひとりプレイ）でのみお使いください</li>
+            <li data-i18n="note2">ゲーム本体の配布はしていません</li>
+            <li data-i18n="note3">非公式のコードです。メーカー・権利者の方々とは一切関係ありません</li>
+          </ul>
+        </div>
+      </div>
+    </div></div>
   </section>
 
-  <section class="card" id="log">
-    <div class="body">
-      <h3 class="first" data-i18n="log">更新履歴</h3>
+  <div class="sec"><span class="sec-en" aria-hidden="true">UPDATE LOG</span><h2 data-i18n="log">更新履歴</h2></div>
+  <section id="log">
+    <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
         <div class="ent">
           <p class="d">2026-10-16</p>
@@ -276,47 +410,53 @@
             </ul>
           </div>
         </div>
-        <div class="ent">
-          <p class="d">2026-10-14</p>
-          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
-            <ul>
-              <li><span class="new">公開</span>ダブルオーライザーを公開しました</li>
-            </ul>
+        <details class="older">
+          <summary>それより前の更新</summary>
+          <div class="ent">
+            <p class="d">2026-10-14</p>
+            <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+              <ul>
+                <li><span class="new">公開</span>ダブルオーライザーを公開しました</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag nu">νガンダム</span><span class="tag reb">リボーンズガンダム</span>
+              <ul>
+                <li>新しい PPSSPP で落ちるおそれのある行を直しました</li>
+              </ul>
+            </div>
           </div>
-          <div class="grp"><span class="tag nu">νガンダム</span><span class="tag reb">リボーンズガンダム</span>
-            <ul>
-              <li>新しい PPSSPP で落ちるおそれのある行を直しました</li>
-            </ul>
+          <div class="ent">
+            <p class="d">2026-10-09</p>
+            <div class="grp"><span class="tag nu">νガンダム</span>
+              <ul>
+                <li><span class="new">公開</span>νガンダムを公開しました</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+              <ul>
+                <li><span class="new">追加</span>ダメージ表示</li>
+                <li>勝利ポーズのチートがフリーバトルでも効くようにしました</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="ent">
-          <p class="d">2026-10-09</p>
-          <div class="grp"><span class="tag nu">νガンダム</span>
-            <ul>
-              <li><span class="new">公開</span>νガンダムを公開しました</li>
-            </ul>
+          <div class="ent">
+            <p class="d">2026-10-03</p>
+            <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+              <ul>
+                <li><span class="new">公開</span>リボーンズガンダムを公開しました</li>
+              </ul>
+            </div>
           </div>
-          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
-            <ul>
-              <li><span class="new">追加</span>ダメージ表示</li>
-              <li>勝利ポーズのチートがフリーバトルでも効くようにしました</li>
-            </ul>
-          </div>
-        </div>
-        <div class="ent">
-          <p class="d">2026-10-03</p>
-          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
-            <ul>
-              <li><span class="new">公開</span>リボーンズガンダムを公開しました</li>
-            </ul>
-          </div>
-        </div>
+        </details>
       </div>
-    </div>
+    </div></div>
   </section>
 
   <footer>
-    <a href="https://www.youtube.com/@NEXTPLUSMods" data-i18n="youtube">YouTube：NEXT PLUS Mods</a>
+    <a class="yt" href="https://www.youtube.com/@NEXTPLUSMods">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="4" fill="#FF3B4E"/><path d="M10 8.8v6.4l5.4-3.2z" fill="#fff"/></svg>
+      <span data-i18n="youtube">YouTube：NEXT PLUS Mods</span>
+    </a>
   </footer>
 </div>
 <script>
@@ -325,12 +465,18 @@
   (function () {
     var EN = {
       tagline: 'Cheat codes for Gundam vs. Gundam NEXT PLUS (PSP)',
-      game: 'Mobile Suit Gundam: Gundam vs. Gundam NEXT PLUS (NPJH50107)',
+      chipGame: 'NPJH50107 (Japan)',
+      chipFormat: 'CWCheat format',
+      meta: 'Tested on PPSSPP v1.20.4 (Windows)',
       reborns: 'EXVS-Style Reborns Gundam',
       nu: 'EXVS-Style Nu Gundam',
       oo: 'EXVS-Style 00 Raiser',
+      seriesNu: 'Char’s Counterattack',
+      series00: 'Mobile Suit Gundam 00',
       download: 'Download NPJH50107.ini',
-      meta: 'CWCheat format / Tested on PPSSPP v1.20.4 (Windows)',
+      dlShort: 'Download',
+      secUnits: 'Per-unit files',
+      common: 'Every file includes <b>EXVS System</b>, <b>Wider Camera FOV</b> and <b>Infinite Awakening (Unlimited Awakening Attacks)</b> (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)',
       howto: 'How to use',
       step1: 'In PPSSPP, go to Settings → System and turn on “Enable Cheats”',
       step2: 'Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
@@ -352,9 +498,9 @@
       updNu: 'Updated 2026-10-15',
       updOo: 'Updated 2026-10-15',
       listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>1 Nu Gundam cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
-      listReborns: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
-      listNu: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
-      listOo: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
+      listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
+      listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
+      listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
       log: 'Update history',
       logList:
         '<div class="ent"><p class="d">2026-10-16</p>' +
@@ -383,28 +529,30 @@
             '<li>Fixed the guard from behind briefly carrying over to the next match when a match ended during TRANS-AM</li>' +
           '</ul></div>' +
         '</div>' +
-        '<div class="ent"><p class="d">2026-10-14</p>' +
-          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
-            '<li><span class="new">RELEASE</span>Released 00 Raiser</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag nu">Nu Gundam</span><span class="tag reb">Reborns Gundam</span><ul>' +
-            '<li>Fixed lines that could crash newer PPSSPP builds</li>' +
-          '</ul></div>' +
-        '</div>' +
-        '<div class="ent"><p class="d">2026-10-09</p>' +
-          '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
-            '<li><span class="new">RELEASE</span>Released Nu Gundam</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
-            '<li><span class="new">NEW</span>Damage numbers</li>' +
-            '<li>The victory pose cheat now also works in Free Battle</li>' +
-          '</ul></div>' +
-        '</div>' +
-        '<div class="ent"><p class="d">2026-10-03</p>' +
-          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
-            '<li><span class="new">RELEASE</span>Released Reborns Gundam</li>' +
-          '</ul></div>' +
-        '</div>',
+        '<details class="older"><summary>Earlier updates</summary>' +
+          '<div class="ent"><p class="d">2026-10-14</p>' +
+            '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+              '<li><span class="new">RELEASE</span>Released 00 Raiser</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag nu">Nu Gundam</span><span class="tag reb">Reborns Gundam</span><ul>' +
+              '<li>Fixed lines that could crash newer PPSSPP builds</li>' +
+            '</ul></div>' +
+          '</div>' +
+          '<div class="ent"><p class="d">2026-10-09</p>' +
+            '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
+              '<li><span class="new">RELEASE</span>Released Nu Gundam</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+              '<li><span class="new">NEW</span>Damage numbers</li>' +
+              '<li>The victory pose cheat now also works in Free Battle</li>' +
+            '</ul></div>' +
+          '</div>' +
+          '<div class="ent"><p class="d">2026-10-03</p>' +
+            '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+              '<li><span class="new">RELEASE</span>Released Reborns Gundam</li>' +
+            '</ul></div>' +
+          '</div>' +
+        '</details>',
       notes: 'Notes',
       note1: 'Use at your own risk. Please use them only in CPU battles (single player)',
       note2: 'The game itself is not distributed here',
