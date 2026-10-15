@@ -71,8 +71,22 @@
   summary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
   details ul { margin-top: 8px; }
   .date { color: var(--sub); font-weight: 500; font-size: 12px; margin-left: 6px; }
-  .log li { margin: 4px 0; }
-  .log b { color: var(--text); font-weight: 700; margin-right: 6px; }
+  .log { margin-top: 14px; }
+  .ent { position: relative; padding: 0 0 22px 22px; border-left: 2px solid var(--line); margin-left: 5px; }
+  .ent:last-child { padding-bottom: 0; border-left-color: transparent; }
+  .ent::before { content: ""; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--panel); border: 2px solid var(--sub); }
+  .ent:first-child::before { background: var(--gold); border-color: var(--gold); }
+  .ent .d { margin: 0 0 8px; font-size: 15px; font-weight: 800; line-height: 1.4; }
+  .ent:first-child .d { color: var(--gold); }
+  .grp { margin-top: 10px; }
+  .grp ul { margin-top: 4px; }
+  .grp li { margin: 3px 0; }
+  .tag { display: inline-block; margin-right: 6px; padding: 0 10px; border: 1px solid currentColor; border-radius: 999px; font-size: 12px; font-weight: 700; line-height: 1.8; }
+  .tag.all { color: var(--gold); }
+  .tag.oo { color: #5CC8F5; }
+  .tag.nu { color: #B9A2FF; }
+  .tag.reb { color: #6FD49C; }
+  .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 4px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
   footer { margin-top: 28px; font-size: 12px; color: var(--sub); text-align: center; }
   footer a { color: var(--sub); }
   @media (max-width: 480px) {
@@ -102,9 +116,9 @@
 
   <section class="card" id="all">
     <div class="trio">
-      <img src="reborns.jpg" alt="" width="960" height="540">
       <img src="nu.jpg" alt="" width="960" height="540">
       <img src="oo.jpg" alt="" width="960" height="540">
+      <img src="reborns.jpg" alt="" width="960" height="540">
     </div>
     <div class="body">
       <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
@@ -126,22 +140,22 @@
     </div>
   </section>
 
-  <section class="card" id="reborns">
-    <img class="hero" src="reborns.jpg" alt="リボーンズガンダム（EXVS風）" data-i18n-alt="altReborns" width="960" height="540" loading="lazy">
+  <section class="card" id="00raiser">
+    <img class="hero" src="oo.jpg" alt="ダブルオーライザー（EXVS風）" data-i18n-alt="altOo" width="960" height="540" loading="lazy">
     <div class="body">
       <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2 data-i18n="reborns">エクバ風リボーンズガンダム</h2>
-      <a class="dl" href="/reborns-gundam-exvs/NPJH50107.ini" data-href-en="/reborns-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
+      <h2 data-i18n="oo">エクバ風ダブルオーライザー</h2>
+      <a class="dl" href="/00-raiser-exvs/NPJH50107.ini" data-href-en="/00-raiser-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
         <span data-i18n="download">NPJH50107.ini をダウンロード</span>
       </a>
       <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
       <details>
-        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updReborns">更新 2026-10-16</span></summary>
-        <ul data-i18n="listReborns">
+        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updOo">更新 2026-10-15</span></summary>
+        <ul data-i18n="listOo">
           <li>EXVSシステム ／ カメラ視野角変更</li>
           <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
-          <li>リボーンズガンダム (EXVS風)（耐久620→650・射撃強化・格闘強化・機体各部を発光させる・勝利ポーズを後格闘に を1つにまとめたもの）</li>
+          <li>ダブルオーライザー (EXVS風)（GNソードIIIモード強化・格闘強化・TRANS-AM20秒・TRANS-AM強化・TRANS-AMのガードにGNフィールド・機体各部の発光 を1つにまとめたもの）</li>
         </ul>
       </details>
     </div>
@@ -168,22 +182,22 @@
     </div>
   </section>
 
-  <section class="card" id="00raiser">
-    <img class="hero" src="oo.jpg" alt="ダブルオーライザー（EXVS風）" data-i18n-alt="altOo" width="960" height="540" loading="lazy">
+  <section class="card" id="reborns">
+    <img class="hero" src="reborns.jpg" alt="リボーンズガンダム（EXVS風）" data-i18n-alt="altReborns" width="960" height="540" loading="lazy">
     <div class="body">
       <p class="game" data-i18n="game">機動戦士ガンダム ガンダムVS.ガンダムNEXT PLUS（NPJH50107）</p>
-      <h2 data-i18n="oo">エクバ風ダブルオーライザー</h2>
-      <a class="dl" href="/00-raiser-exvs/NPJH50107.ini" data-href-en="/00-raiser-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
+      <h2 data-i18n="reborns">エクバ風リボーンズガンダム</h2>
+      <a class="dl" href="/reborns-gundam-exvs/NPJH50107.ini" data-href-en="/reborns-gundam-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
         <span data-i18n="download">NPJH50107.ini をダウンロード</span>
       </a>
       <p class="meta" data-i18n="meta">CWCheat 形式 ／ PPSSPP v1.20.4（Windows）で確認</p>
       <details>
-        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updOo">更新 2026-10-15</span></summary>
-        <ul data-i18n="listOo">
+        <summary><span data-i18n="contents">入っているチート</span><span class="date" data-i18n="updReborns">更新 2026-10-16</span></summary>
+        <ul data-i18n="listReborns">
           <li>EXVSシステム ／ カメラ視野角変更</li>
           <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
-          <li>ダブルオーライザー (EXVS風)（GNソードIIIモード強化・格闘強化・TRANS-AM20秒・TRANS-AM強化・TRANS-AMのガードにGNフィールド・機体各部の発光 を1つにまとめたもの）</li>
+          <li>リボーンズガンダム (EXVS風)（耐久620→650・射撃強化・格闘強化・機体各部を発光させる・勝利ポーズを後格闘に を1つにまとめたもの）</li>
         </ul>
       </details>
     </div>
@@ -219,15 +233,85 @@
         <li data-i18n="note2">ゲーム本体の配布はしていません</li>
         <li data-i18n="note3">非公式のコードです。メーカー・権利者の方々とは一切関係ありません</li>
       </ul>
+    </div>
+  </section>
 
-      <h3 data-i18n="log">更新履歴</h3>
-      <ul class="log" data-i18n="logList">
-        <li><b>2026-10-16</b>リボーンズガンダム：5個のチートを「リボーンズガンダム (EXVS風)」1個にまとめました。ライフルのレンズの光り方を新しくし（ダブルオーライザーのGNコンデンサーと同じ作り）、ツインアイと額の光のちらつきを止めました。覚醒技の最中もファングが早く戻ったままになることがある点を直しました</li>
-        <li><b>2026-10-15</b>全機体統合版を追加。νガンダム：6個のチートを「νガンダム (EXVS風)」1個にまとめ、ファンネルが取り付き直すときの速さが効いていなかった点・覚醒技の最中にファンネルの動きが変わることがある点・新しい PPSSPP で正しく動かないおそれのある行を直しました。ダブルオーライザー：6個のチートを「ダブルオーライザー (EXVS風)」1個にまとめ、新しい PPSSPP で正しく動かないおそれのある行（TRANS-AM20秒など）と、TRANS-AMのまま試合が終わると次の試合で後ろからのガードが一瞬残る点を直しました。全機体：ダメージ表示が試合開始の演出の間に出ないようにし、「覚醒無限 (覚醒技撃ち放題)」を追加しました（最初は OFF）</li>
-        <li><b>2026-10-14</b>ダブルオーライザーを公開。リボーンズガンダム・νガンダム：新しい PPSSPP で落ちるおそれのある行を直しました</li>
-        <li><b>2026-10-09</b>νガンダムを公開。リボーンズガンダム：ダメージ表示を追加、勝利ポーズのチートがフリーバトルでも効くように</li>
-        <li><b>2026-10-03</b>リボーンズガンダムを公開</li>
-      </ul>
+  <section class="card" id="log">
+    <div class="body">
+      <h3 class="first" data-i18n="log">更新履歴</h3>
+      <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-10-16</p>
+          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+            <ul>
+              <li>5個のチートを「リボーンズガンダム (EXVS風)」1個にまとめました</li>
+              <li>ライフルのレンズの光り方を新しくしました（ダブルオーライザーのGNコンデンサーと同じ作り）</li>
+              <li>ツインアイと額の光のちらつきを止めました</li>
+              <li>覚醒技の最中もファングが早く戻ったままになることがある点を直しました</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ent">
+          <p class="d">2026-10-15</p>
+          <div class="grp"><span class="tag all">全機体</span>
+            <ul>
+              <li><span class="new">追加</span>全機体統合版</li>
+              <li><span class="new">追加</span>「覚醒無限 (覚醒技撃ち放題)」（最初は OFF）</li>
+              <li>ダメージ表示が試合開始の演出の間に出ないようにしました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+            <ul>
+              <li>6個のチートを「ダブルオーライザー (EXVS風)」1個にまとめました</li>
+              <li>新しい PPSSPP で正しく動かないおそれのある行（TRANS-AM20秒など）を直しました</li>
+              <li>TRANS-AMのまま試合が終わると、次の試合で後ろからのガードが一瞬残る点を直しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag nu">νガンダム</span>
+            <ul>
+              <li>6個のチートを「νガンダム (EXVS風)」1個にまとめました</li>
+              <li>ファンネルが取り付き直すときの速さが効いていなかった点を直しました</li>
+              <li>覚醒技の最中にファンネルの動きが変わることがある点を直しました</li>
+              <li>新しい PPSSPP で正しく動かないおそれのある行を直しました</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ent">
+          <p class="d">2026-10-14</p>
+          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+            <ul>
+              <li><span class="new">公開</span>ダブルオーライザーを公開しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag nu">νガンダム</span><span class="tag reb">リボーンズガンダム</span>
+            <ul>
+              <li>新しい PPSSPP で落ちるおそれのある行を直しました</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ent">
+          <p class="d">2026-10-09</p>
+          <div class="grp"><span class="tag nu">νガンダム</span>
+            <ul>
+              <li><span class="new">公開</span>νガンダムを公開しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+            <ul>
+              <li><span class="new">追加</span>ダメージ表示</li>
+              <li>勝利ポーズのチートがフリーバトルでも効くようにしました</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ent">
+          <p class="d">2026-10-03</p>
+          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+            <ul>
+              <li><span class="new">公開</span>リボーンズガンダムを公開しました</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -272,7 +356,55 @@
       listNu: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
       listOo: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
       log: 'Update history',
-      logList: '<li><b>2026-10-16</b>Reborns Gundam: merged the 5 cheats into one, “Reborns Gundam (EXVS Style)”. New glow for the rifle lens (made the same way as the 00 Raiser GN condensers), and the twin eyes and forehead glow no longer flicker. Fixed the fangs sometimes still returning faster during the awakening attack</li><li><b>2026-10-15</b>Added “All Units Combined”. Nu Gundam: merged the 6 cheats into one, “Nu Gundam (EXVS Style)”, and fixed the funnel re-attach speed not taking effect, the funnels sometimes moving differently during the awakening attack, and lines that might not work correctly on newer PPSSPP builds. 00 Raiser: merged the 6 cheats into one, “00 Raiser (EXVS Style)”, and fixed lines that might not work correctly on newer PPSSPP builds (such as TRANS-AM 20 sec) and the guard from behind briefly carrying over to the next match when a match ended during TRANS-AM. All units: damage numbers no longer appear during the match intro, and added “Infinite Awakening (Unlimited Awakening Attacks)” (OFF by default)</li><li><b>2026-10-14</b>Released 00 Raiser. Reborns Gundam / Nu Gundam: fixed lines that could crash newer PPSSPP builds</li><li><b>2026-10-09</b>Released Nu Gundam. Reborns Gundam: added damage numbers; the victory pose cheat now also works in Free Battle</li><li><b>2026-10-03</b>Released Reborns Gundam</li>',
+      logList:
+        '<div class="ent"><p class="d">2026-10-16</p>' +
+          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+            '<li>Merged the 5 cheats into one, “Reborns Gundam (EXVS Style)”</li>' +
+            '<li>New glow for the rifle lens (made the same way as the 00 Raiser GN condensers)</li>' +
+            '<li>The twin eyes and forehead glow no longer flicker</li>' +
+            '<li>Fixed the fangs sometimes still returning faster during the awakening attack</li>' +
+          '</ul></div>' +
+        '</div>' +
+        '<div class="ent"><p class="d">2026-10-15</p>' +
+          '<div class="grp"><span class="tag all">All units</span><ul>' +
+            '<li><span class="new">NEW</span>All Units Combined</li>' +
+            '<li><span class="new">NEW</span>“Infinite Awakening (Unlimited Awakening Attacks)” (OFF by default)</li>' +
+            '<li>Damage numbers no longer appear during the match intro</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+            '<li>Merged the 6 cheats into one, “00 Raiser (EXVS Style)”</li>' +
+            '<li>Fixed lines that might not work correctly on newer PPSSPP builds (such as TRANS-AM 20 sec)</li>' +
+            '<li>Fixed the guard from behind briefly carrying over to the next match when a match ended during TRANS-AM</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
+            '<li>Merged the 6 cheats into one, “Nu Gundam (EXVS Style)”</li>' +
+            '<li>Fixed the funnel re-attach speed not taking effect</li>' +
+            '<li>Fixed the funnels sometimes moving differently during the awakening attack</li>' +
+            '<li>Fixed lines that might not work correctly on newer PPSSPP builds</li>' +
+          '</ul></div>' +
+        '</div>' +
+        '<div class="ent"><p class="d">2026-10-14</p>' +
+          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+            '<li><span class="new">RELEASE</span>Released 00 Raiser</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag nu">Nu Gundam</span><span class="tag reb">Reborns Gundam</span><ul>' +
+            '<li>Fixed lines that could crash newer PPSSPP builds</li>' +
+          '</ul></div>' +
+        '</div>' +
+        '<div class="ent"><p class="d">2026-10-09</p>' +
+          '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
+            '<li><span class="new">RELEASE</span>Released Nu Gundam</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+            '<li><span class="new">NEW</span>Damage numbers</li>' +
+            '<li>The victory pose cheat now also works in Free Battle</li>' +
+          '</ul></div>' +
+        '</div>' +
+        '<div class="ent"><p class="d">2026-10-03</p>' +
+          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+            '<li><span class="new">RELEASE</span>Released Reborns Gundam</li>' +
+          '</ul></div>' +
+        '</div>',
       notes: 'Notes',
       note1: 'Use at your own risk. Please use them only in CPU battles (single player)',
       note2: 'The game itself is not distributed here',
