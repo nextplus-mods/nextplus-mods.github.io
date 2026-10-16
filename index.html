@@ -253,6 +253,7 @@
         <ul data-i18n="listAll">
           <li>EXVSシステム ／ カメラ視野角変更</li>
           <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
+          <li>BGMオフ (効果音・ボイスはそのまま)（最初は OFF）</li>
           <li>νガンダム用 1個・ダブルオーライザー用 1個・リボーンズガンダム用 1個（中身は下の機体ごとのファイルと同じです）</li>
         </ul>
       </details>
@@ -260,7 +261,7 @@
   </section>
 
   <div class="sec"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
-  <p class="common" data-i18n="common">どのファイルにも <b>EXVSシステム</b>・<b>カメラ視野角変更</b>・<b>覚醒無限 (覚醒技撃ち放題)</b>（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）が入っています</p>
+  <p class="common" data-i18n="common">どのファイルにも <b>EXVSシステム</b>・<b>カメラ視野角変更</b>・<b>覚醒無限 (覚醒技撃ち放題)</b>（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）・<b>BGMオフ (効果音・ボイスはそのまま)</b>（最初は OFF）が入っています</p>
   <div class="units">
     <article class="unit" id="nu" style="--u: var(--nu)">
       <div class="frame"><div class="in">
@@ -297,7 +298,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updOo">更新 2026-10-15</p>
+          <p class="meta" data-i18n="updOo">更新 2026-10-16</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listOo">
@@ -379,6 +380,7 @@
           <p class="d">2026-10-16</p>
           <div class="grp"><span class="tag all">全機体</span>
             <ul>
+              <li><span class="new">追加</span>「BGMオフ (効果音・ボイスはそのまま)」（最初は OFF）</li>
               <li>使い方に「チートのリフレッシュレートを 15 にする」を追加しました（初期値の 77 のままだと、チートが正しく動かないことがあります）</li>
             </ul>
           </div>
@@ -486,7 +488,7 @@
       series00: 'Mobile Suit Gundam 00',
       dlShort: 'Download',
       secUnits: 'Per-unit files',
-      common: 'Every file includes <b>EXVS System</b>, <b>Wider Camera FOV</b> and <b>Infinite Awakening (Unlimited Awakening Attacks)</b> (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)',
+      common: 'Every file includes <b>EXVS System</b>, <b>Wider Camera FOV</b>, <b>Infinite Awakening (Unlimited Awakening Attacks)</b> (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again) and <b>BGM Off (Sound Effects and Voices Stay)</b> (OFF by default)',
       howto: 'How to use',
       step1: 'In PPSSPP, go to Settings → System and turn on “Enable Cheats”',
       step2: 'Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
@@ -507,8 +509,8 @@
       updAll: 'Updated 2026-10-16',
       updReborns: 'Updated 2026-10-16',
       updNu: 'Updated 2026-10-16',
-      updOo: 'Updated 2026-10-15',
-      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>1 Nu Gundam cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
+      updOo: 'Updated 2026-10-16',
+      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
       listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
       listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
       listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
@@ -516,6 +518,7 @@
       logList:
         '<div class="ent"><p class="d">2026-10-16</p>' +
           '<div class="grp"><span class="tag all">All units</span><ul>' +
+            '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)” (OFF by default)</li>' +
             '<li>Added “Set the cheat Refresh interval to 15” to How to use (with the default value of 77, the cheats may not work correctly)</li>' +
           '</ul></div>' +
           '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
