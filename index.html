@@ -274,7 +274,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updNu">更新 2026-10-15</p>
+          <p class="meta" data-i18n="updNu">更新 2026-10-16</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listNu">
@@ -339,6 +339,7 @@
         <li data-i18n="step1">PPSSPP の「設定」→「システム」で「チートを有効化」を ON にする</li>
         <li data-i18n="step2">ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる（フォルダがなければ作る）<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
         <li data-i18n="step3">ゲームを起動し、メニューの「チート」で ON になっているか確かめる</li>
+        <li data-i18n="stepRefresh">同じ「チート」の画面で「リフレッシュレート」を <b>15</b> にする<br><span class="warn">初期値の 77 のままだと、チートが正しく動かないことがあります</span></li>
         <li data-i18n="step4">使いたい機体を <b>1P</b> で選んで試合を始める（チートは1Pの機体にだけ効きます）</li>
       </ol>
       <div class="subs">
@@ -376,6 +377,16 @@
       <div class="log" data-i18n="logList">
         <div class="ent">
           <p class="d">2026-10-16</p>
+          <div class="grp"><span class="tag all">全機体</span>
+            <ul>
+              <li>使い方に「チートのリフレッシュレートを 15 にする」を追加しました（初期値の 77 のままだと、チートが正しく動かないことがあります）</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag nu">νガンダム</span>
+            <ul>
+              <li>後特格のフィンファンネルバリアのリロード時間を、リフレッシュレート 15 で20秒になるように合わせました</li>
+            </ul>
+          </div>
           <div class="grp"><span class="tag reb">リボーンズガンダム</span>
             <ul>
               <li>5個のチートを「リボーンズガンダム (EXVS風)」1個にまとめました</li>
@@ -480,6 +491,7 @@
       step1: 'In PPSSPP, go to Settings → System and turn on “Enable Cheats”',
       step2: 'Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
       step3: 'Start the game and check in the “Cheats” menu that the cheats are turned on',
+      stepRefresh: 'On the same “Cheats” screen, set “Refresh interval” to <b>15</b><br><span class="warn">With the default value of 77, the cheats may not work correctly</span>',
       step4: 'Pick the unit as <b>Player 1</b> and start a battle (the cheats only affect Player 1’s unit)',
       where: 'Where is the PSP/Cheats folder?',
       whereWin: 'Windows: usually <code>Documents\\PPSSPP\\PSP\\Cheats</code>',
@@ -494,7 +506,7 @@
       contents: 'Included codes',
       updAll: 'Updated 2026-10-16',
       updReborns: 'Updated 2026-10-16',
-      updNu: 'Updated 2026-10-15',
+      updNu: 'Updated 2026-10-16',
       updOo: 'Updated 2026-10-15',
       listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>1 Nu Gundam cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
       listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
@@ -503,6 +515,12 @@
       log: 'Update history',
       logList:
         '<div class="ent"><p class="d">2026-10-16</p>' +
+          '<div class="grp"><span class="tag all">All units</span><ul>' +
+            '<li>Added “Set the cheat Refresh interval to 15” to How to use (with the default value of 77, the cheats may not work correctly)</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
+            '<li>Adjusted the Fin Funnel Barrier (back special melee) reload time to 20 seconds at Refresh interval 15</li>' +
+          '</ul></div>' +
           '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
             '<li>Merged the 5 cheats into one, “Reborns Gundam (EXVS Style)”</li>' +
             '<li>New glow for the rifle lens (made the same way as the 00 Raiser GN condensers)</li>' +
