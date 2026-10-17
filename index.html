@@ -380,13 +380,19 @@
           <p class="d">2026-10-17</p>
           <div class="grp"><span class="tag all">全機体</span>
             <ul>
-              <li>EXVSシステム：チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン）が正しく動かないことがあったのを直しました</li>
+              <li>EXVSシステム：チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン・リボーンズの後覚醒技）が正しく動かないことがあったのを直しました</li>
+              <li>EXVSシステム：自作コードを毎フレーム書き直してしまうことがあったのを直しました（動きは同じで、少し軽くなります）</li>
               <li>カメラ視野角変更：書き込み方を直しました（動きは同じです）</li>
             </ul>
           </div>
           <div class="grp"><span class="tag oo">ダブルオーライザー</span>
             <ul>
               <li>チートを試合の途中で ON にしたときなどに、刀身の光が出ないことがあったのを直しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+            <ul>
+              <li>自作コードを毎フレーム書き直してしまうことがあったのを直しました（動きは同じで、少し軽くなります）</li>
             </ul>
           </div>
         </div>
@@ -533,11 +539,15 @@
       logList:
         '<div class="ent"><p class="d">2026-10-17</p>' +
           '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li>EXVS System: fixed some features (guard behavior, rank icons) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+            '<li>EXVS System: fixed some features (guard behavior, rank icons, Reborns back Burst Attack) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+            '<li>EXVS System: custom code is no longer rewritten every frame in some cases (same behavior, slightly lighter)</li>' +
             '<li>FOV Camera Mod: changed how the value is written (same behavior)</li>' +
           '</ul></div>' +
           '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
             '<li>Fixed the blade glow sometimes not appearing, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+            '<li>Custom code is no longer rewritten every frame in some cases (same behavior, slightly lighter)</li>' +
           '</ul></div>' +
         '</div>' +
         '<div class="ent"><p class="d">2026-10-16</p>' +
