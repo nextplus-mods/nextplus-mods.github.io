@@ -245,7 +245,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updAll">更新 2026-10-16</p>
+          <p class="meta" data-i18n="updAll">更新 2026-10-17</p>
         </div>
       </div>
       <details>
@@ -275,7 +275,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updNu">更新 2026-10-16</p>
+          <p class="meta" data-i18n="updNu">更新 2026-10-17</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listNu">
@@ -298,7 +298,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updOo">更新 2026-10-16</p>
+          <p class="meta" data-i18n="updOo">更新 2026-10-17</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listOo">
@@ -321,7 +321,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updReborns">更新 2026-10-16</p>
+          <p class="meta" data-i18n="updReborns">更新 2026-10-17</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listReborns">
@@ -376,6 +376,20 @@
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-10-17</p>
+          <div class="grp"><span class="tag all">全機体</span>
+            <ul>
+              <li>EXVSシステム：チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン）が正しく動かないことがあったのを直しました</li>
+              <li>カメラ視野角変更：書き込み方を直しました（動きは同じです）</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+            <ul>
+              <li>チートを試合の途中で ON にしたときなどに、刀身の光が出ないことがあったのを直しました</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-10-16</p>
           <div class="grp"><span class="tag all">全機体</span>
@@ -507,16 +521,25 @@
       all: 'All Units Combined',
       allLead: 'Nu Gundam, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
       contents: 'Included codes',
-      updAll: 'Updated 2026-10-16',
-      updReborns: 'Updated 2026-10-16',
-      updNu: 'Updated 2026-10-16',
-      updOo: 'Updated 2026-10-16',
+      updAll: 'Updated 2026-10-17',
+      updReborns: 'Updated 2026-10-17',
+      updNu: 'Updated 2026-10-17',
+      updOo: 'Updated 2026-10-17',
       listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
       listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
       listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
       listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-10-17</p>' +
+          '<div class="grp"><span class="tag all">All units</span><ul>' +
+            '<li>EXVS System: fixed some features (guard behavior, rank icons) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+            '<li>FOV Camera Mod: changed how the value is written (same behavior)</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+            '<li>Fixed the blade glow sometimes not appearing, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-10-16</p>' +
           '<div class="grp"><span class="tag all">All units</span><ul>' +
             '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)” (OFF by default)</li>' +
