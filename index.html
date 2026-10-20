@@ -245,7 +245,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updAll">更新 2026-10-17</p>
+          <p class="meta" data-i18n="updAll">更新 2026-10-20</p>
         </div>
       </div>
       <details>
@@ -275,7 +275,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updNu">更新 2026-10-17</p>
+          <p class="meta" data-i18n="updNu">更新 2026-10-20</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listNu">
@@ -298,7 +298,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updOo">更新 2026-10-17</p>
+          <p class="meta" data-i18n="updOo">更新 2026-10-20</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listOo">
@@ -321,7 +321,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updReborns">更新 2026-10-17</p>
+          <p class="meta" data-i18n="updReborns">更新 2026-10-20</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listReborns">
@@ -377,13 +377,23 @@
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
         <div class="ent">
+          <p class="d">2026-10-20</p>
+          <div class="grp"><span class="tag all">全機体</span>
+            <ul>
+              <li>EXVSシステム：十字キーで前（↑）を入れながら L+R を押すと、覚醒技ではなくアシストが出てしまうことがあったのを直しました（ノーベルは今までどおり）</li>
+              <li>EXVSシステム：シールドで射撃を防いだあとの2秒間（受けるダメージ ×0.85）に減った分を、自機の被ダメージの数字（黄色）の右に水色で出すようにしました</li>
+              <li>EXVSシステム：ガンダムF91 の覚醒技のあとは、始める前の形態（BR モード／ヴェスバーモード）に戻るようにしました。覚醒技の最初の踏み込みを1.5倍にしました</li>
+              <li>EXVSシステム：覚醒技の最中に R+×（アシスト）を押すと、覚醒技が止まって何度でも出し直せてしまったのを直しました</li>
+              <li>EXVSシステム：リボーンズの後覚醒技の処理が、機体の組み合わせによっては関係のないデータを書き換えるおそれがあったのを直しました</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ent">
           <p class="d">2026-10-17</p>
           <div class="grp"><span class="tag all">全機体</span>
             <ul>
               <li>EXVSシステム：チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン・武装欄の数字・アシストの向き・リボーンズの後覚醒技）が正しく動かないことがあったのを直しました</li>
               <li>EXVSシステム・カメラ視野角変更・各機体：ゲームのコードや自作コードを毎フレーム書き直していた所を減らし、使っていない行を片付けました（動きは同じで、少し軽くなります）</li>
-              <li>EXVSシステム：覚醒技の最中に R+×（アシスト）を押すと、覚醒技が止まって何度でも出し直せてしまったのを直しました</li>
-              <li>EXVSシステム：リボーンズの後覚醒技の処理が、機体の組み合わせによっては関係のないデータを書き換えるおそれがあったのを直しました</li>
               <li>EXVSシステム：試合の始め（登場演出の間）に、自機の被ダメージの数字が出ることがあったのを直しました</li>
               <li>カメラ視野角変更：書き込み方を直しました（動きは同じです）</li>
             </ul>
@@ -532,22 +542,29 @@
       all: 'All Units Combined',
       allLead: 'Nu Gundam, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
       contents: 'Included codes',
-      updAll: 'Updated 2026-10-17',
-      updReborns: 'Updated 2026-10-17',
-      updNu: 'Updated 2026-10-17',
-      updOo: 'Updated 2026-10-17',
+      updAll: 'Updated 2026-10-20',
+      updReborns: 'Updated 2026-10-20',
+      updNu: 'Updated 2026-10-20',
+      updOo: 'Updated 2026-10-20',
       listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
       listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
       listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
       listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-10-20</p>' +
+          '<div class="grp"><span class="tag all">All units</span><ul>' +
+            '<li>EXVS System: pressing L+R while holding forward (Up) on the D-pad sometimes called the assist instead of the Burst Attack; fixed (Nobel unchanged)</li>' +
+            '<li>EXVS System: the damage cut during the 2 seconds after blocking a shot with the shield (damage taken x0.85) is now shown in light blue to the right of your damage-taken number (yellow)</li>' +
+            '<li>EXVS System: after the Gundam F91 Burst Attack, the unit returns to the form it was in before (BR mode / V.S.B.R. mode); the first lunge of the Burst Attack is now 1.5x</li>' +
+            '<li>EXVS System: pressing R+X (assist) during the Burst Attack stopped it and let you use it again and again; fixed</li>' +
+            '<li>EXVS System: the Reborns back Burst Attack code could overwrite unrelated data with some unit combinations; fixed</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-10-17</p>' +
           '<div class="grp"><span class="tag all">All units</span><ul>' +
             '<li>EXVS System: fixed some features (guard behavior, rank icons, weapon digits, assist facing, Reborns back Burst Attack) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
             '<li>EXVS System, FOV Camera Mod and each unit: fewer places rewrite game code or custom code every frame, and unused lines were removed (same behavior, slightly lighter)</li>' +
-            '<li>EXVS System: pressing R+X (assist) during the Burst Attack stopped it and let you use it again and again; fixed</li>' +
-            '<li>EXVS System: the Reborns back Burst Attack code could overwrite unrelated data with some unit combinations; fixed</li>' +
             '<li>EXVS System: fixed your own damage-taken number sometimes appearing at the start of a match (during the entry animation)</li>' +
             '<li>FOV Camera Mod: changed how the value is written (same behavior)</li>' +
           '</ul></div>' +
