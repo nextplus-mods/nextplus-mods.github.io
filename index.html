@@ -257,7 +257,7 @@
           <li>EXVSシステム ／ カメラ視野角変更</li>
           <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
           <li>BGMオフ (効果音・ボイスはそのまま)（最初は OFF）</li>
-          <li>νガンダム用 1個・ガンダムF91用 2個（M.E.P.E.永続 は最初は OFF）・ダブルオーライザー用 1個・リボーンズガンダム用 1個（中身は下の機体ごとのファイルと同じです）</li>
+          <li>νガンダム用 1個・ガンダムF91用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（M.E.P.E.永続・TRANS-AM永続 は最初は OFF。中身は下の機体ごとのファイルと同じです）</li>
         </ul>
       </details>
     </div></div>
@@ -330,6 +330,7 @@
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listOo">
               <li>ダブルオーライザー (EXVS風)（GNソードIIIモード強化・格闘強化・TRANS-AM20秒・TRANS-AM強化・TRANS-AMのガードにGNフィールド・機体各部の発光 を1つにまとめたもの）</li>
+              <li>ダブルオーライザー (TRANS-AM永続)（最初は OFF。ON にすると、TRANS-AM のゲージがいつも最大で、発動したら時間で解けない）</li>
             </ul>
           </details>
         </div>
@@ -353,6 +354,7 @@
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listReborns">
               <li>リボーンズガンダム (EXVS風)（耐久620→650・射撃強化・格闘強化・機体各部を発光させる・勝利ポーズを後格闘に を1つにまとめたもの）</li>
+              <li>リボーンズガンダム (TRANS-AM永続)（最初は OFF。ON にすると、TRANS-AM のゲージがいつも最大で、発動したら時間で解けない）</li>
             </ul>
           </details>
         </div>
@@ -409,6 +411,16 @@
             <ul>
               <li><span class="new">公開</span>ガンダムF91を公開しました</li>
               <li><span class="new">追加</span>「ガンダムF91 (M.E.P.E.永続)」（最初は OFF）</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+            <ul>
+              <li><span class="new">追加</span>「ダブルオーライザー (TRANS-AM永続)」（最初は OFF）</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+            <ul>
+              <li><span class="new">追加</span>「リボーンズガンダム (TRANS-AM永続)」（最初は OFF）</li>
             </ul>
           </div>
           <div class="grp"><span class="tag all">全機体</span>
@@ -591,17 +603,23 @@
       updNu: 'Updated 2026-10-22',
       updOo: 'Updated 2026-10-22',
       updF91: 'Updated 2026-10-22',
-      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats (Infinite M.E.P.E. is OFF by default), 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
-      listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
+      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats, 2 00 Raiser cheats, 2 Reborns Gundam cheats (Infinite M.E.P.E. and Infinite TRANS-AM are OFF by default; the same as in the per-unit files below)</li>',
+      listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li><li>Reborns Gundam (Infinite TRANS-AM) (OFF by default. When ON, the TRANS-AM gauge is always full, and once activated TRANS-AM does not run out)</li>',
       listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
       listF91: '<li>Gundam F91 (EXVS Style) (BR mode and VSBR mode merged, Shooting Buffs, Melee Buffs, M.E.P.E. Buffs, Automatic Vulcan Interception, Assist Buff and more in one cheat)</li><li>Gundam F91 (Infinite M.E.P.E.) (OFF by default. When ON, the M.E.P.E. gauge is always full, and once activated M.E.P.E. does not run out)</li>',
-      listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
+      listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li><li>00 Raiser (Infinite TRANS-AM) (OFF by default. When ON, the TRANS-AM gauge is always full, and once activated TRANS-AM does not run out)</li>',
       log: 'Update history',
       logList:
         '<div class="ent"><p class="d">2026-10-22</p>' +
           '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
             '<li><span class="new">RELEASE</span>Released Gundam F91</li>' +
             '<li><span class="new">NEW</span>“Gundam F91 (Infinite M.E.P.E.)” (OFF by default)</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+            '<li><span class="new">NEW</span>“00 Raiser (Infinite TRANS-AM)” (OFF by default)</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+            '<li><span class="new">NEW</span>“Reborns Gundam (Infinite TRANS-AM)” (OFF by default)</li>' +
           '</ul></div>' +
           '<div class="grp"><span class="tag all">All units</span><ul>' +
             '<li>EXVS System: when the awakened unit was targeting something that is not a unit (such as Rafflesia’s bugs), shots and effects sometimes stopped appearing; fixed</li>' +
