@@ -24,6 +24,7 @@
     --nu: #B9A2FF;
     --oo: #5CC8F5;
     --reb: #6FD49C;
+    --f91: #FF7438;
     --cut: 16px;
     --latin: "Rajdhani", "Murecho", sans-serif;
   }
@@ -82,7 +83,7 @@
 
   /* All Units Combined */
   .feature .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 28%, var(--line-hi) 72%, var(--gold)); }
-  .trio { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #000; }
+  .trio { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #000; }
   .trio img { display: block; width: 100%; height: auto; }
   .trio::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
   .fb { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: center; padding: 24px 28px 4px; }
@@ -110,7 +111,7 @@
   .meta { margin: 8px 0 0; text-align: center; font-size: 12px; color: var(--sub); }
 
   /* unit cards */
-  .units { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .units { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
   .unit { transition: transform .2s, filter .2s; }
   .unit:hover { transform: translateY(-3px); filter: drop-shadow(0 0 14px color-mix(in srgb, var(--u) 38%, transparent)); }
   .unit .frame { background: linear-gradient(160deg, var(--u), var(--line-hi) 32%, var(--line-hi) 68%, var(--u)); }
@@ -166,6 +167,7 @@
   .tag.oo { color: var(--oo); }
   .tag.nu { color: var(--nu); }
   .tag.reb { color: var(--reb); }
+  .tag.f91 { color: var(--f91); }
   .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 3px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
   .log .older { margin: 0; padding: 0; border: 0; }
   .log .older > summary { margin: 0 0 0 5px; padding: 0 0 18px 22px; border-left: 2px solid var(--line-hi); font-size: 14px; }
@@ -231,6 +233,7 @@
     <div class="frame"><div class="in">
       <div class="trio">
         <img src="nu.jpg" alt="" width="960" height="540">
+        <img src="f91.jpg" alt="" width="960" height="540">
         <img src="oo.jpg" alt="" width="960" height="540">
         <img src="reborns.jpg" alt="" width="960" height="540">
       </div>
@@ -238,14 +241,14 @@
         <div>
           <span class="badge">ALL UNITS</span>
           <h2 data-i18n="all">全機体統合版</h2>
-          <p class="lead" data-i18n="allLead">νガンダム・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
+          <p class="lead" data-i18n="allLead">νガンダム・ガンダムF91・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
         </div>
         <div>
           <a class="dl" href="/all/NPJH50107.ini" data-href-en="/all/en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updAll">更新 2026-10-20</p>
+          <p class="meta" data-i18n="updAll">更新 2026-10-22</p>
         </div>
       </div>
       <details>
@@ -254,7 +257,7 @@
           <li>EXVSシステム ／ カメラ視野角変更</li>
           <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
           <li>BGMオフ (効果音・ボイスはそのまま)（最初は OFF）</li>
-          <li>νガンダム用 1個・ダブルオーライザー用 1個・リボーンズガンダム用 1個（中身は下の機体ごとのファイルと同じです）</li>
+          <li>νガンダム用 1個・ガンダムF91用 1個・ダブルオーライザー用 1個・リボーンズガンダム用 1個（中身は下の機体ごとのファイルと同じです）</li>
         </ul>
       </details>
     </div></div>
@@ -275,11 +278,34 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updNu">更新 2026-10-20</p>
+          <p class="meta" data-i18n="updNu">更新 2026-10-22</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listNu">
               <li>νガンダム (EXVS風)（メイン射撃の見た目変更・射撃CS強化・フィンファンネル強化・フィンファンネルの位置矯正・格闘強化・後特格でフィンファンネルバリア展開 を1つにまとめたもの）</li>
+            </ul>
+          </details>
+        </div>
+      </div></div>
+    </article>
+
+    <article class="unit" id="f91" style="--u: var(--f91)">
+      <div class="frame"><div class="in">
+        <div class="shot"><img src="f91.jpg" alt="ガンダムF91（EXVS風）" data-i18n-alt="altF91" width="960" height="540" loading="lazy"></div>
+        <div class="ub">
+          <div class="grow">
+            <p class="series" data-i18n="seriesF91">機動戦士ガンダムF91</p>
+            <h3 data-i18n="f91">EXVS風ガンダムF91</h3>
+          </div>
+          <a class="dl" href="/gundam-f91-exvs/NPJH50107.ini" data-href-en="/gundam-f91-exvs/en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updF91">更新 2026-10-22</p>
+          <details>
+            <summary><span data-i18n="contents">入っているコード</span></summary>
+            <ul data-i18n="listF91">
+              <li>ガンダムF91 (EXVS風)（BRモードとヴェスバーモードの統合・射撃強化・格闘強化・M.E.P.E.強化・バルカンの自動迎撃・アシスト強化 などを1つにまとめたもの）</li>
             </ul>
           </details>
         </div>
@@ -298,7 +324,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updOo">更新 2026-10-20</p>
+          <p class="meta" data-i18n="updOo">更新 2026-10-22</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listOo">
@@ -321,7 +347,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updReborns">更新 2026-10-20</p>
+          <p class="meta" data-i18n="updReborns">更新 2026-10-22</p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listReborns">
@@ -376,6 +402,20 @@
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-10-22</p>
+          <div class="grp"><span class="tag f91">ガンダムF91</span>
+            <ul>
+              <li><span class="new">公開</span>ガンダムF91を公開しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag all">全機体</span>
+            <ul>
+              <li>EXVSシステム：覚醒して狙っている相手が機体でないとき（ラフレシアのバグなど）、弾やエフェクトが出なくなることがあったのを直しました</li>
+              <li>EXVSシステム：ゴッドガンダム・マスターガンダム・∀ガンダムで、覚醒中についた光・ダメージアップ・強化の演出（∀ガンダムは羽も）が覚醒のあとも残っていたのを、覚醒の前に戻すようにしました（1P のみ）</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-10-20</p>
           <div class="grp"><span class="tag all">全機体</span>
@@ -520,7 +560,9 @@
       reborns: 'EXVS-Style Reborns Gundam',
       nu: 'EXVS-Style Nu Gundam',
       oo: 'EXVS-Style 00 Raiser',
+      f91: 'EXVS-Style Gundam F91',
       seriesNu: 'Char’s Counterattack',
+      seriesF91: 'Mobile Suit Gundam F91',
       series00: 'Mobile Suit Gundam 00',
       dlShort: 'Download',
       secUnits: 'Per-unit files',
@@ -540,18 +582,29 @@
       tip3: 'Make sure the game ID is <code>NPJH50107</code> (Japanese version). Other versions are not supported',
       oneFile: 'All files have the same name, and only one of them can be in <code>PSP/Cheats</code> at a time. To use all units, pick “All Units Combined”',
       all: 'All Units Combined',
-      allLead: 'Nu Gundam, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
+      allLead: 'Nu Gundam, Gundam F91, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
       contents: 'Included codes',
-      updAll: 'Updated 2026-10-20',
-      updReborns: 'Updated 2026-10-20',
-      updNu: 'Updated 2026-10-20',
-      updOo: 'Updated 2026-10-20',
-      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
+      updAll: 'Updated 2026-10-22',
+      updReborns: 'Updated 2026-10-22',
+      updNu: 'Updated 2026-10-22',
+      updOo: 'Updated 2026-10-22',
+      updF91: 'Updated 2026-10-22',
+      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 1 Gundam F91 cheat, 1 00 Raiser cheat, 1 Reborns Gundam cheat (the same as in the per-unit files below)</li>',
       listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li>',
       listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
+      listF91: '<li>Gundam F91 (EXVS Style) (BR mode and VSBR mode merged, Shooting Buffs, Melee Buffs, M.E.P.E. Buffs, Automatic Vulcan Interception, Assist Buff and more in one cheat)</li>',
       listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li>',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-10-22</p>' +
+          '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
+            '<li><span class="new">RELEASE</span>Released Gundam F91</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag all">All units</span><ul>' +
+            '<li>EXVS System: when the awakened unit was targeting something that is not a unit (such as Rafflesia’s bugs), shots and effects sometimes stopped appearing; fixed</li>' +
+            '<li>EXVS System: for God Gundam, Master Gundam and Turn A Gundam, the glow, damage boost and power-up effect gained during awakening (and Turn A’s wings) stayed after awakening ended; they now return to how they were before awakening (Player 1 only)</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-10-20</p>' +
           '<div class="grp"><span class="tag all">All units</span><ul>' +
             '<li>EXVS System: pressing L+R while holding forward (Up) on the D-pad sometimes called the assist instead of the Burst Attack; fixed (Nobel unchanged)</li>' +
@@ -642,7 +695,8 @@
       youtube: 'YouTube: NEXT PLUS Mods',
       altReborns: 'Reborns Gundam (EXVS-style)',
       altNu: 'Nu Gundam (EXVS-style)',
-      altOo: '00 Raiser (EXVS-style)'
+      altOo: '00 Raiser (EXVS-style)',
+      altF91: 'Gundam F91 (EXVS-style)'
     };
     var JA = {};
     var texts = document.querySelectorAll('[data-i18n]');
