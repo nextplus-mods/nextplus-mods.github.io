@@ -165,6 +165,7 @@
   .grp li { margin: 3px 0; }
   .tag { display: inline-block; margin-right: 6px; padding: 0 10px; border: 1px solid currentColor; border-radius: 3px; font-size: 12px; font-weight: 700; line-height: 1.8; }
   .tag.all { color: var(--gold); }
+  .tag.sys { color: var(--text); }
   .tag.oo { color: var(--oo); }
   .tag.nu { color: var(--nu); }
   .tag.reb { color: var(--reb); }
@@ -409,14 +410,18 @@
       <div class="log" data-i18n="logList">
         <div class="ent">
           <p class="d">2026-10-24</p>
+          <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
+            <ul>
+              <li>僚機の表示を並べ直し、僚機のアイコンの右に耐久と僚機の覚醒ゲージを表示するようにしました（覚醒ゲージには覚醒できる所に目盛りがあります）</li>
+              <li>自機の覚醒ゲージの数字の下に、僚機と同じ覚醒ゲージの棒と、覚醒できる所の目盛りを表示するようにしました</li>
+              <li>アーケードの一部のステージで、僚機の覚醒のカットインに前の試合の僚機の顔が出ることがあったのを直しました（そのステージでは僚機のカットインは出ません）</li>
+              <li>自機と僚機の覚醒ゲージで、覚醒できる量を越えた分を緑で表示するようにしました（境目はグラデーション、目盛りは棒の中）</li>
+              <li>自機の覚醒ゲージ（数字・アイコン・棒）を耐久とブーストゲージの間に移して小さくし、自機の機体名の表示を消しました</li>
+              <li>3P〜5PのCPUがガンダムDXのときの処理や、5PのCPUのダウンの処理などにあった、元のコードの写し間違いを直しました</li>
+            </ul>
+          </div>
           <div class="grp"><span class="tag all">全機体</span>
             <ul>
-              <li>EXVSシステム：僚機の表示を並べ直し、僚機のアイコンの右に耐久と僚機の覚醒ゲージを表示するようにしました（覚醒ゲージには覚醒できる所に目盛りがあります）</li>
-              <li>EXVSシステム：自機の覚醒ゲージの数字の下に、僚機と同じ覚醒ゲージの棒と、覚醒できる所の目盛りを表示するようにしました</li>
-              <li>EXVSシステム：アーケードの一部のステージで、僚機の覚醒のカットインに前の試合の僚機の顔が出ることがあったのを直しました（そのステージでは僚機のカットインは出ません）</li>
-              <li>EXVSシステム：自機と僚機の覚醒ゲージで、覚醒できる量を越えた分を緑で表示するようにしました（境目はグラデーション、目盛りは棒の中）</li>
-              <li>EXVSシステム：自機の覚醒ゲージ（数字・アイコン・棒）を耐久とブーストゲージの間に移して小さくし、自機の機体名の表示を消しました</li>
-              <li>EXVSシステム：3P〜5PのCPUがガンダムDXのときの処理や、5PのCPUのダウンの処理などにあった、元のコードの写し間違いを直しました</li>
               <li>「うまく動かないとき」に「動きが重いときは CPU クロックを 666 にする」を追加しました</li>
             </ul>
           </div>
@@ -428,11 +433,11 @@
               <li>試合の始めやBRモードに戻ったときに、武装欄の数字や色が一瞬だけ前の状態で出ることがあったのを直しました</li>
             </ul>
           </div>
-          <div class="grp"><span class="tag all">全機体</span>
+          <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
             <ul>
-              <li><span class="new">追加</span>EXVSシステム：僚機が覚醒したときに、1P と同じ覚醒のカットインが出るようにしました</li>
-              <li><span class="new">追加</span>EXVSシステム：僚機コマンド表示の上に、僚機の機体アイコンと今の耐久を表示するようにしました（耐久は自機と同じく、減ると黄・赤に点滅します）</li>
-              <li>EXVSシステム：動きは変えずにコードを短くしました（「1P の格闘中は味方CPUが別の敵を狙う」の書き直しなど）</li>
+              <li><span class="new">追加</span>僚機が覚醒したときに、1P と同じ覚醒のカットインが出るようにしました</li>
+              <li><span class="new">追加</span>僚機コマンド表示の上に、僚機の機体アイコンと今の耐久を表示するようにしました（耐久は自機と同じく、減ると黄・赤に点滅します）</li>
+              <li>動きは変えずにコードを短くしました（「1P の格闘中は味方CPUが別の敵を狙う」の書き直しなど）</li>
             </ul>
           </div>
         </div>
@@ -456,32 +461,36 @@
                 <li><span class="new">追加</span>「リボーンズガンダム (TRANS-AM永続)」（最初は OFF）</li>
               </ul>
             </div>
-            <div class="grp"><span class="tag all">全機体</span>
+            <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
               <ul>
-                <li>EXVSシステム：覚醒して狙っている相手が機体でないとき（ラフレシアのバグなど）、弾やエフェクトが出なくなることがあったのを直しました</li>
-                <li>EXVSシステム：ゴッドガンダム・マスターガンダム・∀ガンダムで、覚醒中についた光・ダメージアップ・強化の演出（∀ガンダムは羽も）が覚醒のあとも残っていたのを、覚醒の前に戻すようにしました（1P のみ）</li>
+                <li>覚醒して狙っている相手が機体でないとき（ラフレシアのバグなど）、弾やエフェクトが出なくなることがあったのを直しました</li>
+                <li>ゴッドガンダム・マスターガンダム・∀ガンダムで、覚醒中についた光・ダメージアップ・強化の演出（∀ガンダムは羽も）が覚醒のあとも残っていたのを、覚醒の前に戻すようにしました（1P のみ）</li>
               </ul>
             </div>
           </div>
           <div class="ent">
             <p class="d">2026-10-20</p>
-            <div class="grp"><span class="tag all">全機体</span>
+            <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
               <ul>
-                <li>EXVSシステム：十字キーで前（↑）を入れながら L+R を押すと、覚醒技ではなくアシストが出てしまうことがあったのを直しました（ノーベルは今までどおり）</li>
-                <li>EXVSシステム：シールドで射撃を防いだあとの2秒間（受けるダメージ ×0.85）に減った分を、自機の被ダメージの数字（黄色）の右に水色で出すようにしました</li>
-                <li>EXVSシステム：ガンダムF91 の覚醒技のあとは、始める前の形態（BR モード／ヴェスバーモード）に戻るようにしました。覚醒技の最初の踏み込みを1.5倍にしました</li>
-                <li>EXVSシステム：覚醒技の最中に R+×（アシスト）を押すと、覚醒技が止まって何度でも出し直せてしまったのを直しました</li>
-                <li>EXVSシステム：リボーンズの後覚醒技の処理が、機体の組み合わせによっては関係のないデータを書き換えるおそれがあったのを直しました</li>
+                <li>十字キーで前（↑）を入れながら L+R を押すと、覚醒技ではなくアシストが出てしまうことがあったのを直しました（ノーベルは今までどおり）</li>
+                <li>シールドで射撃を防いだあとの2秒間（受けるダメージ ×0.85）に減った分を、自機の被ダメージの数字（黄色）の右に水色で出すようにしました</li>
+                <li>ガンダムF91 の覚醒技のあとは、始める前の形態（BR モード／ヴェスバーモード）に戻るようにしました。覚醒技の最初の踏み込みを1.5倍にしました</li>
+                <li>覚醒技の最中に R+×（アシスト）を押すと、覚醒技が止まって何度でも出し直せてしまったのを直しました</li>
+                <li>リボーンズの後覚醒技の処理が、機体の組み合わせによっては関係のないデータを書き換えるおそれがあったのを直しました</li>
               </ul>
             </div>
           </div>
           <div class="ent">
             <p class="d">2026-10-17</p>
+            <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
+              <ul>
+                <li>チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン・武装欄の数字・アシストの向き・リボーンズの後覚醒技）が正しく動かないことがあったのを直しました</li>
+                <li>試合の始め（登場演出の間）に、自機の被ダメージの数字が出ることがあったのを直しました</li>
+              </ul>
+            </div>
             <div class="grp"><span class="tag all">全機体</span>
               <ul>
-                <li>EXVSシステム：チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン・武装欄の数字・アシストの向き・リボーンズの後覚醒技）が正しく動かないことがあったのを直しました</li>
                 <li>EXVSシステム・カメラ視野角変更・各機体：ゲームのコードや自作コードを毎フレーム書き直していた所を減らし、使っていない行を片付けました（動きは同じで、少し軽くなります）</li>
-                <li>EXVSシステム：試合の始め（登場演出の間）に、自機の被ダメージの数字が出ることがあったのを直しました</li>
                 <li>カメラ視野角変更：書き込み方を直しました（動きは同じです）</li>
               </ul>
             </div>
@@ -500,10 +509,14 @@
           </div>
           <div class="ent">
             <p class="d">2026-10-16</p>
+            <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
+              <ul>
+                <li>特殊射撃・特殊格闘のボタンを押し続けても、技のあとにジャンプ（上昇）しないようにしました（1P のみ）</li>
+              </ul>
+            </div>
             <div class="grp"><span class="tag all">全機体</span>
               <ul>
                 <li><span class="new">追加</span>「BGMオフ (効果音・ボイスはそのまま)」（最初は OFF）</li>
-                <li>EXVSシステム：特殊射撃・特殊格闘のボタンを押し続けても、技のあとにジャンプ（上昇）しないようにしました（1P のみ）</li>
                 <li>使い方に「チートのリフレッシュレートを 16 にする」を追加しました（初期値の 77 のままだと、チートが正しく動かないことがあります）</li>
               </ul>
             </div>
@@ -643,13 +656,15 @@
       log: 'Update history',
       logList:
         '<div class="ent"><p class="d">2026-10-24</p>' +
+          '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+            '<li>The partner display has been rearranged; the partner’s HP and Burst gauge are now shown to the right of the partner’s unit icon (the Burst gauge has a mark where Burst becomes available)</li>' +
+            '<li>Under your Burst gauge number, the same Burst gauge bar as the partner’s, with a mark where Burst becomes available, is now shown</li>' +
+            '<li>On some Arcade stages, the partner’s Burst cut-in sometimes showed the previous match’s partner’s face; fixed (on those stages the partner’s cut-in is not shown)</li>' +
+            '<li>On your and the partner’s Burst gauges, the part above the amount needed for Burst is now shown in green (with a gradient at the boundary and the mark inside the bar)</li>' +
+            '<li>Your Burst gauge (number, icon and bar) has been moved between your HP and the Boost gauge and made smaller, and your unit name is no longer shown</li>' +
+            '<li>Fixed copy mistakes in the original code, such as in the handling for 3P–5P CPUs using Gundam DX and for the 5P CPU’s downs</li>' +
+          '</ul></div>' +
           '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li>EXVS System: the partner display has been rearranged; the partner’s HP and Burst gauge are now shown to the right of the partner’s unit icon (the Burst gauge has a mark where Burst becomes available)</li>' +
-            '<li>EXVS System: under your Burst gauge number, the same Burst gauge bar as the partner’s, with a mark where Burst becomes available, is now shown</li>' +
-            '<li>EXVS System: on some Arcade stages, the partner’s Burst cut-in sometimes showed the previous match’s partner’s face; fixed (on those stages the partner’s cut-in is not shown)</li>' +
-            '<li>EXVS System: on your and the partner’s Burst gauges, the part above the amount needed for Burst is now shown in green (with a gradient at the boundary and the mark inside the bar)</li>' +
-            '<li>EXVS System: your Burst gauge (number, icon and bar) has been moved between your HP and the Boost gauge and made smaller, and your unit name is no longer shown</li>' +
-            '<li>EXVS System: fixed copy mistakes in the original code, such as in the handling for 3P–5P CPUs using Gundam DX and for the 5P CPU’s downs</li>' +
             '<li>Added “If the game slows down, set the CPU clock to 666” to If it doesn’t work</li>' +
           '</ul></div>' +
         '</div>' +
@@ -657,10 +672,10 @@
           '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
             '<li>At the start of a match or when returning to BR mode, the weapon gauge numbers and colors sometimes showed the previous state for a moment; fixed</li>' +
           '</ul></div>' +
-          '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li><span class="new">NEW</span>EXVS System: when your CPU partner Bursts, the same Burst cut-in as Player 1 is now shown</li>' +
-            '<li><span class="new">NEW</span>EXVS System: the partner’s unit icon and current HP are now shown above the partner command display (the HP flashes yellow and red when low, like your own)</li>' +
-            '<li>EXVS System: shorter code with the same behavior (such as rewriting “ally CPU targets another enemy while Player 1 is in melee”)</li>' +
+          '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+            '<li><span class="new">NEW</span>When your CPU partner Bursts, the same Burst cut-in as Player 1 is now shown</li>' +
+            '<li><span class="new">NEW</span>The partner’s unit icon and current HP are now shown above the partner command display (the HP flashes yellow and red when low, like your own)</li>' +
+            '<li>Shorter code with the same behavior (such as rewriting “ally CPU targets another enemy while Player 1 is in melee”)</li>' +
           '</ul></div>' +
         '</div>' +
         '<details class="older"><summary>Earlier updates</summary>' +
@@ -675,25 +690,27 @@
             '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
               '<li><span class="new">NEW</span>“Reborns Gundam (Infinite TRANS-AM)” (OFF by default)</li>' +
             '</ul></div>' +
-            '<div class="grp"><span class="tag all">All units</span><ul>' +
-              '<li>EXVS System: when the awakened unit was targeting something that is not a unit (such as Rafflesia’s bugs), shots and effects sometimes stopped appearing; fixed</li>' +
-              '<li>EXVS System: for God Gundam, Master Gundam and Turn A Gundam, the glow, damage boost and power-up effect gained during awakening (and Turn A’s wings) stayed after awakening ended; they now return to how they were before awakening (Player 1 only)</li>' +
+            '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+              '<li>When the awakened unit was targeting something that is not a unit (such as Rafflesia’s bugs), shots and effects sometimes stopped appearing; fixed</li>' +
+              '<li>For God Gundam, Master Gundam and Turn A Gundam, the glow, damage boost and power-up effect gained during awakening (and Turn A’s wings) stayed after awakening ended; they now return to how they were before awakening (Player 1 only)</li>' +
             '</ul></div>' +
           '</div>' +
           '<div class="ent"><p class="d">2026-10-20</p>' +
-            '<div class="grp"><span class="tag all">All units</span><ul>' +
-              '<li>EXVS System: pressing L+R while holding forward (Up) on the D-pad sometimes called the assist instead of the Burst Attack; fixed (Nobel unchanged)</li>' +
-              '<li>EXVS System: the damage cut during the 2 seconds after blocking a shot with the shield (damage taken x0.85) is now shown in light blue to the right of your damage-taken number (yellow)</li>' +
-              '<li>EXVS System: after the Gundam F91 Burst Attack, the unit returns to the form it was in before (BR mode / V.S.B.R. mode); the first lunge of the Burst Attack is now 1.5x</li>' +
-              '<li>EXVS System: pressing R+X (assist) during the Burst Attack stopped it and let you use it again and again; fixed</li>' +
-              '<li>EXVS System: the Reborns back Burst Attack code could overwrite unrelated data with some unit combinations; fixed</li>' +
+            '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+              '<li>Pressing L+R while holding forward (Up) on the D-pad sometimes called the assist instead of the Burst Attack; fixed (Nobel unchanged)</li>' +
+              '<li>The damage cut during the 2 seconds after blocking a shot with the shield (damage taken x0.85) is now shown in light blue to the right of your damage-taken number (yellow)</li>' +
+              '<li>After the Gundam F91 Burst Attack, the unit returns to the form it was in before (BR mode / V.S.B.R. mode); the first lunge of the Burst Attack is now 1.5x</li>' +
+              '<li>Pressing R+X (assist) during the Burst Attack stopped it and let you use it again and again; fixed</li>' +
+              '<li>The Reborns back Burst Attack code could overwrite unrelated data with some unit combinations; fixed</li>' +
             '</ul></div>' +
           '</div>' +
           '<div class="ent"><p class="d">2026-10-17</p>' +
+            '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+              '<li>Fixed some features (guard behavior, rank icons, weapon digits, assist facing, Reborns back Burst Attack) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+              '<li>Fixed your own damage-taken number sometimes appearing at the start of a match (during the entry animation)</li>' +
+            '</ul></div>' +
             '<div class="grp"><span class="tag all">All units</span><ul>' +
-              '<li>EXVS System: fixed some features (guard behavior, rank icons, weapon digits, assist facing, Reborns back Burst Attack) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
               '<li>EXVS System, FOV Camera Mod and each unit: fewer places rewrite game code or custom code every frame, and unused lines were removed (same behavior, slightly lighter)</li>' +
-              '<li>EXVS System: fixed your own damage-taken number sometimes appearing at the start of a match (during the entry animation)</li>' +
               '<li>FOV Camera Mod: changed how the value is written (same behavior)</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
@@ -706,9 +723,11 @@
             '</ul></div>' +
           '</div>' +
           '<div class="ent"><p class="d">2026-10-16</p>' +
+            '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+              '<li>Holding the Special Shot / Special Melee buttons no longer makes you jump (rise) after the attack (Player 1 only)</li>' +
+            '</ul></div>' +
             '<div class="grp"><span class="tag all">All units</span><ul>' +
               '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)” (OFF by default)</li>' +
-              '<li>EXVS System: holding the Special Shot / Special Melee buttons no longer makes you jump (rise) after the attack (Player 1 only)</li>' +
               '<li>Added “Set the cheat Refresh interval to 16” to How to use (with the default value of 77, the cheats may not work correctly)</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
