@@ -383,6 +383,7 @@
         <div class="sub">
           <h3 data-i18n="tips">うまく動かないとき</h3>
           <ul>
+            <li data-i18n="tipCpu">弾が多い場面などで動きが重いときは、ゲーム一覧でこのゲームを長押し（Windows は右クリック）→「ゲーム設定を作成」→「ゲーム設定」→「システム」で「CPU クロック」を <b>666</b> にしてみてください。このゲームだけに効きます</li>
             <li data-i18n="tip1">チートの ON/OFF を切り替えたら、試合を最初から始め直してください。試合の途中で切り替えると、正しく動かないことがあります</li>
             <li data-i18n="tip2">ファイル名が <code>NPJH50107.ini.txt</code> などになっていないか確かめてください</li>
             <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）であることを確かめてください。ほかの版では動きません</li>
@@ -415,6 +416,7 @@
               <li>EXVSシステム：自機と僚機の覚醒ゲージで、覚醒できる量を越えた分を緑で表示するようにしました（境目はグラデーション、目盛りは棒の中）</li>
               <li>EXVSシステム：自機の覚醒ゲージ（数字・アイコン・棒）を耐久とブーストゲージの間に移して小さくし、自機の機体名の表示を消しました</li>
               <li>EXVSシステム：3P〜5PのCPUがガンダムDXのときの処理や、5PのCPUのダウンの処理などにあった、元のコードの写し間違いを直しました</li>
+              <li>「うまく動かないとき」に「動きが重いときは CPU クロックを 666 にする」を追加しました</li>
             </ul>
           </div>
         </div>
@@ -619,6 +621,7 @@
       whereWin: 'Windows: usually <code>Documents\\PPSSPP\\PSP\\Cheats</code>',
       whereAndroid: 'Android: <code>PSP/Cheats</code> inside PPSSPP’s memory stick folder (the folder you chose the first time you started PPSSPP)',
       tips: 'If it doesn’t work',
+      tipCpu: 'If the game slows down (for example when there are many shots on screen), long-press this game in the game list (right-click on Windows) → “Create game config” → “Game settings” → “System”, and set “CPU clock” to <b>666</b>. This only affects this game',
       tip1: 'After turning cheats on or off, restart the battle from the beginning. Switching them in the middle of a battle may not work correctly',
       tip2: 'Make sure the file name did not become <code>NPJH50107.ini.txt</code> or similar',
       tip3: 'Make sure the game ID is <code>NPJH50107</code> (Japanese version). Other versions are not supported',
@@ -646,6 +649,7 @@
             '<li>EXVS System: on your and the partner’s Burst gauges, the part above the amount needed for Burst is now shown in green (with a gradient at the boundary and the mark inside the bar)</li>' +
             '<li>EXVS System: your Burst gauge (number, icon and bar) has been moved between your HP and the Boost gauge and made smaller, and your unit name is no longer shown</li>' +
             '<li>EXVS System: fixed copy mistakes in the original code, such as in the handling for 3P–5P CPUs using Gundam DX and for the 5P CPU’s downs</li>' +
+            '<li>Added “If the game slows down, set the CPU clock to 666” to If it doesn’t work</li>' +
           '</ul></div>' +
         '</div>' +
         '<div class="ent"><p class="d">2026-10-23</p>' +
