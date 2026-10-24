@@ -146,7 +146,8 @@
   .steps li { position: relative; counter-increment: step; margin: 0; padding: 12px 0 12px 58px; border-bottom: 1px solid var(--line); font-size: 15px; }
   .steps li:last-child { border-bottom: 0; }
   .steps li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 7px; font-family: var(--latin); font-size: 30px; font-weight: 700; line-height: 1.2; color: var(--gold); }
-  .subs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+  .subs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+  .sub.tips { grid-column: 1 / -1; }
   .sub { padding: 16px 18px; background: var(--panel-2); border: 1px solid var(--line); border-top: 2px solid var(--gold); }
   .sub h3 { margin: 0 0 8px; font-size: 15px; font-weight: 700; color: var(--gold); }
   .sub ul { font-size: 13px; }
@@ -381,6 +382,14 @@
           </ul>
         </div>
         <div class="sub">
+          <h3 data-i18n="notes">注意</h3>
+          <ul>
+            <li data-i18n="note1">使用は自己責任でお願いします。CPU 戦（ひとりプレイ）でのみお使いください</li>
+            <li data-i18n="note2">ゲーム本体の配布はしていません</li>
+            <li data-i18n="note3">非公式のコードです。メーカー・権利者の方々とは一切関係ありません</li>
+          </ul>
+        </div>
+        <div class="sub tips">
           <h3 data-i18n="tips">うまく動かないとき</h3>
           <ul>
             <li data-i18n="tipCpu">弾が多い場面などで動きが重いときは、ゲーム一覧でこのゲームを長押し（Windows は右クリック）→「ゲーム設定を作成」→「ゲーム設定」→「システム」で「CPU クロック」を <b>666</b> にしてみてください。このゲームだけに効きます</li>
@@ -389,14 +398,6 @@
             <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）であることを確かめてください。ほかの版では動きません</li>
           </ul>
           <p class="note" data-i18n="oneFile">どのファイルも同じ名前です。<code>PSP/Cheats</code> に置けるのはどれか1つなので、全部の機体を使うときは「全機体統合版」を選んでください</p>
-        </div>
-        <div class="sub">
-          <h3 data-i18n="notes">注意</h3>
-          <ul>
-            <li data-i18n="note1">使用は自己責任でお願いします。CPU 戦（ひとりプレイ）でのみお使いください</li>
-            <li data-i18n="note2">ゲーム本体の配布はしていません</li>
-            <li data-i18n="note3">非公式のコードです。メーカー・権利者の方々とは一切関係ありません</li>
-          </ul>
         </div>
       </div>
     </div></div>
@@ -435,116 +436,116 @@
             </ul>
           </div>
         </div>
-        <div class="ent">
-          <p class="d">2026-10-22</p>
-          <div class="grp"><span class="tag f91">ガンダムF91</span>
-            <ul>
-              <li><span class="new">公開</span>ガンダムF91を公開しました</li>
-              <li><span class="new">追加</span>「ガンダムF91 (M.E.P.E.永続)」（最初は OFF）</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
-            <ul>
-              <li><span class="new">追加</span>「ダブルオーライザー (TRANS-AM永続)」（最初は OFF）</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
-            <ul>
-              <li><span class="new">追加</span>「リボーンズガンダム (TRANS-AM永続)」（最初は OFF）</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag all">全機体</span>
-            <ul>
-              <li>EXVSシステム：覚醒して狙っている相手が機体でないとき（ラフレシアのバグなど）、弾やエフェクトが出なくなることがあったのを直しました</li>
-              <li>EXVSシステム：ゴッドガンダム・マスターガンダム・∀ガンダムで、覚醒中についた光・ダメージアップ・強化の演出（∀ガンダムは羽も）が覚醒のあとも残っていたのを、覚醒の前に戻すようにしました（1P のみ）</li>
-            </ul>
-          </div>
-        </div>
-        <div class="ent">
-          <p class="d">2026-10-20</p>
-          <div class="grp"><span class="tag all">全機体</span>
-            <ul>
-              <li>EXVSシステム：十字キーで前（↑）を入れながら L+R を押すと、覚醒技ではなくアシストが出てしまうことがあったのを直しました（ノーベルは今までどおり）</li>
-              <li>EXVSシステム：シールドで射撃を防いだあとの2秒間（受けるダメージ ×0.85）に減った分を、自機の被ダメージの数字（黄色）の右に水色で出すようにしました</li>
-              <li>EXVSシステム：ガンダムF91 の覚醒技のあとは、始める前の形態（BR モード／ヴェスバーモード）に戻るようにしました。覚醒技の最初の踏み込みを1.5倍にしました</li>
-              <li>EXVSシステム：覚醒技の最中に R+×（アシスト）を押すと、覚醒技が止まって何度でも出し直せてしまったのを直しました</li>
-              <li>EXVSシステム：リボーンズの後覚醒技の処理が、機体の組み合わせによっては関係のないデータを書き換えるおそれがあったのを直しました</li>
-            </ul>
-          </div>
-        </div>
-        <div class="ent">
-          <p class="d">2026-10-17</p>
-          <div class="grp"><span class="tag all">全機体</span>
-            <ul>
-              <li>EXVSシステム：チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン・武装欄の数字・アシストの向き・リボーンズの後覚醒技）が正しく動かないことがあったのを直しました</li>
-              <li>EXVSシステム・カメラ視野角変更・各機体：ゲームのコードや自作コードを毎フレーム書き直していた所を減らし、使っていない行を片付けました（動きは同じで、少し軽くなります）</li>
-              <li>EXVSシステム：試合の始め（登場演出の間）に、自機の被ダメージの数字が出ることがあったのを直しました</li>
-              <li>カメラ視野角変更：書き込み方を直しました（動きは同じです）</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
-            <ul>
-              <li>チートを試合の途中で ON にしたときなどに、刀身の光が出ないことがあったのを直しました</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
-            <ul>
-              <li>覚醒技の最中に、このチートがファングの動き（体当たり・集まる・向き）と残像の値を変えていたのをやめ、元の覚醒技どおりにしました</li>
-              <li>チートを試合の途中で ON にしたときなどに、残数表示が出ないことがあったのを直しました</li>
-              <li>自作コードを毎フレーム書き直してしまうことがあったのを直しました（動きは同じで、少し軽くなります）</li>
-            </ul>
-          </div>
-        </div>
-        <div class="ent">
-          <p class="d">2026-10-16</p>
-          <div class="grp"><span class="tag all">全機体</span>
-            <ul>
-              <li><span class="new">追加</span>「BGMオフ (効果音・ボイスはそのまま)」（最初は OFF）</li>
-              <li>EXVSシステム：特殊射撃・特殊格闘のボタンを押し続けても、技のあとにジャンプ（上昇）しないようにしました（1P のみ）</li>
-              <li>使い方に「チートのリフレッシュレートを 16 にする」を追加しました（初期値の 77 のままだと、チートが正しく動かないことがあります）</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag nu">νガンダム</span>
-            <ul>
-              <li>後特格のフィンファンネルバリアのリロード時間を、リフレッシュレート 16 で20秒になるように合わせました</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag reb">リボーンズガンダム</span>
-            <ul>
-              <li>5個のチートを「リボーンズガンダム (EXVS風)」1個にまとめました</li>
-              <li>ライフルのレンズの光り方を新しくしました（ダブルオーライザーのGNコンデンサーと同じ作り）</li>
-              <li>ツインアイと額の光のちらつきを止めました</li>
-              <li>覚醒技の最中もファングが早く戻ったままになることがある点を直しました</li>
-            </ul>
-          </div>
-        </div>
-        <div class="ent">
-          <p class="d">2026-10-15</p>
-          <div class="grp"><span class="tag all">全機体</span>
-            <ul>
-              <li><span class="new">追加</span>全機体統合版</li>
-              <li><span class="new">追加</span>「覚醒無限 (覚醒技撃ち放題)」（最初は OFF）</li>
-              <li>ダメージ表示が試合開始の演出の間に出ないようにしました</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag nu">νガンダム</span>
-            <ul>
-              <li>6個のチートを「νガンダム (EXVS風)」1個にまとめました</li>
-              <li>ファンネルが取り付き直すときの速さが効いていなかった点を直しました</li>
-              <li>覚醒技の最中にファンネルの動きが変わることがある点を直しました</li>
-              <li>新しい PPSSPP で正しく動かないおそれのある行を直しました</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag oo">ダブルオーライザー</span>
-            <ul>
-              <li>6個のチートを「ダブルオーライザー (EXVS風)」1個にまとめました</li>
-              <li>新しい PPSSPP で正しく動かないおそれのある行（TRANS-AM20秒など）を直しました</li>
-              <li>TRANS-AMのまま試合が終わると、次の試合で後ろからのガードが一瞬残る点を直しました</li>
-            </ul>
-          </div>
-        </div>
         <details class="older">
           <summary>それより前の更新</summary>
+          <div class="ent">
+            <p class="d">2026-10-22</p>
+            <div class="grp"><span class="tag f91">ガンダムF91</span>
+              <ul>
+                <li><span class="new">公開</span>ガンダムF91を公開しました</li>
+                <li><span class="new">追加</span>「ガンダムF91 (M.E.P.E.永続)」（最初は OFF）</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+              <ul>
+                <li><span class="new">追加</span>「ダブルオーライザー (TRANS-AM永続)」（最初は OFF）</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+              <ul>
+                <li><span class="new">追加</span>「リボーンズガンダム (TRANS-AM永続)」（最初は OFF）</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag all">全機体</span>
+              <ul>
+                <li>EXVSシステム：覚醒して狙っている相手が機体でないとき（ラフレシアのバグなど）、弾やエフェクトが出なくなることがあったのを直しました</li>
+                <li>EXVSシステム：ゴッドガンダム・マスターガンダム・∀ガンダムで、覚醒中についた光・ダメージアップ・強化の演出（∀ガンダムは羽も）が覚醒のあとも残っていたのを、覚醒の前に戻すようにしました（1P のみ）</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ent">
+            <p class="d">2026-10-20</p>
+            <div class="grp"><span class="tag all">全機体</span>
+              <ul>
+                <li>EXVSシステム：十字キーで前（↑）を入れながら L+R を押すと、覚醒技ではなくアシストが出てしまうことがあったのを直しました（ノーベルは今までどおり）</li>
+                <li>EXVSシステム：シールドで射撃を防いだあとの2秒間（受けるダメージ ×0.85）に減った分を、自機の被ダメージの数字（黄色）の右に水色で出すようにしました</li>
+                <li>EXVSシステム：ガンダムF91 の覚醒技のあとは、始める前の形態（BR モード／ヴェスバーモード）に戻るようにしました。覚醒技の最初の踏み込みを1.5倍にしました</li>
+                <li>EXVSシステム：覚醒技の最中に R+×（アシスト）を押すと、覚醒技が止まって何度でも出し直せてしまったのを直しました</li>
+                <li>EXVSシステム：リボーンズの後覚醒技の処理が、機体の組み合わせによっては関係のないデータを書き換えるおそれがあったのを直しました</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ent">
+            <p class="d">2026-10-17</p>
+            <div class="grp"><span class="tag all">全機体</span>
+              <ul>
+                <li>EXVSシステム：チートを試合の途中で ON にしたときなどに、一部の機能（ガードまわり・段のアイコン・武装欄の数字・アシストの向き・リボーンズの後覚醒技）が正しく動かないことがあったのを直しました</li>
+                <li>EXVSシステム・カメラ視野角変更・各機体：ゲームのコードや自作コードを毎フレーム書き直していた所を減らし、使っていない行を片付けました（動きは同じで、少し軽くなります）</li>
+                <li>EXVSシステム：試合の始め（登場演出の間）に、自機の被ダメージの数字が出ることがあったのを直しました</li>
+                <li>カメラ視野角変更：書き込み方を直しました（動きは同じです）</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+              <ul>
+                <li>チートを試合の途中で ON にしたときなどに、刀身の光が出ないことがあったのを直しました</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+              <ul>
+                <li>覚醒技の最中に、このチートがファングの動き（体当たり・集まる・向き）と残像の値を変えていたのをやめ、元の覚醒技どおりにしました</li>
+                <li>チートを試合の途中で ON にしたときなどに、残数表示が出ないことがあったのを直しました</li>
+                <li>自作コードを毎フレーム書き直してしまうことがあったのを直しました（動きは同じで、少し軽くなります）</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ent">
+            <p class="d">2026-10-16</p>
+            <div class="grp"><span class="tag all">全機体</span>
+              <ul>
+                <li><span class="new">追加</span>「BGMオフ (効果音・ボイスはそのまま)」（最初は OFF）</li>
+                <li>EXVSシステム：特殊射撃・特殊格闘のボタンを押し続けても、技のあとにジャンプ（上昇）しないようにしました（1P のみ）</li>
+                <li>使い方に「チートのリフレッシュレートを 16 にする」を追加しました（初期値の 77 のままだと、チートが正しく動かないことがあります）</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag nu">νガンダム</span>
+              <ul>
+                <li>後特格のフィンファンネルバリアのリロード時間を、リフレッシュレート 16 で20秒になるように合わせました</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag reb">リボーンズガンダム</span>
+              <ul>
+                <li>5個のチートを「リボーンズガンダム (EXVS風)」1個にまとめました</li>
+                <li>ライフルのレンズの光り方を新しくしました（ダブルオーライザーのGNコンデンサーと同じ作り）</li>
+                <li>ツインアイと額の光のちらつきを止めました</li>
+                <li>覚醒技の最中もファングが早く戻ったままになることがある点を直しました</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ent">
+            <p class="d">2026-10-15</p>
+            <div class="grp"><span class="tag all">全機体</span>
+              <ul>
+                <li><span class="new">追加</span>全機体統合版</li>
+                <li><span class="new">追加</span>「覚醒無限 (覚醒技撃ち放題)」（最初は OFF）</li>
+                <li>ダメージ表示が試合開始の演出の間に出ないようにしました</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag nu">νガンダム</span>
+              <ul>
+                <li>6個のチートを「νガンダム (EXVS風)」1個にまとめました</li>
+                <li>ファンネルが取り付き直すときの速さが効いていなかった点を直しました</li>
+                <li>覚醒技の最中にファンネルの動きが変わることがある点を直しました</li>
+                <li>新しい PPSSPP で正しく動かないおそれのある行を直しました</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag oo">ダブルオーライザー</span>
+              <ul>
+                <li>6個のチートを「ダブルオーライザー (EXVS風)」1個にまとめました</li>
+                <li>新しい PPSSPP で正しく動かないおそれのある行（TRANS-AM20秒など）を直しました</li>
+                <li>TRANS-AMのまま試合が終わると、次の試合で後ろからのガードが一瞬残る点を直しました</li>
+              </ul>
+            </div>
+          </div>
           <div class="ent">
             <p class="d">2026-10-14</p>
             <div class="grp"><span class="tag oo">ダブルオーライザー</span>
@@ -662,82 +663,82 @@
             '<li>EXVS System: shorter code with the same behavior (such as rewriting “ally CPU targets another enemy while Player 1 is in melee”)</li>' +
           '</ul></div>' +
         '</div>' +
-        '<div class="ent"><p class="d">2026-10-22</p>' +
-          '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
-            '<li><span class="new">RELEASE</span>Released Gundam F91</li>' +
-            '<li><span class="new">NEW</span>“Gundam F91 (Infinite M.E.P.E.)” (OFF by default)</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
-            '<li><span class="new">NEW</span>“00 Raiser (Infinite TRANS-AM)” (OFF by default)</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
-            '<li><span class="new">NEW</span>“Reborns Gundam (Infinite TRANS-AM)” (OFF by default)</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li>EXVS System: when the awakened unit was targeting something that is not a unit (such as Rafflesia’s bugs), shots and effects sometimes stopped appearing; fixed</li>' +
-            '<li>EXVS System: for God Gundam, Master Gundam and Turn A Gundam, the glow, damage boost and power-up effect gained during awakening (and Turn A’s wings) stayed after awakening ended; they now return to how they were before awakening (Player 1 only)</li>' +
-          '</ul></div>' +
-        '</div>' +
-        '<div class="ent"><p class="d">2026-10-20</p>' +
-          '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li>EXVS System: pressing L+R while holding forward (Up) on the D-pad sometimes called the assist instead of the Burst Attack; fixed (Nobel unchanged)</li>' +
-            '<li>EXVS System: the damage cut during the 2 seconds after blocking a shot with the shield (damage taken x0.85) is now shown in light blue to the right of your damage-taken number (yellow)</li>' +
-            '<li>EXVS System: after the Gundam F91 Burst Attack, the unit returns to the form it was in before (BR mode / V.S.B.R. mode); the first lunge of the Burst Attack is now 1.5x</li>' +
-            '<li>EXVS System: pressing R+X (assist) during the Burst Attack stopped it and let you use it again and again; fixed</li>' +
-            '<li>EXVS System: the Reborns back Burst Attack code could overwrite unrelated data with some unit combinations; fixed</li>' +
-          '</ul></div>' +
-        '</div>' +
-        '<div class="ent"><p class="d">2026-10-17</p>' +
-          '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li>EXVS System: fixed some features (guard behavior, rank icons, weapon digits, assist facing, Reborns back Burst Attack) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
-            '<li>EXVS System, FOV Camera Mod and each unit: fewer places rewrite game code or custom code every frame, and unused lines were removed (same behavior, slightly lighter)</li>' +
-            '<li>EXVS System: fixed your own damage-taken number sometimes appearing at the start of a match (during the entry animation)</li>' +
-            '<li>FOV Camera Mod: changed how the value is written (same behavior)</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
-            '<li>Fixed the blade glow sometimes not appearing, e.g. when the cheats were turned ON in the middle of a battle</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
-            '<li>During the Burst Attack, this cheat no longer changes the fangs (rush, gathering, facing) or the afterimage value, so the Burst Attack works as originally designed</li>' +
-            '<li>Fixed the remaining-count display sometimes not appearing, e.g. when the cheats were turned ON in the middle of a battle</li>' +
-            '<li>Custom code is no longer rewritten every frame in some cases (same behavior, slightly lighter)</li>' +
-          '</ul></div>' +
-        '</div>' +
-        '<div class="ent"><p class="d">2026-10-16</p>' +
-          '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)” (OFF by default)</li>' +
-            '<li>EXVS System: holding the Special Shot / Special Melee buttons no longer makes you jump (rise) after the attack (Player 1 only)</li>' +
-            '<li>Added “Set the cheat Refresh interval to 16” to How to use (with the default value of 77, the cheats may not work correctly)</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
-            '<li>Adjusted the Fin Funnel Barrier (back special melee) reload time to 20 seconds at Refresh interval 16</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
-            '<li>Merged the 5 cheats into one, “Reborns Gundam (EXVS Style)”</li>' +
-            '<li>New glow for the rifle lens (made the same way as the 00 Raiser GN condensers)</li>' +
-            '<li>The twin eyes and forehead glow no longer flicker</li>' +
-            '<li>Fixed the fangs sometimes still returning faster during the awakening attack</li>' +
-          '</ul></div>' +
-        '</div>' +
-        '<div class="ent"><p class="d">2026-10-15</p>' +
-          '<div class="grp"><span class="tag all">All units</span><ul>' +
-            '<li><span class="new">NEW</span>All Units Combined</li>' +
-            '<li><span class="new">NEW</span>“Infinite Awakening (Unlimited Awakening Attacks)” (OFF by default)</li>' +
-            '<li>Damage numbers no longer appear during the match intro</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
-            '<li>Merged the 6 cheats into one, “Nu Gundam (EXVS Style)”</li>' +
-            '<li>Fixed the funnel re-attach speed not taking effect</li>' +
-            '<li>Fixed the funnels sometimes moving differently during the awakening attack</li>' +
-            '<li>Fixed lines that might not work correctly on newer PPSSPP builds</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
-            '<li>Merged the 6 cheats into one, “00 Raiser (EXVS Style)”</li>' +
-            '<li>Fixed lines that might not work correctly on newer PPSSPP builds (such as TRANS-AM 20 sec)</li>' +
-            '<li>Fixed the guard from behind briefly carrying over to the next match when a match ended during TRANS-AM</li>' +
-          '</ul></div>' +
-        '</div>' +
         '<details class="older"><summary>Earlier updates</summary>' +
+          '<div class="ent"><p class="d">2026-10-22</p>' +
+            '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
+              '<li><span class="new">RELEASE</span>Released Gundam F91</li>' +
+              '<li><span class="new">NEW</span>“Gundam F91 (Infinite M.E.P.E.)” (OFF by default)</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+              '<li><span class="new">NEW</span>“00 Raiser (Infinite TRANS-AM)” (OFF by default)</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+              '<li><span class="new">NEW</span>“Reborns Gundam (Infinite TRANS-AM)” (OFF by default)</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag all">All units</span><ul>' +
+              '<li>EXVS System: when the awakened unit was targeting something that is not a unit (such as Rafflesia’s bugs), shots and effects sometimes stopped appearing; fixed</li>' +
+              '<li>EXVS System: for God Gundam, Master Gundam and Turn A Gundam, the glow, damage boost and power-up effect gained during awakening (and Turn A’s wings) stayed after awakening ended; they now return to how they were before awakening (Player 1 only)</li>' +
+            '</ul></div>' +
+          '</div>' +
+          '<div class="ent"><p class="d">2026-10-20</p>' +
+            '<div class="grp"><span class="tag all">All units</span><ul>' +
+              '<li>EXVS System: pressing L+R while holding forward (Up) on the D-pad sometimes called the assist instead of the Burst Attack; fixed (Nobel unchanged)</li>' +
+              '<li>EXVS System: the damage cut during the 2 seconds after blocking a shot with the shield (damage taken x0.85) is now shown in light blue to the right of your damage-taken number (yellow)</li>' +
+              '<li>EXVS System: after the Gundam F91 Burst Attack, the unit returns to the form it was in before (BR mode / V.S.B.R. mode); the first lunge of the Burst Attack is now 1.5x</li>' +
+              '<li>EXVS System: pressing R+X (assist) during the Burst Attack stopped it and let you use it again and again; fixed</li>' +
+              '<li>EXVS System: the Reborns back Burst Attack code could overwrite unrelated data with some unit combinations; fixed</li>' +
+            '</ul></div>' +
+          '</div>' +
+          '<div class="ent"><p class="d">2026-10-17</p>' +
+            '<div class="grp"><span class="tag all">All units</span><ul>' +
+              '<li>EXVS System: fixed some features (guard behavior, rank icons, weapon digits, assist facing, Reborns back Burst Attack) sometimes not working, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+              '<li>EXVS System, FOV Camera Mod and each unit: fewer places rewrite game code or custom code every frame, and unused lines were removed (same behavior, slightly lighter)</li>' +
+              '<li>EXVS System: fixed your own damage-taken number sometimes appearing at the start of a match (during the entry animation)</li>' +
+              '<li>FOV Camera Mod: changed how the value is written (same behavior)</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+              '<li>Fixed the blade glow sometimes not appearing, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+              '<li>During the Burst Attack, this cheat no longer changes the fangs (rush, gathering, facing) or the afterimage value, so the Burst Attack works as originally designed</li>' +
+              '<li>Fixed the remaining-count display sometimes not appearing, e.g. when the cheats were turned ON in the middle of a battle</li>' +
+              '<li>Custom code is no longer rewritten every frame in some cases (same behavior, slightly lighter)</li>' +
+            '</ul></div>' +
+          '</div>' +
+          '<div class="ent"><p class="d">2026-10-16</p>' +
+            '<div class="grp"><span class="tag all">All units</span><ul>' +
+              '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)” (OFF by default)</li>' +
+              '<li>EXVS System: holding the Special Shot / Special Melee buttons no longer makes you jump (rise) after the attack (Player 1 only)</li>' +
+              '<li>Added “Set the cheat Refresh interval to 16” to How to use (with the default value of 77, the cheats may not work correctly)</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
+              '<li>Adjusted the Fin Funnel Barrier (back special melee) reload time to 20 seconds at Refresh interval 16</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
+              '<li>Merged the 5 cheats into one, “Reborns Gundam (EXVS Style)”</li>' +
+              '<li>New glow for the rifle lens (made the same way as the 00 Raiser GN condensers)</li>' +
+              '<li>The twin eyes and forehead glow no longer flicker</li>' +
+              '<li>Fixed the fangs sometimes still returning faster during the awakening attack</li>' +
+            '</ul></div>' +
+          '</div>' +
+          '<div class="ent"><p class="d">2026-10-15</p>' +
+            '<div class="grp"><span class="tag all">All units</span><ul>' +
+              '<li><span class="new">NEW</span>All Units Combined</li>' +
+              '<li><span class="new">NEW</span>“Infinite Awakening (Unlimited Awakening Attacks)” (OFF by default)</li>' +
+              '<li>Damage numbers no longer appear during the match intro</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
+              '<li>Merged the 6 cheats into one, “Nu Gundam (EXVS Style)”</li>' +
+              '<li>Fixed the funnel re-attach speed not taking effect</li>' +
+              '<li>Fixed the funnels sometimes moving differently during the awakening attack</li>' +
+              '<li>Fixed lines that might not work correctly on newer PPSSPP builds</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
+              '<li>Merged the 6 cheats into one, “00 Raiser (EXVS Style)”</li>' +
+              '<li>Fixed lines that might not work correctly on newer PPSSPP builds (such as TRANS-AM 20 sec)</li>' +
+              '<li>Fixed the guard from behind briefly carrying over to the next match when a match ended during TRANS-AM</li>' +
+            '</ul></div>' +
+          '</div>' +
           '<div class="ent"><p class="d">2026-10-14</p>' +
             '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
               '<li><span class="new">RELEASE</span>Released 00 Raiser</li>' +
