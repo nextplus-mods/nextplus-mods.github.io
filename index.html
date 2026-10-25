@@ -25,6 +25,7 @@
     --oo: #5CC8F5;
     --reb: #6FD49C;
     --f91: #FF7438;
+    --psp: #8FB4FF;
     --cut: 16px;
     --latin: "Rajdhani", "Murecho", sans-serif;
   }
@@ -153,6 +154,21 @@
   .sub ul { font-size: 13px; }
   .sub li { margin: 4px 0; }
 
+  /* real PSP */
+  .spec li.to-psp { padding: 0; background: none; clip-path: none; margin-left: auto; }
+  .to-psp a { display: inline-block; padding: 2px 14px; font-size: 12px; font-weight: 700; color: var(--psp); text-decoration: none; border: 1px solid var(--psp); border-radius: 3px; }
+  .to-psp a::after { content: " ↓"; }
+  .to-psp a:hover { background: color-mix(in srgb, var(--psp) 16%, transparent); }
+  .to-psp a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  #psp .frame { background: linear-gradient(135deg, var(--psp), var(--line-hi) 28%, var(--line-hi) 72%, var(--psp)); }
+  #psp .badge { background: var(--psp); }
+  .pt { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+  .pt h3 { margin: 8px 0 6px; font-size: 22px; font-weight: 800; line-height: 1.35; }
+  #psp .steps li::before, #psp .sub h3 { color: var(--psp); }
+  #psp .sub { border-top-color: var(--psp); }
+  #psp .steps { margin-top: 6px; }
+  .steps pre { margin: 8px 0 2px; padding: 8px 12px; font-family: Consolas, "Courier New", monospace; font-size: 13px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; white-space: pre-wrap; overflow-wrap: anywhere; }
+
   /* update log */
   .log .ent { position: relative; margin-left: 5px; padding: 0 0 22px 22px; border-left: 2px solid var(--line-hi); }
   .log .ent:last-child { padding-bottom: 0; border-left-color: transparent; }
@@ -170,6 +186,7 @@
   .tag.nu { color: var(--nu); }
   .tag.reb { color: var(--reb); }
   .tag.f91 { color: var(--f91); }
+  .tag.psp { color: var(--psp); }
   .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 3px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
   .log .older { margin: 0; padding: 0; border: 0; }
   .log .older > summary { margin: 0 0 0 5px; padding: 0 0 18px 22px; border-left: 2px solid var(--line-hi); font-size: 14px; }
@@ -186,7 +203,7 @@
   }
   @media (max-width: 760px) {
     .units { grid-template-columns: 1fr; }
-    .fb { grid-template-columns: 1fr; gap: 18px; }
+    .fb, .pt { grid-template-columns: 1fr; gap: 18px; }
   }
   @media (max-width: 480px) {
     :root { --cut: 12px; }
@@ -229,6 +246,7 @@
     <li data-i18n="chipGame">NPJH50107（日本版）</li>
     <li data-i18n="chipFormat">CWCheat 形式</li>
     <li data-i18n="meta">PPSSPP v1.20.4（Windows）で確認</li>
+    <li class="to-psp"><a href="#psp" data-i18n="toPsp">PSP 実機用はこちら</a></li>
   </ul>
 
   <section class="feature" id="all">
@@ -404,10 +422,71 @@
     </div></div>
   </section>
 
+  <div class="sec"><span class="sec-en" aria-hidden="true">REAL PSP</span><h2 data-i18n="secPsp">PSP 実機用</h2></div>
+  <section id="psp">
+    <div class="frame"><div class="in panel">
+      <div class="pt">
+        <div>
+          <span class="badge">REAL PSP</span>
+          <h3 data-i18n="pspTitle">PSP 実機用（プラグイン版）</h3>
+          <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと4機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
+        </div>
+        <div>
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261025/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updPsp">更新 2026-10-25</p>
+        </div>
+      </div>
+      <ol class="steps">
+        <li data-i18n="pspStep1">ダウンロードした zip を展開し、中の <code>seplugins</code> フォルダを PSP のメモリースティックのいちばん上にコピーする（<code>seplugins</code> がすでにあれば、中身を足す）</li>
+        <li data-i18n="pspStep2"><code>seplugins/game.txt</code> に次の1行を足す（ファイルがなければ作る）<pre>ms0:/seplugins/exvsplug.prx 1</pre></li>
+        <li data-i18n="pspStep3">CWCheat を使っている場合は、<code>game.txt</code> の CWCheat の行の最後の <code>1</code> を <code>0</code> にして止める</li>
+        <li data-i18n="pspStep4">USB 接続を終わらせてゲームを起動し、使いたい機体を <b>1P</b> で選んで試合を始める（チートは1Pの機体にだけ効きます）</li>
+      </ol>
+      <div class="subs">
+        <div class="sub">
+          <h3 data-i18n="contents">入っているコード</h3>
+          <ul data-i18n="listPsp">
+            <li>EXVSシステム</li>
+            <li>νガンダム (EXVS風)・ガンダムF91 (EXVS風)・ダブルオーライザー (EXVS風)・リボーンズガンダム (EXVS風)</li>
+            <li>どれもいつも ON です（ON/OFF の切り替えはできません）</li>
+            <li>カメラ視野角変更・覚醒無限・BGMオフ・M.E.P.E.永続・TRANS-AM永続 は入っていません</li>
+          </ul>
+        </div>
+        <div class="sub">
+          <h3 data-i18n="notes">注意</h3>
+          <ul>
+            <li data-i18n="pspNote1">CFW 6.6x ME の PSP で確認しています。ほかの CFW では確かめていません</li>
+            <li data-i18n="pspNote2">プラグインは <code>seplugins/exvs</code> に、動きの記録の小さいファイル（<code>log.txt</code>）を作ります</li>
+            <li data-i18n="pspNote3">使用は自己責任でお願いします。上の「注意」も読んでください</li>
+          </ul>
+        </div>
+        <div class="sub tips">
+          <h3 data-i18n="tips">うまく動かないとき</h3>
+          <ul>
+            <li data-i18n="pspTip1">ゲームを起動すると <code>80020148</code> などのエラーが出るときは、CFW をもう一度起動してから（6.6x ME なら <code>launcher</code>）ゲームを起動してください。電源を完全に切ったあとや、ゲームを何回か起動し直したあとに出ることがあります</li>
+            <li data-i18n="pspTip2"><code>seplugins/exvsplug.prx</code> と <code>seplugins/exvs/exvs.bin</code> の場所と名前、<code>game.txt</code> の行がまちがっていないか確かめてください</li>
+            <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）であることを確かめてください。ほかの版では動きません</li>
+          </ul>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
   <div class="sec"><span class="sec-en" aria-hidden="true">UPDATE LOG</span><h2 data-i18n="log">更新履歴</h2></div>
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-10-25</p>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li><span class="new">公開</span>PSP 実機用（プラグイン版。EXVSシステムと4機体）を公開しました</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-10-24</p>
           <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
@@ -426,23 +505,23 @@
             </ul>
           </div>
         </div>
-        <div class="ent">
-          <p class="d">2026-10-23</p>
-          <div class="grp"><span class="tag f91">ガンダムF91</span>
-            <ul>
-              <li>試合の始めやBRモードに戻ったときに、武装欄の数字や色が一瞬だけ前の状態で出ることがあったのを直しました</li>
-            </ul>
-          </div>
-          <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
-            <ul>
-              <li><span class="new">追加</span>僚機が覚醒したときに、1P と同じ覚醒のカットインが出るようにしました</li>
-              <li><span class="new">追加</span>僚機コマンド表示の上に、僚機の機体アイコンと今の耐久を表示するようにしました（耐久は自機と同じく、減ると黄・赤に点滅します）</li>
-              <li>動きは変えずにコードを短くしました（「1P の格闘中は味方CPUが別の敵を狙う」の書き直しなど）</li>
-            </ul>
-          </div>
-        </div>
         <details class="older">
           <summary>それより前の更新</summary>
+          <div class="ent">
+            <p class="d">2026-10-23</p>
+            <div class="grp"><span class="tag f91">ガンダムF91</span>
+              <ul>
+                <li>試合の始めやBRモードに戻ったときに、武装欄の数字や色が一瞬だけ前の状態で出ることがあったのを直しました</li>
+              </ul>
+            </div>
+            <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
+              <ul>
+                <li><span class="new">追加</span>僚機が覚醒したときに、1P と同じ覚醒のカットインが出るようにしました</li>
+                <li><span class="new">追加</span>僚機コマンド表示の上に、僚機の機体アイコンと今の耐久を表示するようにしました（耐久は自機と同じく、減ると黄・赤に点滅します）</li>
+                <li>動きは変えずにコードを短くしました（「1P の格闘中は味方CPUが別の敵を狙う」の書き直しなど）</li>
+              </ul>
+            </div>
+          </div>
           <div class="ent">
             <p class="d">2026-10-22</p>
             <div class="grp"><span class="tag f91">ガンダムF91</span>
@@ -653,8 +732,28 @@
       listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
       listF91: '<li>Gundam F91 (EXVS Style) (BR mode and VSBR mode merged, Shooting Buffs, Melee Buffs, M.E.P.E. Buffs, Automatic Vulcan Interception, Assist Buff and more in one cheat)</li><li>Gundam F91 (Infinite M.E.P.E.) (OFF by default. When ON, the M.E.P.E. gauge is always full, and once activated M.E.P.E. does not run out)</li>',
       listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li><li>00 Raiser (Infinite TRANS-AM) (OFF by default. When ON, the TRANS-AM gauge is always full, and once activated TRANS-AM does not run out)</li>',
+      toPsp: 'For a real PSP',
+      secPsp: 'For a real PSP',
+      pspTitle: 'Real PSP version (plugin)',
+      pspLead: 'A plugin that runs the EXVS System and the 4 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
+      updPsp: 'Updated 2026-10-25',
+      pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
+      pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>',
+      pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
+      pspStep4: 'End the USB connection, start the game, pick the unit as <b>Player 1</b> and start a battle (the cheats only affect Player 1’s unit)',
+      listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E. and Infinite TRANS-AM are not included</li>',
+      pspNote1: 'Tested on a PSP with CFW 6.6x ME. Other CFWs have not been tested',
+      pspNote2: 'The plugin writes a small log file (<code>log.txt</code>) in <code>seplugins/exvs</code>',
+      pspNote3: 'Use at your own risk. Please also read the Notes above',
+      pspTip1: 'If starting the game shows an error such as <code>80020148</code>, start the CFW again (<code>launcher</code> for 6.6x ME) and then start the game. This can happen after the PSP has been fully powered off or after the game has been restarted several times',
+      pspTip2: 'Check the location and names of <code>seplugins/exvsplug.prx</code> and <code>seplugins/exvs/exvs.bin</code>, and the line in <code>game.txt</code>',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-10-25</p>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li><span class="new">RELEASE</span>Released the real PSP version (plugin; EXVS System and the 4 units)</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-10-24</p>' +
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>The partner display has been rearranged; the partner’s HP and Burst gauge are now shown to the right of the partner’s unit icon (the Burst gauge has a mark where Burst becomes available)</li>' +
@@ -668,17 +767,17 @@
             '<li>Added “If the game slows down, set the CPU clock to 666” to If it doesn’t work</li>' +
           '</ul></div>' +
         '</div>' +
-        '<div class="ent"><p class="d">2026-10-23</p>' +
-          '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
-            '<li>At the start of a match or when returning to BR mode, the weapon gauge numbers and colors sometimes showed the previous state for a moment; fixed</li>' +
-          '</ul></div>' +
-          '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
-            '<li><span class="new">NEW</span>When your CPU partner Bursts, the same Burst cut-in as Player 1 is now shown</li>' +
-            '<li><span class="new">NEW</span>The partner’s unit icon and current HP are now shown above the partner command display (the HP flashes yellow and red when low, like your own)</li>' +
-            '<li>Shorter code with the same behavior (such as rewriting “ally CPU targets another enemy while Player 1 is in melee”)</li>' +
-          '</ul></div>' +
-        '</div>' +
         '<details class="older"><summary>Earlier updates</summary>' +
+          '<div class="ent"><p class="d">2026-10-23</p>' +
+            '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
+              '<li>At the start of a match or when returning to BR mode, the weapon gauge numbers and colors sometimes showed the previous state for a moment; fixed</li>' +
+            '</ul></div>' +
+            '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+              '<li><span class="new">NEW</span>When your CPU partner Bursts, the same Burst cut-in as Player 1 is now shown</li>' +
+              '<li><span class="new">NEW</span>The partner’s unit icon and current HP are now shown above the partner command display (the HP flashes yellow and red when low, like your own)</li>' +
+              '<li>Shorter code with the same behavior (such as rewriting “ally CPU targets another enemy while Player 1 is in melee”)</li>' +
+            '</ul></div>' +
+          '</div>' +
           '<div class="ent"><p class="d">2026-10-22</p>' +
             '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
               '<li><span class="new">RELEASE</span>Released Gundam F91</li>' +
