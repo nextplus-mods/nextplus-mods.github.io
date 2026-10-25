@@ -432,11 +432,11 @@
           <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと4機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261025/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261026/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updPsp">更新 2026-10-25</p>
+          <p class="meta" data-i18n="updPsp">更新 2026-10-26</p>
         </div>
       </div>
       <ol class="steps">
@@ -485,6 +485,11 @@
             <ul>
               <li>リボーンズの後覚醒技（トランザム射撃CS）の威力・ダウン値・補正値を、ダブルオーライザーの後覚醒技と同じにしました</li>
               <li>R でサブ射撃を長押ししているときに × で BD しようとすると、R+×（アシスト）が出てしまうことがあったのを直しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li>PSP 実機用の EXVSシステムを最新版（上の2つの直し）にしました</li>
             </ul>
           </div>
         </div>
@@ -745,7 +750,7 @@
       secPsp: 'For a real PSP',
       pspTitle: 'Real PSP version (plugin)',
       pspLead: 'A plugin that runs the EXVS System and the 4 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
-      updPsp: 'Updated 2026-10-25',
+      updPsp: 'Updated 2026-10-26',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
@@ -762,6 +767,9 @@
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>The Reborns back Burst Attack (TRANS-AM charge shot) now has the same power, down value and damage scaling as the 00 Raiser back Burst Attack</li>' +
             '<li>Pressing X to boost dash while holding R for a sub shot sometimes called the R+X assist; fixed</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li>The EXVS System in the real PSP version has been updated to the latest version (the 2 fixes above)</li>' +
           '</ul></div>' +
         '</div>' +
         '<div class="ent"><p class="d">2026-10-25</p>' +
