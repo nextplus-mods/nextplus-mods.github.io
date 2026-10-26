@@ -432,7 +432,7 @@
           <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと4機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261026-2/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261026-3/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
@@ -485,11 +485,17 @@
             <ul>
               <li>リボーンズの後覚醒技（トランザム射撃CS）の威力・ダウン値・補正値を、ダブルオーライザーの後覚醒技と同じにしました</li>
               <li>R でサブ射撃を長押ししているときに × で BD しようとすると、R+×（アシスト）が出てしまうことがあったのを直しました</li>
+              <li>覚醒ゲージが 999 のときにシールドで弾を防ぐと、覚醒ゲージの数字がちらつくことがあったのを直しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag f91">ガンダムF91</span>
+            <ul>
+              <li>M.E.P.E.中のメイン射撃（ライフルと連動のヴェスバー2本）のダウン値を、3本の合計で 1200 → 700 にしました</li>
             </ul>
           </div>
           <div class="grp"><span class="tag psp">PSP 実機</span>
             <ul>
-              <li>PSP 実機用の EXVSシステムを最新版（上の2つの直し）にしました</li>
+              <li>PSP 実機用の EXVSシステムとガンダムF91 を最新版（上の直し）にしました</li>
               <li>PSP 実機で、覚醒技（覚醒中の L+R）が出ないことがあったのを直しました</li>
             </ul>
           </div>
@@ -768,9 +774,13 @@
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>The Reborns back Burst Attack (TRANS-AM charge shot) now has the same power, down value and damage scaling as the 00 Raiser back Burst Attack</li>' +
             '<li>Pressing X to boost dash while holding R for a sub shot sometimes called the R+X assist; fixed</li>' +
+            '<li>When the awakening gauge was at 999, blocking a shot with the shield sometimes made the awakening gauge number flicker; fixed</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
+            '<li>The down value of the M.E.P.E. main shot (the rifle and the 2 linked VSBR shots) is now 700 in total for the 3 shots (was 1200)</li>' +
           '</ul></div>' +
           '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
-            '<li>The EXVS System in the real PSP version has been updated to the latest version (the 2 fixes above)</li>' +
+            '<li>The EXVS System and Gundam F91 in the real PSP version have been updated to the latest version (the fixes above)</li>' +
             '<li>On a real PSP, the Burst Attack (L+R while awakened) sometimes did not come out; fixed</li>' +
           '</ul></div>' +
         '</div>' +
