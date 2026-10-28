@@ -67,6 +67,7 @@
   .sec::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line-hi), transparent); }
   .common { margin: -4px 0 18px; padding: 12px 16px; font-size: 13px; color: var(--sub); background: rgba(16, 20, 26, .8); border-left: 3px solid var(--gold); }
   .common b { color: var(--text); font-weight: 700; }
+  .common + .common { margin-top: -8px; }
 
   /* cut-corner frames: outer = border colour, inner = panel */
   .frame {
@@ -285,6 +286,7 @@
 
   <div class="sec"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
   <p class="common" data-i18n="common">どのファイルにも <b>EXVSシステム</b>・<b>カメラ視野角変更</b>・<b>覚醒無限 (覚醒技撃ち放題)</b>（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）・<b>BGMオフ (効果音・ボイスはそのまま)</b>（最初は OFF）が入っています</p>
+  <p class="common" data-i18n="awakeHow"><b>覚醒</b>：覚醒ゲージが 500 以上のときに <b>L+R</b>。<b>覚醒技</b>：覚醒中にもう一度 <b>L+R</b>（十字キーの↑は押さずに。1回の覚醒で1回）</p>
   <div class="units">
     <article class="unit" id="nu" style="--u: var(--nu)">
       <div class="frame"><div class="in">
@@ -725,6 +727,7 @@
       dlShort: 'Download',
       secUnits: 'Per-unit files',
       common: 'Every file includes <b>EXVS System</b>, <b>Wider Camera FOV</b>, <b>Infinite Awakening (Unlimited Awakening Attacks)</b> (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again) and <b>BGM Off (Sound Effects and Voices Stay)</b> (OFF by default)',
+      awakeHow: '<b>Awakening</b>: press <b>L+R</b> when the awakening gauge is 500 or more. <b>Burst Attack</b>: press <b>L+R</b> again while awakened (without holding Up on the D-pad; once per awakening)',
       howto: 'How to use',
       step1: 'In PPSSPP, go to Settings → System and turn on “Enable Cheats”',
       step2: 'Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
