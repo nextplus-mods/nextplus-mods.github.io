@@ -434,16 +434,16 @@
           <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと4機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261030/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261031/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updPsp">更新 2026-10-30</p>
+          <p class="meta" data-i18n="updPsp">更新 2026-10-31</p>
         </div>
       </div>
       <ol class="steps">
         <li data-i18n="pspStep1">ダウンロードした zip を展開し、中の <code>seplugins</code> フォルダを PSP のメモリースティックのいちばん上にコピーする（<code>seplugins</code> がすでにあれば、中身を足す）</li>
-        <li data-i18n="pspStep2"><code>seplugins/game.txt</code> に次の1行を足す（ファイルがなければ作る）<pre>ms0:/seplugins/exvsplug.prx 1</pre></li>
+        <li data-i18n="pspStep2"><code>seplugins/game.txt</code> に次の1行を足す（ファイルがなければ作る）<pre>ms0:/seplugins/exvsplug.prx 1</pre>ARK の場合は、かわりに <code>seplugins/PLUGINS.TXT</code> に次の1行を足す<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre></li>
         <li data-i18n="pspStep3">CWCheat を使っている場合は、<code>game.txt</code> の CWCheat の行の最後の <code>1</code> を <code>0</code> にして止める</li>
         <li data-i18n="pspStep4">USB 接続を終わらせてゲームを起動し、使いたい機体を <b>1P</b> で選んで試合を始める（チートは1Pの機体にだけ効きます）</li>
       </ol>
@@ -460,7 +460,8 @@
         <div class="sub">
           <h3 data-i18n="notes">注意</h3>
           <ul>
-            <li data-i18n="pspNote1">CFW 6.6x ME の PSP で確認しています。ほかの CFW では確かめていません</li>
+            <li data-i18n="pspNote1">CFW ARK（FasterARK）の PSP-3000 で確認しています（前の版は 6.61 LME でも確認）。ほかの CFW では確かめていません</li>
+            <li data-i18n="pspNote4">チートが効き始めるのは、ゲームを起動してから約20秒後です（ゲームの起動とぶつからないようにするため）</li>
             <li data-i18n="pspNote2">プラグインは <code>seplugins/exvs</code> に、動きの記録の小さいファイル（<code>log.txt</code>）を作ります</li>
             <li data-i18n="pspNote3">使用は自己責任でお願いします。上の「注意」も読んでください</li>
           </ul>
@@ -468,8 +469,8 @@
         <div class="sub tips">
           <h3 data-i18n="tips">うまく動かないとき</h3>
           <ul>
-            <li data-i18n="pspTip1">ゲームを起動すると <code>80020148</code> などのエラーが出るときは、CFW をもう一度起動してから（6.6x ME なら <code>launcher</code>）ゲームを起動してください。電源を完全に切ったあとや、ゲームを何回か起動し直したあとに出ることがあります</li>
-            <li data-i18n="pspTip2"><code>seplugins/exvsplug.prx</code> と <code>seplugins/exvs/exvs.bin</code> の場所と名前、<code>game.txt</code> の行がまちがっていないか確かめてください</li>
+            <li data-i18n="pspTip1">ゲームを起動すると <code>80020148</code> などのエラーが出るときは、CFW をもう一度起動してから（ARK なら <code>FasterARK</code>、6.61 LME なら <code>launcher</code>）ゲームを起動してください。電源を完全に切ったあとに出ます</li>
+            <li data-i18n="pspTip2"><code>seplugins/exvsplug.prx</code> と <code>seplugins/exvs/exvs.bin</code> の場所と名前、<code>game.txt</code>（ARK なら <code>PLUGINS.TXT</code>）の行がまちがっていないか確かめてください</li>
             <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）であることを確かめてください。ほかの版では動きません</li>
           </ul>
         </div>
@@ -481,6 +482,15 @@
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-10-31</p>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li>ゲームを終了してもう一度起動すると、<code>80020148</code> のエラーで起動できないことが多かったのを直しました（プラグイン 1.10）。チートが効き始めるのは、ゲームを起動してから約20秒後になります</li>
+              <li>CFW の ARK で使うときの設定（<code>PLUGINS.TXT</code>）を、使い方に足しました</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-10-30</p>
           <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
@@ -773,19 +783,26 @@
       secPsp: 'For a real PSP',
       pspTitle: 'Real PSP version (plugin)',
       pspLead: 'A plugin that runs the EXVS System and the 4 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
-      updPsp: 'Updated 2026-10-30',
+      updPsp: 'Updated 2026-10-31',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
-      pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>',
+      pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
       pspStep4: 'End the USB connection, start the game, pick the unit as <b>Player 1</b> and start a battle (the cheats only affect Player 1’s unit)',
       listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E. and Infinite TRANS-AM are not included</li>',
-      pspNote1: 'Tested on a PSP with CFW 6.6x ME. Other CFWs have not been tested',
+      pspNote1: 'Tested on a PSP-3000 with CFW ARK (FasterARK) (the previous version also on 6.61 LME). Other CFWs have not been tested',
+      pspNote4: 'The cheats start working about 20 seconds after the game is started (so that they do not get in the way of the game starting)',
       pspNote2: 'The plugin writes a small log file (<code>log.txt</code>) in <code>seplugins/exvs</code>',
       pspNote3: 'Use at your own risk. Please also read the Notes above',
-      pspTip1: 'If starting the game shows an error such as <code>80020148</code>, start the CFW again (<code>launcher</code> for 6.6x ME) and then start the game. This can happen after the PSP has been fully powered off or after the game has been restarted several times',
-      pspTip2: 'Check the location and names of <code>seplugins/exvsplug.prx</code> and <code>seplugins/exvs/exvs.bin</code>, and the line in <code>game.txt</code>',
+      pspTip1: 'If starting the game shows an error such as <code>80020148</code>, start the CFW again (<code>FasterARK</code> for ARK, <code>launcher</code> for 6.61 LME) and then start the game. This happens after the PSP has been fully powered off',
+      pspTip2: 'Check the location and names of <code>seplugins/exvsplug.prx</code> and <code>seplugins/exvs/exvs.bin</code>, and the line in <code>game.txt</code> (<code>PLUGINS.TXT</code> for ARK)',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-10-31</p>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li>Starting the game again after quitting it often failed with error <code>80020148</code>; fixed (plugin 1.10). The cheats now start working about 20 seconds after the game is started</li>' +
+            '<li>Added the setting for using the plugin with the ARK CFW (<code>PLUGINS.TXT</code>) to the instructions</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-10-30</p>' +
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>Using Sazabi\'s Burst Attack while its funnels were already out sometimes sent the Burst Attack funnel beams in the wrong direction; fixed</li>' +
