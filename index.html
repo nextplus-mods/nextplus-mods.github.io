@@ -395,7 +395,7 @@
     <div class="frame"><div class="in panel">
       <p class="readfirst" data-i18n="readFirst"><b>最初にお読みください</b><br>下の <b>6つの手順を、上から順にすべて</b>行ってください。1つでも飛ばすと、チートが効かない・動作が不安定になることがあります。うまくいかないときは、質問や不具合の報告の前に、このページ下の「<b>動かないときのチェック</b>」を上から確認してください</p>
       <ol class="steps">
-        <li data-i18n="step1"><b class="st">チートを使えるようにする</b>PPSSPP の「設定」→「システム」で「チートを有効化」を <b>ON</b> にする</li>
+        <li data-i18n="step1"><b class="st">チートを使えるようにする</b>PPSSPP の「設定」→「システム」で「チートを有効化」を <b>ON</b> にする<br><span class="warn">PPSSPP は公式の最新版を使ってください（動作確認は v1.20.4）。「GLSL 差し替え版」などの古い版・非公式版での動作は保証できません</span></li>
         <li data-i18n="stepCpu"><b class="st">CPU クロックを 666 にする</b>ゲーム一覧でこのゲームを長押し（Windows は右クリック）→「ゲーム設定を作成」→「ゲーム設定」→「システム」で「CPU クロック」を <b>666</b> にする<br><span class="warn">このゲームだけに効きます。弾が多い場面での重さを減らします</span></li>
         <li data-i18n="step2"><b class="st">INI ファイルを入れる</b>ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる（フォルダがなければ作る。場所は下の「PSP/Cheats フォルダの場所」）<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
         <li data-i18n="step3"><b class="st">チートが ON か確かめる</b>ゲームを起動し、<b>Esc</b> キー（Android は画面のメニュー）→「チート」を開いて、使うチートが ON になっているか確かめる</li>
@@ -765,7 +765,7 @@
       awakeHow: '<b>Awakening</b>: press <b>L+R</b> when the awakening gauge is 500 or more. <b>Burst Attack</b>: press <b>L+R</b> again while awakened (without holding Up on the D-pad; once per awakening)',
       howto: 'How to use',
       readFirst: '<b>Please read this first</b><br>Do <b>all 6 steps below, in order</b>. If you skip even one, the cheats may not work or the game may become unstable. If something goes wrong, go through “<b>Checklist when it doesn’t work</b>” further down this page before asking a question or reporting a problem',
-      step1: '<b class="st">Allow cheats</b>In PPSSPP, go to Settings → System and turn “Enable Cheats” <b>ON</b>',
+      step1: '<b class="st">Allow cheats</b>In PPSSPP, go to Settings → System and turn “Enable Cheats” <b>ON</b><br><span class="warn">Use the latest official version of PPSSPP (tested on v1.20.4). Operation on old or unofficial builds, such as the “GLSL replace” version, is not guaranteed</span>',
       step2: '<b class="st">Add the INI file</b>Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder (create the folder if it does not exist; see “Where is the PSP/Cheats folder?” below)<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
       stepCpu: '<b class="st">Set CPU clock to 666</b>Long-press this game in the game list (right-click on Windows) → “Create game config” → “Game settings” → “System”, and set “CPU clock” to <b>666</b><br><span class="warn">This only affects this game. It reduces slowdown in scenes with many shots</span>',
       step3: '<b class="st">Check that the cheats are ON</b>Start the game, press <b>Esc</b> (on Android, use the on-screen menu) → open “Cheats”, and check that the cheats you want are turned on',
