@@ -25,6 +25,7 @@
     --oo: #5CC8F5;
     --reb: #6FD49C;
     --f91: #FF7438;
+    --sf: #4F8BFF;
     --psp: #8FB4FF;
     --cut: 16px;
     --latin: "Rajdhani", "Murecho", sans-serif;
@@ -85,7 +86,7 @@
 
   /* All Units Combined */
   .feature .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 28%, var(--line-hi) 72%, var(--gold)); }
-  .trio { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #000; }
+  .trio { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: #000; }
   .trio img { display: block; width: 100%; height: auto; }
   .trio::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
   .fb { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: center; padding: 24px 28px 4px; }
@@ -193,6 +194,7 @@
   .tag.nu { color: var(--nu); }
   .tag.reb { color: var(--reb); }
   .tag.f91 { color: var(--f91); }
+  .tag.sf { color: var(--sf); }
   .tag.psp { color: var(--psp); }
   .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 3px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
   .log .older { margin: 0; padding: 0; border: 0; }
@@ -261,6 +263,7 @@
       <div class="trio">
         <img src="nu.jpg" alt="" width="960" height="540">
         <img src="f91.jpg" alt="" width="960" height="540">
+        <img src="sf.jpg" alt="" width="960" height="540">
         <img src="oo.jpg" alt="" width="960" height="540">
         <img src="reborns.jpg" alt="" width="960" height="540">
       </div>
@@ -268,14 +271,14 @@
         <div>
           <span class="badge">ALL UNITS</span>
           <h2 data-i18n="all">全機体統合版</h2>
-          <p class="lead" data-i18n="allLead">νガンダム・ガンダムF91・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
+          <p class="lead" data-i18n="allLead">νガンダム・ガンダムF91・ストライクフリーダム・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/v20261030-135900-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/v20261102-112128-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updAll">更新 2026-10-30</p>
+          <p class="meta" data-i18n="updAll">更新 2026-11-02</p>
         </div>
       </div>
       <details>
@@ -284,7 +287,7 @@
           <li>EXVSシステム ／ カメラ視野角変更</li>
           <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
           <li>BGMオフ (効果音・ボイスはそのまま)（最初は OFF）</li>
-          <li>νガンダム用 1個・ガンダムF91用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（M.E.P.E.永続・TRANS-AM永続 は最初は OFF。中身は下の機体ごとのファイルと同じです）</li>
+          <li>νガンダム用 1個・ガンダムF91用 2個・ストライクフリーダム用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（M.E.P.E.永続・S.E.E.D.永続・TRANS-AM永続 は最初は OFF。中身は下の機体ごとのファイルと同じです）</li>
         </ul>
       </details>
     </div></div>
@@ -335,6 +338,30 @@
             <ul data-i18n="listF91">
               <li>ガンダムF91 (EXVS風)（BRモードとヴェスバーモードの統合・射撃強化・格闘強化・M.E.P.E.強化・バルカンの自動迎撃・アシスト強化 などを1つにまとめたもの）</li>
               <li>ガンダムF91 (M.E.P.E.永続)（最初は OFF。ON にすると、M.E.P.E. のゲージがいつも最大で、発動したら時間で解けない）</li>
+            </ul>
+          </details>
+        </div>
+      </div></div>
+    </article>
+
+    <article class="unit" id="sfreedom" style="--u: var(--sf)">
+      <div class="frame"><div class="in">
+        <div class="shot"><img src="sf.jpg" alt="ストライクフリーダム（EXVS風）" data-i18n-alt="altSf" width="960" height="540" loading="lazy"></div>
+        <div class="ub">
+          <div class="grow">
+            <p class="series" data-i18n="seriesSeedD">機動戦士ガンダムSEED DESTINY</p>
+            <h3 data-i18n="sf">EXVS風ストライクフリーダム</h3>
+          </div>
+          <a class="dl" href="https://github.com/nextplus-mods/strike-freedom-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/strike-freedom-exvs/releases/download/v20261102-112100-en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updSf">更新 2026-11-02</p>
+          <details>
+            <summary><span data-i18n="contents">入っているコード</span></summary>
+            <ul data-i18n="listSf">
+              <li>ストライクフリーダム (EXVS風)（スーパードラグーン強化・特殊射撃強化・格闘強化・S.E.E.D.発現・横覚醒技でミーティアに換装・勝利ポーズ などを1つにまとめたもの）</li>
+              <li>ストライクフリーダム (S.E.E.D.永続)（最初は OFF。ON にすると、S.E.E.D. のゲージがいつも最大で、発動したら時間で解けない）</li>
             </ul>
           </details>
         </div>
@@ -467,6 +494,7 @@
             <li>νガンダム (EXVS風)・ガンダムF91 (EXVS風)・ダブルオーライザー (EXVS風)・リボーンズガンダム (EXVS風)</li>
             <li>どれもいつも ON です（ON/OFF の切り替えはできません）</li>
             <li>カメラ視野角変更・覚醒無限・BGMオフ・M.E.P.E.永続・TRANS-AM永続 は入っていません</li>
+            <li>ストライクフリーダムは入っていません（PPSSPP 用の ini ファイルだけです）</li>
           </ul>
         </div>
         <div class="sub">
@@ -494,6 +522,25 @@
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-11-02</p>
+          <div class="grp"><span class="tag sf">ストライクフリーダム</span>
+            <ul>
+              <li><span class="new">公開</span>ストライクフリーダムを公開しました（PPSSPP 用。全機体統合版にも入っています）</li>
+              <li><span class="new">追加</span>「ストライクフリーダム (S.E.E.D.永続)」（最初は OFF）</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
+            <ul>
+              <li>ストライクフリーダム（1P・2P・CPU）のふくらはぎのスラスターカバーが、スラスターを噴かしている間だけ開くようにしました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li>PSP 実機用には、ストライクフリーダムは入っていません</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-10-31</p>
           <div class="grp"><span class="tag psp">PSP 実機</span>
@@ -756,8 +803,10 @@
       nu: 'EXVS-Style Nu Gundam',
       oo: 'EXVS-Style 00 Raiser',
       f91: 'EXVS-Style Gundam F91',
+      sf: 'EXVS-Style Strike Freedom',
       seriesNu: 'Char’s Counterattack',
       seriesF91: 'Mobile Suit Gundam F91',
+      seriesSeedD: 'Mobile Suit Gundam SEED DESTINY',
       series00: 'Mobile Suit Gundam 00',
       dlShort: 'Download',
       secUnits: 'Per-unit files',
@@ -785,17 +834,19 @@
       tip3: 'Is the game ID <code>NPJH50107</code> (Japanese version)? Other versions are not supported',
       oneFile: 'All files have the same name, and only one of them can be in <code>PSP/Cheats</code> at a time. To use all units, pick “All Units Combined”',
       all: 'All Units Combined',
-      allLead: 'Nu Gundam, Gundam F91, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
+      allLead: 'Nu Gundam, Gundam F91, Strike Freedom, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
       contents: 'Included codes',
-      updAll: 'Updated 2026-10-30',
+      updAll: 'Updated 2026-11-02',
+      updSf: 'Updated 2026-11-02',
       updReborns: 'Updated 2026-10-30',
       updNu: 'Updated 2026-10-30',
       updOo: 'Updated 2026-10-30',
       updF91: 'Updated 2026-10-30',
-      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats, 2 00 Raiser cheats, 2 Reborns Gundam cheats (Infinite M.E.P.E. and Infinite TRANS-AM are OFF by default; the same as in the per-unit files below)</li>',
+      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats, 2 Strike Freedom cheats, 2 00 Raiser cheats, 2 Reborns Gundam cheats (Infinite M.E.P.E., Infinite S.E.E.D. and Infinite TRANS-AM are OFF by default; the same as in the per-unit files below)</li>',
       listReborns: '<li>Reborns Gundam (EXVS Style) (Durability 620→650, Shooting Buffs, Melee Buffs, Glowing Parts and Victory Pose: Back Melee Motion in one cheat)</li><li>Reborns Gundam (Infinite TRANS-AM) (OFF by default. When ON, the TRANS-AM gauge is always full, and once activated TRANS-AM does not run out)</li>',
       listNu: '<li>Nu Gundam (EXVS Style) (Main Shot Looks Like Burst Beam, Charge Shot Buff, Fin Funnel Buffs, Fin Funnel Position Fix, Melee Buffs and Back Special Melee: Fin Funnel Barrier in one cheat)</li>',
       listF91: '<li>Gundam F91 (EXVS Style) (BR mode and VSBR mode merged, Shooting Buffs, Melee Buffs, M.E.P.E. Buffs, Automatic Vulcan Interception, Assist Buff and more in one cheat)</li><li>Gundam F91 (Infinite M.E.P.E.) (OFF by default. When ON, the M.E.P.E. gauge is always full, and once activated M.E.P.E. does not run out)</li>',
+      listSf: '<li>Strike Freedom (EXVS Style) (Super DRAGOON Buffs, Special Shot Buffs, Melee Buffs, S.E.E.D. Activation, Side Burst Attack: METEOR Equip, Victory Poses and more in one cheat)</li><li>Strike Freedom (Infinite S.E.E.D.) (OFF by default. When ON, the S.E.E.D. gauge is always full, and once activated S.E.E.D. does not run out)</li>',
       listOo: '<li>00 Raiser (EXVS Style) (GN Sword III Mode Buffs, Melee Buffs, TRANS-AM 20 sec, TRANS-AM Buffs, GN Field on TRANS-AM Guard and Glowing Parts in one cheat)</li><li>00 Raiser (Infinite TRANS-AM) (OFF by default. When ON, the TRANS-AM gauge is always full, and once activated TRANS-AM does not run out)</li>',
       toPsp: 'For a real PSP',
       secPsp: 'For a real PSP',
@@ -806,7 +857,7 @@
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
       pspStep4: 'End the USB connection, start the game, pick the unit as <b>Player 1</b> and start a battle (the cheats only affect Player 1’s unit)',
-      listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E. and Infinite TRANS-AM are not included</li>',
+      listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E. and Infinite TRANS-AM are not included</li><li>Strike Freedom is not included (it is only in the PPSSPP ini files)</li>',
       pspNote1: 'Tested on a PSP-3000 with CFW ARK (FasterARK) (the previous version also on 6.61 LME). Other CFWs have not been tested',
       pspNote4: 'The cheats start working about 20 seconds after the game is started (so that they do not get in the way of the game starting)',
       pspNote2: 'The plugin writes a small log file (<code>log.txt</code>) in <code>seplugins/exvs</code>',
@@ -815,6 +866,18 @@
       pspTip2: 'Check the location and names of <code>seplugins/exvsplug.prx</code> and <code>seplugins/exvs/exvs.bin</code>, and the line in <code>game.txt</code> (<code>PLUGINS.TXT</code> for ARK)',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-11-02</p>' +
+          '<div class="grp"><span class="tag sf">Strike Freedom</span><ul>' +
+            '<li><span class="new">RELEASE</span>Released Strike Freedom (for PPSSPP; also in the All Units Combined file)</li>' +
+            '<li><span class="new">NEW</span>“Strike Freedom (Infinite S.E.E.D.)” (OFF by default)</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+            '<li>Strike Freedom’s calf thruster covers (Player 1, Player 2 and CPU) now open only while the thrusters are firing</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li>Strike Freedom is not included in the real PSP version</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-10-31</p>' +
           '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
             '<li>Starting the game again after quitting it often failed with error <code>80020148</code>; fixed (plugin 1.10). The cheats now start working about 20 seconds after the game is started</li>' +
@@ -982,7 +1045,8 @@
       altReborns: 'Reborns Gundam (EXVS-style)',
       altNu: 'Nu Gundam (EXVS-style)',
       altOo: '00 Raiser (EXVS-style)',
-      altF91: 'Gundam F91 (EXVS-style)'
+      altF91: 'Gundam F91 (EXVS-style)',
+      altSf: 'Strike Freedom (EXVS-style)'
     };
     var JA = {};
     var texts = document.querySelectorAll('[data-i18n]');
