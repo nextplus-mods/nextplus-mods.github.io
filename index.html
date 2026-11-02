@@ -473,11 +473,11 @@
           <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと4機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261031/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261102/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updPsp">更新 2026-10-31</p>
+          <p class="meta" data-i18n="updPsp">更新 2026-11-02</p>
         </div>
       </div>
       <ol class="steps">
@@ -537,6 +537,7 @@
           </div>
           <div class="grp"><span class="tag psp">PSP 実機</span>
             <ul>
+              <li>チートを当てる間かくが一定でなく、あるフレームでは2回・別のフレームでは1回も当たらないことがあったのを直し、PPSSPP と同じく1フレームに1回当てるようにしました（プラグイン 1.12）</li>
               <li>PSP 実機用には、ストライクフリーダムは入っていません</li>
             </ul>
           </div>
@@ -852,7 +853,7 @@
       secPsp: 'For a real PSP',
       pspTitle: 'Real PSP version (plugin)',
       pspLead: 'A plugin that runs the EXVS System and the 4 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
-      updPsp: 'Updated 2026-10-31',
+      updPsp: 'Updated 2026-11-02',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
@@ -875,6 +876,7 @@
             '<li>Strike Freedom’s calf thruster covers (Player 1, Player 2 and CPU) now open only while the thrusters are firing</li>' +
           '</ul></div>' +
           '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li>The cheats were not applied at a steady rate (twice in some frames and not at all in others); fixed, they are now applied once per frame as on PPSSPP (plugin 1.12)</li>' +
             '<li>Strike Freedom is not included in the real PSP version</li>' +
           '</ul></div>' +
         '</div>' +
