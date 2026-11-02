@@ -68,7 +68,13 @@
   .sec::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line-hi), transparent); }
   .common { margin: -4px 0 18px; padding: 12px 16px; font-size: 13px; color: var(--sub); background: rgba(16, 20, 26, .8); border-left: 3px solid var(--gold); }
   .common b { color: var(--text); font-weight: 700; }
-  .common + .common { margin-top: -8px; }
+  .ctl { margin-top: 18px; padding: 16px 18px; background: var(--panel-2); border: 1px solid var(--line); border-left: 4px solid var(--gold); }
+  .ctl h3 { margin: 0 0 10px; font-size: 16px; font-weight: 700; color: var(--gold); }
+  .ctl ul { margin: 0; padding: 0; list-style: none; }
+  .ctl li { display: flex; align-items: center; gap: 12px; margin: 8px 0; font-size: 16px; }
+  .ctl-name { flex: none; min-width: 4.5em; font-size: 18px; color: var(--text); }
+  .ctl-key { flex: none; padding: 2px 12px; font-family: var(--latin); font-size: 18px; font-weight: 700; color: var(--gold-hi); background: var(--panel); border: 1px solid var(--gold); border-radius: 6px; }
+  .ctl-desc { color: var(--sub); }
 
   /* cut-corner frames: outer = border colour, inner = panel */
   .frame {
@@ -214,6 +220,9 @@
 
   @media (max-width: 860px) {
     .subs { grid-template-columns: 1fr; }
+    .ctl li { flex-wrap: wrap; gap: 6px 12px; }
+    .ctl-desc { flex: 1 1 100%; font-size: 14px; }
+    .ctl-name { min-width: 0; }
   }
   @media (max-width: 760px) {
     .units { grid-template-columns: 1fr; }
@@ -302,7 +311,6 @@
 
   <div class="sec"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
   <p class="common" data-i18n="common">どのファイルにも <b>EXVSシステム</b>・<b>カメラ視野角変更</b>・<b>覚醒無限 (覚醒技撃ち放題)</b>（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）・<b>BGMオフ (効果音・ボイスはそのまま)</b>（最初は OFF）が入っています</p>
-  <p class="common" data-i18n="awakeHow"><b>覚醒</b>：覚醒ゲージが 500 以上のときに <b>L+R</b>。<b>覚醒技</b>：覚醒中にもう一度 <b>L+R</b>（十字キーの↑は押さずに。1回の覚醒で1回）</p>
   <div class="units">
     <article class="unit" id="nu" style="--u: var(--nu)">
       <div class="frame"><div class="in">
@@ -442,6 +450,16 @@
         <li data-i18n="stepRefresh"><b class="st">リフレッシュレートを 16 にする（大事）</b>同じ「チート」の画面で「リフレッシュレート」を <b>16</b> にする<br><span class="warn">初期値の 77 のままだと、チートが正しく動かないことがあります</span></li>
         <li data-i18n="step4"><b class="st">1P で機体を選んで試合を始める</b>使いたい機体を <b>1P</b> で選び、<b>CPU 戦</b>（ひとりプレイ）で試合を始める（チートは1Pの機体にだけ効きます）</li>
       </ol>
+      <div class="ctl">
+        <h3 data-i18n="ctlTitle">試合中の操作（全機体共通）</h3>
+        <ul>
+          <li data-i18n="ctlAwake"><b class="ctl-name">覚醒</b><span class="ctl-key">L + R</span><span class="ctl-desc">覚醒ゲージが 500 以上のときに押す</span></li>
+          <li data-i18n="ctlBurst"><b class="ctl-name">覚醒技</b><span class="ctl-key">L + R</span><span class="ctl-desc">覚醒中にもう一度押す（十字キーの↑は押さずに。1回の覚醒で1回）</span></li>
+          <li data-i18n="ctlSide"><b class="ctl-name">横覚醒技</b><span class="ctl-key">← / → + L + R</span><span class="ctl-desc">覚醒中に、横（← か →）を押しながら押す</span></li>
+          <li data-i18n="ctlBack"><b class="ctl-name">後覚醒技</b><span class="ctl-key">↓ + L + R</span><span class="ctl-desc">覚醒中に、下（↓）を押しながら押す</span></li>
+        </ul>
+        <p class="note" data-i18n="ctlNote">出る技は機体ごとに違います。横覚醒技・後覚醒技がない機体もあります</p>
+      </div>
       <div class="subs">
         <div class="sub">
           <h3 data-i18n="where">PSP/Cheats フォルダの場所</h3>
@@ -826,7 +844,12 @@
       dlShort: 'Download',
       secUnits: 'Per-unit files',
       common: 'Every file includes <b>EXVS System</b>, <b>Wider Camera FOV</b>, <b>Infinite Awakening (Unlimited Awakening Attacks)</b> (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again) and <b>BGM Off (Sound Effects and Voices Stay)</b> (OFF by default)',
-      awakeHow: '<b>Awakening</b>: press <b>L+R</b> when the awakening gauge is 500 or more. <b>Burst Attack</b>: press <b>L+R</b> again while awakened (without holding Up on the D-pad; once per awakening)',
+      ctlTitle: 'In-match controls (all units)',
+      ctlAwake: '<b class="ctl-name">Awakening</b><span class="ctl-key">L + R</span><span class="ctl-desc">Press when the awakening gauge is 500 or more</span>',
+      ctlBurst: '<b class="ctl-name">Burst Attack</b><span class="ctl-key">L + R</span><span class="ctl-desc">Press again while awakened (without holding Up on the D-pad; once per awakening)</span>',
+      ctlSide: '<b class="ctl-name">Side Burst</b><span class="ctl-key">← / → + L + R</span><span class="ctl-desc">While awakened, press while holding Left or Right</span>',
+      ctlBack: '<b class="ctl-name">Back Burst</b><span class="ctl-key">↓ + L + R</span><span class="ctl-desc">While awakened, press while holding Down</span>',
+      ctlNote: 'The attack that comes out differs by unit. Some units have no Side or Back Burst',
       howto: 'How to use',
       readFirst: '<b>Please read this first</b><br>Do <b>all 6 steps below, in order</b>. If you skip even one, the cheats may not work or the game may become unstable. If something goes wrong, go through “<b>Checklist when it doesn’t work</b>” further down this page before asking a question or reporting a problem',
       step1: '<b class="st">Allow cheats</b>In PPSSPP, go to Settings → System and turn “Enable Cheats” <b>ON</b><br><span class="warn">Use the latest official version of PPSSPP (tested on v1.20.4). Operation on old or unofficial builds, such as the “GLSL replace” version, is not guaranteed</span>',
