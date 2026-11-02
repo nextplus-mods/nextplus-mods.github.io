@@ -66,8 +66,6 @@
   .sec-en::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 8px; background: var(--gold); clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .sec h2 { margin: 0; font-size: 18px; font-weight: 800; white-space: nowrap; }
   .sec::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line-hi), transparent); }
-  .common { margin: -4px 0 18px; padding: 12px 16px; font-size: 13px; color: var(--sub); background: rgba(16, 20, 26, .8); border-left: 3px solid var(--gold); }
-  .common b { color: var(--text); font-weight: 700; }
   .ctl { margin-top: 18px; padding: 16px 18px; background: var(--panel-2); border: 1px solid var(--line); border-left: 4px solid var(--gold); }
   .ctl h3 { margin: 0 0 10px; font-size: 16px; font-weight: 700; color: var(--gold); }
   .ctl ul { margin: 0; padding: 0; list-style: none; }
@@ -99,7 +97,7 @@
   .badge { display: inline-block; padding: 1px 14px; font-family: var(--latin); font-size: 13px; font-weight: 700; letter-spacing: .18em; color: #111; background: var(--gold); clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
   .fb h2 { margin: 8px 0 6px; font-size: 26px; font-weight: 800; line-height: 1.35; }
   .lead { margin: 0; font-size: 14px; color: var(--sub); }
-  .feature details { margin: 16px 28px 0; padding-bottom: 24px; }
+  .feature details { margin: 0 0 14px; }
 
   /* download button */
   .dl {
@@ -135,7 +133,7 @@
   .shot::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--u); box-shadow: 0 0 14px var(--u); }
   .ub { flex: 1; display: flex; flex-direction: column; padding: 16px 18px 20px; }
   .ub > p:last-of-type { margin-bottom: 14px; }
-  .ub details { margin-top: auto; }
+  .ub details { margin: 0 0 14px; }
   .series { margin: 0; font-size: 12px; font-weight: 700; color: var(--u); }
   .ub h3 { margin: 2px 0 14px; font-size: 18px; font-weight: 800; line-height: 1.45; }
 
@@ -239,7 +237,6 @@
     .sec { margin-top: 36px; }
     .fb { padding: 18px 18px 2px; }
     .fb h2 { font-size: 22px; }
-    .feature details { margin: 14px 18px 0; padding-bottom: 20px; }
     .feature .dl { font-size: 16px; }
     .panel { padding: 20px 18px 22px; }
     .steps li { padding-left: 48px; font-size: 14px; }
@@ -288,6 +285,15 @@
           <p class="lead" data-i18n="allLead">νガンダム・ガンダムF91・ストライクフリーダム・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
         </div>
         <div>
+          <details>
+            <summary><span data-i18n="contents">入っているコード</span></summary>
+            <ul data-i18n="listAll">
+              <li>EXVSシステム ／ カメラ視野角変更</li>
+              <li>覚醒無限 (覚醒技撃ち放題)</li>
+              <li>BGMオフ</li>
+              <li>νガンダム用 1個・ガンダムF91用 2個・ストライクフリーダム用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（中身は下の機体ごとのファイルと同じです）</li>
+            </ul>
+          </details>
           <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/v20261102-112128-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
@@ -298,20 +304,10 @@
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div>
-      <details>
-        <summary><span data-i18n="contents">入っているコード</span></summary>
-        <ul data-i18n="listAll">
-          <li>EXVSシステム ／ カメラ視野角変更</li>
-          <li>覚醒無限 (覚醒技撃ち放題)（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）</li>
-          <li>BGMオフ (効果音・ボイスはそのまま)（最初は OFF）</li>
-          <li>νガンダム用 1個・ガンダムF91用 2個・ストライクフリーダム用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（M.E.P.E.永続・S.E.E.D.永続・TRANS-AM永続 は最初は OFF。中身は下の機体ごとのファイルと同じです）</li>
-        </ul>
-      </details>
     </div></div>
   </section>
 
   <div class="sec"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
-  <p class="common" data-i18n="common">どのファイルにも <b>EXVSシステム</b>・<b>カメラ視野角変更</b>・<b>覚醒無限 (覚醒技撃ち放題)</b>（最初は OFF。ON にすると、覚醒ゲージが最初から最大・覚醒しても減らない・覚醒技を何度でも使える）・<b>BGMオフ (効果音・ボイスはそのまま)</b>（最初は OFF）が入っています</p>
   <div class="units">
     <article class="unit" id="nu" style="--u: var(--nu)">
       <div class="frame"><div class="in">
@@ -321,13 +317,6 @@
             <p class="series" data-i18n="seriesNu">機動戦士ガンダム 逆襲のシャア</p>
             <h3 data-i18n="nu">EXVS風νガンダム</h3>
           </div>
-          <a class="dl" href="https://github.com/nextplus-mods/nu-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nu-gundam-exvs/releases/download/v20261030-135814-en/NPJH50107.ini" download="NPJH50107.ini">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-            <span data-i18n="dlShort">ダウンロード</span>
-          </a>
-          <p class="meta" data-i18n="updNu">更新 2026-10-30</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listNu">
@@ -335,6 +324,13 @@
               <li>νガンダム (EXVS風)</li>
             </ul>
           </details>
+          <a class="dl" href="https://github.com/nextplus-mods/nu-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nu-gundam-exvs/releases/download/v20261030-135814-en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updNu">更新 2026-10-30</p>
+          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
+          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -347,13 +343,6 @@
             <p class="series" data-i18n="seriesF91">機動戦士ガンダムF91</p>
             <h3 data-i18n="f91">EXVS風ガンダムF91</h3>
           </div>
-          <a class="dl" href="https://github.com/nextplus-mods/gundam-f91-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/gundam-f91-exvs/releases/download/v20261030-135821-en/NPJH50107.ini" download="NPJH50107.ini">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-            <span data-i18n="dlShort">ダウンロード</span>
-          </a>
-          <p class="meta" data-i18n="updF91">更新 2026-10-30</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listF91">
@@ -362,6 +351,13 @@
               <li>ガンダムF91 (M.E.P.E.永続)</li>
             </ul>
           </details>
+          <a class="dl" href="https://github.com/nextplus-mods/gundam-f91-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/gundam-f91-exvs/releases/download/v20261030-135821-en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updF91">更新 2026-10-30</p>
+          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
+          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -374,14 +370,6 @@
             <p class="series" data-i18n="seriesSeedD">機動戦士ガンダムSEED DESTINY</p>
             <h3 data-i18n="sf">EXVS風ストライクフリーダム</h3>
           </div>
-          <a class="dl" href="https://github.com/nextplus-mods/strike-freedom-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/strike-freedom-exvs/releases/download/v20261102-112100-en/NPJH50107.ini" download="NPJH50107.ini">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-            <span data-i18n="dlShort">ダウンロード</span>
-          </a>
-          <p class="meta" data-i18n="updSf">更新 2026-11-02</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listSf">
@@ -390,6 +378,14 @@
               <li>ストライクフリーダム (S.E.E.D.永続)</li>
             </ul>
           </details>
+          <a class="dl" href="https://github.com/nextplus-mods/strike-freedom-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/strike-freedom-exvs/releases/download/v20261102-112100-en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updSf">更新 2026-11-02</p>
+          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
+          <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
+          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -402,13 +398,6 @@
             <p class="series" data-i18n="series00">機動戦士ガンダム00</p>
             <h3 data-i18n="oo">EXVS風ダブルオーライザー</h3>
           </div>
-          <a class="dl" href="https://github.com/nextplus-mods/00-raiser-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/00-raiser-exvs/releases/download/v20261030-135816-en/NPJH50107.ini" download="NPJH50107.ini">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-            <span data-i18n="dlShort">ダウンロード</span>
-          </a>
-          <p class="meta" data-i18n="updOo">更新 2026-10-30</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listOo">
@@ -417,6 +406,13 @@
               <li>ダブルオーライザー (TRANS-AM永続)</li>
             </ul>
           </details>
+          <a class="dl" href="https://github.com/nextplus-mods/00-raiser-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/00-raiser-exvs/releases/download/v20261030-135816-en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updOo">更新 2026-10-30</p>
+          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
+          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -429,13 +425,6 @@
             <p class="series" data-i18n="series00">機動戦士ガンダム00</p>
             <h3 data-i18n="reborns">EXVS風リボーンズガンダム</h3>
           </div>
-          <a class="dl" href="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/download/v20261030-135812-en/NPJH50107.ini" download="NPJH50107.ini">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
-            <span data-i18n="dlShort">ダウンロード</span>
-          </a>
-          <p class="meta" data-i18n="updReborns">更新 2026-10-30</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
           <details>
             <summary><span data-i18n="contents">入っているコード</span></summary>
             <ul data-i18n="listReborns">
@@ -444,6 +433,13 @@
               <li>リボーンズガンダム (TRANS-AM永続)</li>
             </ul>
           </details>
+          <a class="dl" href="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/download/v20261030-135812-en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updReborns">更新 2026-10-30</p>
+          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
+          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -854,7 +850,6 @@
       series00: 'Mobile Suit Gundam 00',
       dlShort: 'Download',
       secUnits: 'Per-unit files',
-      common: 'Every file includes <b>EXVS System</b>, <b>Wider Camera FOV</b>, <b>Infinite Awakening (Unlimited Awakening Attacks)</b> (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again) and <b>BGM Off (Sound Effects and Voices Stay)</b> (OFF by default)',
       ctlTitle: 'In-match controls (all units)',
       ctlAwake: '<b class="ctl-name">Awakening</b><span class="ctl-key">L + R</span><span class="ctl-desc">Press when the awakening gauge is 500 or more</span>',
       ctlBurst: '<b class="ctl-name">Burst Attack</b><span class="ctl-key">L + R</span><span class="ctl-desc">Press again while awakened (without holding Up on the D-pad; once per awakening)</span>',
@@ -891,7 +886,7 @@
       updNu: 'Updated 2026-10-30',
       updOo: 'Updated 2026-10-30',
       updF91: 'Updated 2026-10-30',
-      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks) (OFF by default. When ON, the awakening gauge starts full, does not go down while awakened, and you can use the awakening attack again and again)</li><li>BGM Off (Sound Effects and Voices Stay) (OFF by default)</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats, 2 Strike Freedom cheats, 2 00 Raiser cheats, 2 Reborns Gundam cheats (Infinite M.E.P.E., Infinite S.E.E.D. and Infinite TRANS-AM are OFF by default; the same as in the per-unit files below)</li>',
+      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks)</li><li>BGM Off</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats, 2 Strike Freedom cheats, 2 00 Raiser cheats, 2 Reborns Gundam cheats (the same as in the per-unit files below)</li>',
       listReborns: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Reborns Gundam (EXVS Style)</li><li>Reborns Gundam (Infinite TRANS-AM)</li>',
       listNu: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Nu Gundam (EXVS Style)</li>',
       listF91: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Gundam F91 (EXVS Style)</li><li>Gundam F91 (Infinite M.E.P.E.)</li>',
