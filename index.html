@@ -93,7 +93,8 @@
   .trio { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: #000; }
   .trio img { display: block; width: 100%; height: auto; }
   .trio::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
-  .fb { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: center; padding: 24px 28px 4px; }
+  .fb { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; padding: 28px 36px 32px; }
+  .feature .must { margin-top: 8px; }
   .badge { display: inline-block; padding: 1px 14px; font-family: var(--latin); font-size: 13px; font-weight: 700; letter-spacing: .18em; color: #111; background: var(--gold); clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
   .fb h2 { margin: 8px 0 6px; font-size: 26px; font-weight: 800; line-height: 1.35; }
   .lead { margin: 0; font-size: 14px; color: var(--sub); }
@@ -235,7 +236,7 @@
     .lang { position: absolute; top: 14px; right: 16px; }
     .spec { margin-bottom: 26px; }
     .sec { margin-top: 36px; }
-    .fb { padding: 18px 18px 2px; }
+    .fb { padding: 20px 20px 26px; }
     .fb h2 { font-size: 22px; }
     .feature .dl { font-size: 16px; }
     .panel { padding: 20px 18px 22px; }
@@ -566,7 +567,7 @@
           <div class="grp"><span class="tag sf">ストライクフリーダム</span>
             <ul>
               <li><span class="new">公開</span>ストライクフリーダムを公開しました（PPSSPP 用。全機体統合版にも入っています）</li>
-              <li><span class="new">追加</span>「ストライクフリーダム (S.E.E.D.永続)」（最初は OFF）</li>
+              <li><span class="new">追加</span>「ストライクフリーダム (S.E.E.D.永続)」</li>
             </ul>
           </div>
           <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
@@ -672,17 +673,17 @@
             <div class="grp"><span class="tag f91">ガンダムF91</span>
               <ul>
                 <li><span class="new">公開</span>ガンダムF91を公開しました</li>
-                <li><span class="new">追加</span>「ガンダムF91 (M.E.P.E.永続)」（最初は OFF）</li>
+                <li><span class="new">追加</span>「ガンダムF91 (M.E.P.E.永続)」</li>
               </ul>
             </div>
             <div class="grp"><span class="tag oo">ダブルオーライザー</span>
               <ul>
-                <li><span class="new">追加</span>「ダブルオーライザー (TRANS-AM永続)」（最初は OFF）</li>
+                <li><span class="new">追加</span>「ダブルオーライザー (TRANS-AM永続)」</li>
               </ul>
             </div>
             <div class="grp"><span class="tag reb">リボーンズガンダム</span>
               <ul>
-                <li><span class="new">追加</span>「リボーンズガンダム (TRANS-AM永続)」（最初は OFF）</li>
+                <li><span class="new">追加</span>「リボーンズガンダム (TRANS-AM永続)」</li>
               </ul>
             </div>
             <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
@@ -740,7 +741,7 @@
             </div>
             <div class="grp"><span class="tag all">全機体</span>
               <ul>
-                <li><span class="new">追加</span>「BGMオフ (効果音・ボイスはそのまま)」（最初は OFF）</li>
+                <li><span class="new">追加</span>「BGMオフ (効果音・ボイスはそのまま)」</li>
                 <li>使い方に「チートのリフレッシュレートを 16 にする」を追加しました（初期値の 77 のままだと、チートが正しく動かないことがあります）</li>
               </ul>
             </div>
@@ -763,7 +764,7 @@
             <div class="grp"><span class="tag all">全機体</span>
               <ul>
                 <li><span class="new">追加</span>全機体統合版</li>
-                <li><span class="new">追加</span>「覚醒無限 (覚醒技撃ち放題)」（最初は OFF）</li>
+                <li><span class="new">追加</span>「覚醒無限 (覚醒技撃ち放題)」</li>
                 <li>ダメージ表示が試合開始の演出の間に出ないようにしました</li>
               </ul>
             </div>
@@ -917,7 +918,7 @@
         '<div class="ent"><p class="d">2026-11-02</p>' +
           '<div class="grp"><span class="tag sf">Strike Freedom</span><ul>' +
             '<li><span class="new">RELEASE</span>Released Strike Freedom (for PPSSPP; also in the All Units Combined file)</li>' +
-            '<li><span class="new">NEW</span>“Strike Freedom (Infinite S.E.E.D.)” (OFF by default)</li>' +
+            '<li><span class="new">NEW</span>“Strike Freedom (Infinite S.E.E.D.)”</li>' +
           '</ul></div>' +
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>Strike Freedom’s calf thruster covers (Player 1, Player 2 and CPU) now open only while the thrusters are firing</li>' +
@@ -987,13 +988,13 @@
           '<div class="ent"><p class="d">2026-10-22</p>' +
             '<div class="grp"><span class="tag f91">Gundam F91</span><ul>' +
               '<li><span class="new">RELEASE</span>Released Gundam F91</li>' +
-              '<li><span class="new">NEW</span>“Gundam F91 (Infinite M.E.P.E.)” (OFF by default)</li>' +
+              '<li><span class="new">NEW</span>“Gundam F91 (Infinite M.E.P.E.)”</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag oo">00 Raiser</span><ul>' +
-              '<li><span class="new">NEW</span>“00 Raiser (Infinite TRANS-AM)” (OFF by default)</li>' +
+              '<li><span class="new">NEW</span>“00 Raiser (Infinite TRANS-AM)”</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
-              '<li><span class="new">NEW</span>“Reborns Gundam (Infinite TRANS-AM)” (OFF by default)</li>' +
+              '<li><span class="new">NEW</span>“Reborns Gundam (Infinite TRANS-AM)”</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
               '<li>When the awakened unit was targeting something that is not a unit (such as Rafflesia’s bugs), shots and effects sometimes stopped appearing; fixed</li>' +
@@ -1032,7 +1033,7 @@
               '<li>Holding the Special Shot / Special Melee buttons no longer makes you jump (rise) after the attack (Player 1 only)</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag all">All units</span><ul>' +
-              '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)” (OFF by default)</li>' +
+              '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)”</li>' +
               '<li>Added “Set the cheat Refresh interval to 16” to How to use (with the default value of 77, the cheats may not work correctly)</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
@@ -1048,7 +1049,7 @@
           '<div class="ent"><p class="d">2026-10-15</p>' +
             '<div class="grp"><span class="tag all">All units</span><ul>' +
               '<li><span class="new">NEW</span>All Units Combined</li>' +
-              '<li><span class="new">NEW</span>“Infinite Awakening (Unlimited Awakening Attacks)” (OFF by default)</li>' +
+              '<li><span class="new">NEW</span>“Infinite Awakening (Unlimited Awakening Attacks)”</li>' +
               '<li>Damage numbers no longer appear during the match intro</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
