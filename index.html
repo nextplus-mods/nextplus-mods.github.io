@@ -512,11 +512,11 @@
           <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと4機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261102/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261103/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updPsp">更新 2026-11-02</p>
+          <p class="meta" data-i18n="updPsp">更新 2026-11-03</p>
         </div>
       </div>
       <ol class="steps">
@@ -567,6 +567,11 @@
           <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
             <ul>
               <li>アーケードのボスのストライクフリーダムも、ふくらはぎのスラスターカバーが開くようにしました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li>EXVSシステムを最新版にしました。アーケードのボスのストライクフリーダムのふくらはぎのスラスターカバーが開きます</li>
             </ul>
           </div>
         </div>
@@ -908,7 +913,7 @@
       mustLatest: '<a href="#howto">⚠ Be sure to use the <b>latest official version</b> of PPSSPP</a>',
       mustRefresh: '<a href="#howto">⚠ Be sure to set PPSSPP’s Refresh interval to <b>16 ms</b></a>',
       mustCpu: '<a href="#howto">⚠ Be sure to set PPSSPP’s CPU clock to <b>666 MHz</b></a>',
-      updPsp: 'Updated 2026-11-02',
+      updPsp: 'Updated 2026-11-03',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
@@ -926,6 +931,9 @@
         '<div class="ent"><p class="d">2026-11-03</p>' +
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>The calf thruster covers of the boss Strike Freedom in Arcade mode now open too</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li>Updated the EXVS System to the latest version. The calf thruster covers of the boss Strike Freedom in Arcade mode now open</li>' +
           '</ul></div>' +
         '</div>' +
         '<div class="ent"><p class="d">2026-11-02</p>' +
