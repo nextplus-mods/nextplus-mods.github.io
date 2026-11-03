@@ -186,6 +186,7 @@
   #psp .sub { border-top-color: var(--psp); }
   #psp .steps { margin-top: 6px; }
   #psp .trio { margin: -26px -28px 22px; }
+  #psp .must { color: var(--gold-hi); }
   #psp .trio::after { background: var(--psp); box-shadow: 0 0 16px var(--psp); }
   .steps pre { margin: 8px 0 2px; padding: 8px 12px; font-family: Consolas, "Courier New", monospace; font-size: 13px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; white-space: pre-wrap; overflow-wrap: anywhere; }
 
@@ -527,6 +528,7 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updPsp">更新 2026-11-03</p>
+          <p class="must" data-i18n="pspMustLag">⚠ 処理落ちすることがあります。あらかじめご了承ください</p>
         </div>
       </div>
       <ol class="steps">
@@ -929,6 +931,7 @@
       mustRefresh: '<a href="#howto">⚠ Be sure to set PPSSPP’s Refresh interval to <b>16 ms</b></a>',
       mustCpu: '<a href="#howto">⚠ Be sure to set PPSSPP’s CPU clock to <b>666 MHz</b></a>',
       updPsp: 'Updated 2026-11-03',
+      pspMustLag: '⚠ The game may slow down at times. Thank you for your understanding',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
