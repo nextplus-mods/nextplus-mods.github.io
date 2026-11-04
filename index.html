@@ -3,8 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NEXT PLUS Mods</title>
-<meta name="description" content="ガンダムVS.ガンダムNEXT PLUS（PSP）用の CWCheat コードの配布ページです。">
+<title>NEXT PLUS Mods｜EXVS風チートコード / EXVS-Style Cheat Codes</title>
+<meta name="description" content="ガンダムVS.ガンダムNEXT PLUS（PSP）用の EXVS風 CWCheat コードの配布ページです。PPSSPP と PSP 実機に対応。 / EXVS-style cheat codes for Gundam vs. Gundam NEXT PLUS (PSP), for PPSSPP and a real PSP.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NEXT PLUS Mods">
+<meta property="og:url" content="https://nextplus-mods.github.io/">
+<meta property="og:title" content="NEXT PLUS Mods｜EXVS風チートコード">
+<meta property="og:description" content="ガンダムVS.ガンダムNEXT PLUS（PSP）用。νガンダム・F91・ストライクフリーダム・00ライザー・リボーンズ。PPSSPP と PSP 実機に対応">
+<meta property="og:image" content="https://nextplus-mods.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NEXT PLUS Mods：νガンダム・F91・ストライクフリーダム・00ライザー・リボーンズ">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#07090C">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +98,21 @@
     background: var(--panel);
     clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
   }
-  section[id], article[id] { scroll-margin-top: 16px; }
+  section[id], article[id], .sec[id] { scroll-margin-top: 64px; }
+
+  /* sticky table of contents */
+  .toc {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; gap: 6px; margin: 0 -20px 26px; padding: 8px 20px;
+    overflow-x: auto; scrollbar-width: none;
+    background: rgba(7, 9, 12, .92); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line-hi);
+  }
+  .toc::-webkit-scrollbar { display: none; }
+  .toc a { flex: none; padding: 4px 14px; font-size: 13px; font-weight: 700; color: var(--sub); text-decoration: none; white-space: nowrap; border: 1px solid var(--line); border-radius: 999px; transition: color .15s, border-color .15s; }
+  .toc a:hover { color: var(--gold-hi); border-color: var(--gold); }
+  .toc a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  @media (max-width: 480px) { .toc { margin: 0 -16px 22px; padding: 8px 16px; } }
 
   /* All Units Combined */
   .feature .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 28%, var(--line-hi) 72%, var(--gold)); }
@@ -279,6 +305,13 @@
     <li data-i18n="meta">PPSSPP v1.20.4（Windows）で確認</li>
     <li class="to-psp"><a href="#psp" data-i18n="toPsp">PSP 実機用はこちら</a></li>
   </ul>
+  <nav class="toc" aria-label="Contents">
+    <a href="#all" data-i18n="navAll">全機体統合版</a>
+    <a href="#units" data-i18n="navUnits">機体ごと</a>
+    <a href="#sec-howto" data-i18n="navHow">使い方</a>
+    <a href="#sec-psp" data-i18n="navPsp">PSP 実機用</a>
+    <a href="#sec-log" data-i18n="navLog">更新履歴</a>
+  </nav>
 
   <section class="feature" id="all">
     <div class="frame"><div class="in">
@@ -344,7 +377,7 @@
     </div></div>
   </section>
 
-  <div class="sec"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
+  <div class="sec" id="units"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
   <div class="units">
     <article class="unit" id="nu" style="--u: var(--nu)">
       <div class="frame"><div class="in">
@@ -482,7 +515,7 @@
     </article>
   </div>
 
-  <div class="sec"><span class="sec-en" aria-hidden="true">HOW TO USE</span><h2 data-i18n="howto">使い方</h2></div>
+  <div class="sec" id="sec-howto"><span class="sec-en" aria-hidden="true">HOW TO USE</span><h2 data-i18n="howto">使い方</h2></div>
   <section id="howto">
     <div class="frame"><div class="in panel">
       <p class="readfirst" data-i18n="readFirst"><b>最初にお読みください</b><br>下の <b>6つの手順を、上から順にすべて</b>行ってください。1つでも飛ばすと、チートが効かない・動作が不安定になることがあります。うまくいかないときは、質問や不具合の報告の前に、このページ下の「<b>動かないときのチェック</b>」を上から確認してください</p>
@@ -538,7 +571,7 @@
     </div></div>
   </section>
 
-  <div class="sec"><span class="sec-en" aria-hidden="true">REAL PSP</span><h2 data-i18n="secPsp">PSP 実機用</h2></div>
+  <div class="sec" id="sec-psp"><span class="sec-en" aria-hidden="true">REAL PSP</span><h2 data-i18n="secPsp">PSP 実機用</h2></div>
   <section id="psp">
     <div class="frame"><div class="in panel">
       <div class="trio">
@@ -601,7 +634,7 @@
     </div></div>
   </section>
 
-  <div class="sec"><span class="sec-en" aria-hidden="true">UPDATE LOG</span><h2 data-i18n="log">更新履歴</h2></div>
+  <div class="sec" id="sec-log"><span class="sec-en" aria-hidden="true">UPDATE LOG</span><h2 data-i18n="log">更新履歴</h2></div>
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
@@ -1211,6 +1244,11 @@
       note1: 'Use at your own risk. Please use them only in CPU battles (single player)',
       note2: 'The game software itself is not distributed here',
       note3: 'These are unofficial codes and are not affiliated with the developer, publisher, or any rights holders',
+      navAll: 'All Units',
+      navUnits: 'Per unit',
+      navHow: 'How to use',
+      navPsp: 'Real PSP',
+      navLog: 'Updates',
       youtube: 'YouTube: NEXT PLUS Mods',
       altReborns: 'Reborns Gundam (EXVS-style)',
       altNu: 'Nu Gundam (EXVS-style)',
