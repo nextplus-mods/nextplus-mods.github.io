@@ -246,7 +246,9 @@
 
   footer { margin-top: 36px; text-align: center; }
   .yt { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; font-size: 13px; font-weight: 700; color: var(--text); text-decoration: none; border: 1px solid var(--line-hi); border-radius: 4px; }
+  footer .yt { margin: 4px; }
   .yt:hover { border-color: #FF3B4E; }
+  .yt.dc:hover { border-color: #5865F2; }
   .yt:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
   .yt svg { width: 20px; height: 20px; flex: none; }
 
@@ -963,6 +965,10 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="4" fill="#FF3B4E"/><path d="M10 8.8v6.4l5.4-3.2z" fill="#fff"/></svg>
       <span data-i18n="youtube">YouTube：NEXT PLUS Mods</span>
     </a>
+    <a class="yt dc" href="https://discord.gg/CrHWsXayCy">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 3.5h15a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-8l-4.5 3.5v-3.5h-2.5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3z" fill="#5865F2"/><circle cx="8.5" cy="11" r="1.6" fill="#fff"/><circle cx="15.5" cy="11" r="1.6" fill="#fff"/></svg>
+      <span data-i18n="discord">バグ報告：Discord</span>
+    </a>
   </footer>
 </div>
 <script>
@@ -1273,6 +1279,7 @@
       navPsp: 'Real PSP',
       navLog: 'Updates',
       youtube: 'YouTube: NEXT PLUS Mods',
+      discord: 'Bug reports: Discord',
       altReborns: 'Reborns Gundam (EXVS-style)',
       altNu: 'Nu Gundam (EXVS-style)',
       altOo: '00 Raiser (EXVS-style)',
