@@ -344,11 +344,11 @@
               <li>νガンダム用 1個・ガンダムF91用 2個・デスティニーガンダム用 3個・ストライクフリーダム用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（中身は下の機体ごとのファイルと同じです）</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/v20261113-080331-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/v20261113-211505-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updAll">更新 2026-11-13</p>
+          <p class="meta" data-i18n="updAll">更新 2026-11-14</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
@@ -482,11 +482,11 @@
               <li>ストライクフリーダム (S.E.E.D.永続)</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/strike-freedom-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/strike-freedom-exvs/releases/download/v20261113-080311-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/strike-freedom-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/strike-freedom-exvs/releases/download/v20261113-211504-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updSf">更新 2026-11-13</p>
+          <p class="meta" data-i18n="updSf">更新 2026-11-14</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
@@ -673,6 +673,14 @@
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-11-14</p>
+          <div class="grp"><span class="tag sf">ストライクフリーダム</span>
+            <ul>
+              <li>攻撃を受けている間などに、勝利ポーズのコードが全機体で共有しているデータを書き換えてしまうバグを修正しました</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-11-13</p>
           <div class="grp"><span class="tag de">デスティニーガンダム</span>
@@ -1073,8 +1081,8 @@
       all: 'All Units Combined',
       allLead: 'Nu Gundam, Gundam F91, Destiny Gundam, Strike Freedom, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
       contents: 'Included codes',
-      updAll: 'Updated 2026-11-13',
-      updSf: 'Updated 2026-11-13',
+      updAll: 'Updated 2026-11-14',
+      updSf: 'Updated 2026-11-14',
       updDe: 'Updated 2026-11-13',
       updReborns: 'Updated 2026-11-13',
       updNu: 'Updated 2026-11-13',
@@ -1114,6 +1122,11 @@
       pspTip2: 'Check the location and names of <code>seplugins/exvsplug.prx</code> and <code>seplugins/exvs/exvs.bin</code>, and the line in <code>game.txt</code> (<code>PLUGINS.TXT</code> for ARK)',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-11-14</p>' +
+          '<div class="grp"><span class="tag sf">Strike Freedom</span><ul>' +
+            '<li>Fixed the bug where the victory pose code could overwrite data shared by all units, for example while Strike Freedom was being hit</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-11-13</p>' +
           '<div class="grp"><span class="tag de">Destiny Gundam</span><ul>' +
             '<li><span class="new">RELEASE</span>Released Destiny Gundam. It is also in the All Units Combined file</li>' +
