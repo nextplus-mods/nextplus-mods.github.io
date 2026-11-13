@@ -9,7 +9,7 @@
 <meta property="og:site_name" content="NEXT PLUS Mods">
 <meta property="og:url" content="https://nextplus-mods.github.io/">
 <meta property="og:title" content="NEXT PLUS Mods｜EXVS風チートコード">
-<meta property="og:description" content="ガンダムVS.ガンダムNEXT PLUS（PSP）用。νガンダム・F91・ストライクフリーダム・00ライザー・リボーンズ。PPSSPP と PSP 実機に対応">
+<meta property="og:description" content="ガンダムVS.ガンダムNEXT PLUS（PSP）用。νガンダム・F91・デスティニー・ストライクフリーダム・00ライザー・リボーンズ。PPSSPP と PSP 実機に対応">
 <meta property="og:image" content="https://nextplus-mods.github.io/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -38,6 +38,7 @@
     --reb: #6FD49C;
     --f91: #FF7438;
     --sf: #4F8BFF;
+    --de: #FF5C9A;
     --psp: #8FB4FF;
     --cut: 16px;
     --latin: "Rajdhani", "Murecho", sans-serif;
@@ -118,6 +119,7 @@
   .feature .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 28%, var(--line-hi) 72%, var(--gold)); }
   .trio { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: #000; }
   .trio img { display: block; width: 100%; height: auto; }
+  #all .trio { grid-template-columns: repeat(6, 1fr); }
   .trio::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
   .fb { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: start; padding: 28px 36px 32px; }
   .feature .must { margin-top: 8px; }
@@ -238,6 +240,7 @@
   .tag.reb { color: var(--reb); }
   .tag.f91 { color: var(--f91); }
   .tag.sf { color: var(--sf); }
+  .tag.de { color: var(--de); }
   .tag.psp { color: var(--psp); }
   .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 3px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
   .log .older { margin: 0; padding: 0; border: 0; }
@@ -320,6 +323,7 @@
       <div class="trio">
         <img src="nu.jpg" alt="" width="960" height="540">
         <img src="f91.jpg" alt="" width="960" height="540">
+        <img src="destiny.jpg" alt="" width="960" height="540">
         <img src="sf.jpg" alt="" width="960" height="540">
         <img src="oo.jpg" alt="" width="960" height="540">
         <img src="reborns.jpg" alt="" width="960" height="540">
@@ -328,7 +332,7 @@
         <div>
           <span class="badge">ALL UNITS</span>
           <h2 data-i18n="all">全機体統合版</h2>
-          <p class="lead" data-i18n="allLead">νガンダム・ガンダムF91・ストライクフリーダム・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
+          <p class="lead" data-i18n="allLead">νガンダム・ガンダムF91・デスティニーガンダム・ストライクフリーダム・ダブルオーライザー・リボーンズガンダムを1つのファイルで使えます。チートは1Pで選んだ機体にだけ効きます</p>
         </div>
         <div>
           <details>
@@ -337,14 +341,14 @@
               <li>EXVSシステム ／ カメラ視野角変更</li>
               <li>覚醒無限 (覚醒技撃ち放題)</li>
               <li>BGMオフ</li>
-              <li>νガンダム用 1個・ガンダムF91用 2個・ストライクフリーダム用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（中身は下の機体ごとのファイルと同じです）</li>
+              <li>νガンダム用 1個・ガンダムF91用 2個・デスティニーガンダム用 3個・ストライクフリーダム用 2個・ダブルオーライザー用 2個・リボーンズガンダム用 2個（中身は下の機体ごとのファイルと同じです）</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/v20261106-213351-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/v20261113-080331-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updAll">更新 2026-11-07</p>
+          <p class="meta" data-i18n="updAll">更新 2026-11-13</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
@@ -367,11 +371,11 @@
               <li>EXVSシステム</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/exvs-system/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/exvs-system/releases/download/v20261106-213350-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/exvs-system/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/exvs-system/releases/download/v20261113-080325-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updExvs">更新 2026-11-07</p>
+          <p class="meta" data-i18n="updExvs">更新 2026-11-13</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
@@ -396,11 +400,11 @@
               <li>νガンダム (EXVS風)</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/nu-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nu-gundam-exvs/releases/download/v20261106-213339-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/nu-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/nu-gundam-exvs/releases/download/v20261113-080305-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updNu">更新 2026-11-07</p>
+          <p class="meta" data-i18n="updNu">更新 2026-11-13</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
@@ -423,11 +427,39 @@
               <li>ガンダムF91 (M.E.P.E.永続)</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/gundam-f91-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/gundam-f91-exvs/releases/download/v20261106-213344-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/gundam-f91-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/gundam-f91-exvs/releases/download/v20261113-080318-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updF91">更新 2026-11-07</p>
+          <p class="meta" data-i18n="updF91">更新 2026-11-13</p>
+          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
+          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
+        </div>
+      </div></div>
+    </article>
+
+    <article class="unit" id="destiny" style="--u: var(--de)">
+      <div class="frame"><div class="in">
+        <div class="shot"><img src="destiny.jpg" alt="デスティニーガンダム（EXVS風）" data-i18n-alt="altDe" width="960" height="540" loading="lazy"></div>
+        <div class="ub">
+          <div class="grow">
+            <p class="series" data-i18n="seriesSeedD">機動戦士ガンダムSEED DESTINY</p>
+            <h3 data-i18n="de">EXVS風デスティニーガンダム</h3>
+          </div>
+          <details>
+            <summary><span data-i18n="contents">入っているコード</span></summary>
+            <ul data-i18n="listDe">
+              <li>EXVSシステム・カメラ視野角変更・覚醒無限 (覚醒技撃ち放題)・BGMオフ</li>
+              <li>デスティニー (EXVS風)</li>
+              <li>デスティニー (開幕ビームシールド)</li>
+              <li>デスティニー (S.E.E.D.永続)</li>
+            </ul>
+          </details>
+          <a class="dl" href="https://github.com/nextplus-mods/destiny-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/destiny-gundam-exvs/releases/download/v20261113-080253-en/NPJH50107.ini" download="NPJH50107.ini">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span data-i18n="dlShort">ダウンロード</span>
+          </a>
+          <p class="meta" data-i18n="updDe">更新 2026-11-13</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
@@ -450,11 +482,11 @@
               <li>ストライクフリーダム (S.E.E.D.永続)</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/strike-freedom-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/strike-freedom-exvs/releases/download/v20261106-213347-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/strike-freedom-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/strike-freedom-exvs/releases/download/v20261113-080311-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updSf">更新 2026-11-07</p>
+          <p class="meta" data-i18n="updSf">更新 2026-11-13</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
@@ -478,11 +510,11 @@
               <li>ダブルオーライザー (TRANS-AM永続)</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/00-raiser-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/00-raiser-exvs/releases/download/v20261106-213341-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/00-raiser-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/00-raiser-exvs/releases/download/v20261113-080314-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updOo">更新 2026-11-07</p>
+          <p class="meta" data-i18n="updOo">更新 2026-11-13</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
@@ -505,11 +537,11 @@
               <li>リボーンズガンダム (TRANS-AM永続)</li>
             </ul>
           </details>
-          <a class="dl" href="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/download/v20261106-213335-en/NPJH50107.ini" download="NPJH50107.ini">
+          <a class="dl" href="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/latest/download/NPJH50107.ini" data-href-en="https://github.com/nextplus-mods/reborns-gundam-exvs/releases/download/v20261113-080320-en/NPJH50107.ini" download="NPJH50107.ini">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updReborns">更新 2026-11-07</p>
+          <p class="meta" data-i18n="updReborns">更新 2026-11-13</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
@@ -612,6 +644,7 @@
             <li>νガンダム (EXVS風)・ガンダムF91 (EXVS風)・ストライクフリーダム (EXVS風)・ダブルオーライザー (EXVS風)・リボーンズガンダム (EXVS風)</li>
             <li>どれもいつも ON です（ON/OFF の切り替えはできません）</li>
             <li>カメラ視野角変更・覚醒無限・BGMオフ・M.E.P.E.永続・S.E.E.D.永続・TRANS-AM永続 は入っていません</li>
+            <li>デスティニーガンダムは入っていません</li>
           </ul>
         </div>
         <div class="sub">
@@ -640,6 +673,24 @@
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-11-13</p>
+          <div class="grp"><span class="tag de">デスティニーガンダム</span>
+            <ul>
+              <li><span class="new">公開</span>デスティニーガンダムを公開しました。全機体統合版にも入っています</li>
+              <li><span class="new">追加</span>「デスティニー (開幕ビームシールド)」</li>
+              <li><span class="new">追加</span>「デスティニー (S.E.E.D.永続)」</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
+            <ul>
+              <li>格闘 + サーチで、どの敵にもロックしない状態にできるようにしました。もう一度サーチを押すとロックします</li>
+              <li>覚醒ゲージが 999 のときは、ダウン中・よろけ中・攻撃を受けている最中でも L + R で覚醒できるようにしました</li>
+              <li>L + R で覚醒したときに、L と R の技が一緒に出てしまうバグを修正しました</li>
+              <li>3P〜5P の CPU が覚醒したときも、カットインが出るようにしました</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-11-07</p>
           <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
@@ -985,6 +1036,7 @@
       oo: 'EXVS-Style 00 Raiser',
       f91: 'EXVS-Style Gundam F91',
       sf: 'EXVS-Style Strike Freedom',
+      de: 'EXVS-Style Destiny Gundam',
       seriesNu: 'Char’s Counterattack',
       seriesF91: 'Mobile Suit Gundam F91',
       seriesSeedD: 'Mobile Suit Gundam SEED DESTINY',
@@ -1019,23 +1071,25 @@
       tip3: 'Is the game ID <code>NPJH50107</code> (Japanese version)? Other versions are not supported',
       oneFile: 'All files have the same name, and only one of them can be in <code>PSP/Cheats</code> at a time. To use all units, pick “All Units Combined”',
       all: 'All Units Combined',
-      allLead: 'Nu Gundam, Gundam F91, Strike Freedom, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
+      allLead: 'Nu Gundam, Gundam F91, Destiny Gundam, Strike Freedom, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
       contents: 'Included codes',
-      updAll: 'Updated 2026-11-07',
-      updSf: 'Updated 2026-11-07',
-      updReborns: 'Updated 2026-11-07',
-      updNu: 'Updated 2026-11-07',
-      updOo: 'Updated 2026-11-07',
-      updF91: 'Updated 2026-11-07',
+      updAll: 'Updated 2026-11-13',
+      updSf: 'Updated 2026-11-13',
+      updDe: 'Updated 2026-11-13',
+      updReborns: 'Updated 2026-11-13',
+      updNu: 'Updated 2026-11-13',
+      updOo: 'Updated 2026-11-13',
+      updF91: 'Updated 2026-11-13',
       exvs: 'EXVS System Only',
       exvsLead: 'Use the EXVS System on its own, without any unit codes',
       listExvs: '<li>EXVS System</li>',
-      updExvs: 'Updated 2026-11-07',
-      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks)</li><li>BGM Off</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats, 2 Strike Freedom cheats, 2 00 Raiser cheats, 2 Reborns Gundam cheats (the same as in the per-unit files below)</li>',
+      updExvs: 'Updated 2026-11-13',
+      listAll: '<li>EXVS System / Wider Camera FOV</li><li>Infinite Awakening (Unlimited Awakening Attacks)</li><li>BGM Off</li><li>1 Nu Gundam cheat, 2 Gundam F91 cheats, 3 Destiny Gundam cheats, 2 Strike Freedom cheats, 2 00 Raiser cheats, 2 Reborns Gundam cheats (the same as in the per-unit files below)</li>',
       listReborns: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Reborns Gundam (EXVS Style)</li><li>Reborns Gundam (Infinite TRANS-AM)</li>',
       listNu: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Nu Gundam (EXVS Style)</li>',
       listF91: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Gundam F91 (EXVS Style)</li><li>Gundam F91 (Infinite M.E.P.E.)</li>',
       listSf: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Strike Freedom (EXVS Style)</li><li>Strike Freedom (Infinite S.E.E.D.)</li>',
+      listDe: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>Destiny Gundam (EXVS Style)</li><li>Destiny Gundam (Beam Shield from the Start)</li><li>Destiny Gundam (Infinite S.E.E.D.)</li>',
       listOo: '<li>EXVS System, Wider Camera FOV, Infinite Awakening (Unlimited Awakening Attacks), BGM Off</li><li>00 Raiser (EXVS Style)</li><li>00 Raiser (Infinite TRANS-AM)</li>',
       toPsp: 'For a real PSP',
       secPsp: 'For a real PSP',
@@ -1050,7 +1104,7 @@
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
       pspStep4: 'End the USB connection, start the game, pick the unit as <b>Player 1</b> and start a battle (the cheats only affect Player 1’s unit)',
-      listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), Strike Freedom (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E., Infinite S.E.E.D. and Infinite TRANS-AM are not included</li>',
+      listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), Strike Freedom (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E., Infinite S.E.E.D. and Infinite TRANS-AM are not included</li><li>Destiny Gundam is not included</li>',
       pspNote1: 'Tested on a PSP-3000 with CFW ARK (FasterARK) (the previous version also on 6.61 LME). Other CFWs have not been tested',
       pspNote4: 'The cheats start working about 20 seconds after the game is started (so that they do not get in the way of the game starting)',
       pspNote2: 'The plugin writes a small log file (<code>log.txt</code>) in <code>seplugins/exvs</code>',
@@ -1060,6 +1114,19 @@
       pspTip2: 'Check the location and names of <code>seplugins/exvsplug.prx</code> and <code>seplugins/exvs/exvs.bin</code>, and the line in <code>game.txt</code> (<code>PLUGINS.TXT</code> for ARK)',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-11-13</p>' +
+          '<div class="grp"><span class="tag de">Destiny Gundam</span><ul>' +
+            '<li><span class="new">RELEASE</span>Released Destiny Gundam. It is also in the All Units Combined file</li>' +
+            '<li><span class="new">NEW</span>“Destiny Gundam (Beam Shield from the Start)”</li>' +
+            '<li><span class="new">NEW</span>“Destiny Gundam (Infinite S.E.E.D.)”</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
+            '<li>Melee + Search now releases the lock-on from every enemy. Press Search again to lock on</li>' +
+            '<li>With the awakening gauge at 999, you can now awaken with L + R even while knocked down, staggered or being hit</li>' +
+            '<li>Fixed the bug where the L and R moves came out together when awakening with L + R</li>' +
+            '<li>A cut-in now also appears when a CPU in 3P to 5P awakens</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-11-07</p>' +
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>Fixed the game stuttering and freezing when the left stick is pushed to the right</li>' +
@@ -1284,7 +1351,8 @@
       altNu: 'Nu Gundam (EXVS-style)',
       altOo: '00 Raiser (EXVS-style)',
       altF91: 'Gundam F91 (EXVS-style)',
-      altSf: 'Strike Freedom (EXVS-style)'
+      altSf: 'Strike Freedom (EXVS-style)',
+      altDe: 'Destiny Gundam (EXVS-style)'
     };
     var JA = {};
     var texts = document.querySelectorAll('[data-i18n]');
