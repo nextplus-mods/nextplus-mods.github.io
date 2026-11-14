@@ -119,7 +119,7 @@
   .feature .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 28%, var(--line-hi) 72%, var(--gold)); }
   .trio { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: #000; }
   .trio img { display: block; width: 100%; height: auto; }
-  #all .trio { grid-template-columns: repeat(3, 1fr); }
+  #all .trio, #psp .trio { grid-template-columns: repeat(3, 1fr); }
   .trio::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
   .fb { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: start; padding: 28px 36px 32px; }
   .feature .must { margin-top: 8px; }
@@ -611,6 +611,7 @@
       <div class="trio">
         <img src="nu.jpg" alt="" width="960" height="540" loading="lazy">
         <img src="f91.jpg" alt="" width="960" height="540" loading="lazy">
+        <img src="destiny.jpg" alt="" width="960" height="540" loading="lazy">
         <img src="sf.jpg" alt="" width="960" height="540" loading="lazy">
         <img src="oo.jpg" alt="" width="960" height="540" loading="lazy">
         <img src="reborns.jpg" alt="" width="960" height="540" loading="lazy">
@@ -619,14 +620,14 @@
         <div>
           <span class="badge">REAL PSP</span>
           <h3 data-i18n="pspTitle">PSP 実機用（プラグイン版）</h3>
-          <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと5機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
+          <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと6機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261103-3/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261114/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updPsp">更新 2026-11-04</p>
+          <p class="meta" data-i18n="updPsp">更新 2026-11-14</p>
           <p class="must" data-i18n="pspMustLag">⚠ 処理落ちすることがあります。あらかじめご了承ください</p>
         </div>
       </div>
@@ -641,10 +642,9 @@
           <h3 data-i18n="contents">入っているコード</h3>
           <ul data-i18n="listPsp">
             <li>EXVSシステム</li>
-            <li>νガンダム (EXVS風)・ガンダムF91 (EXVS風)・ストライクフリーダム (EXVS風)・ダブルオーライザー (EXVS風)・リボーンズガンダム (EXVS風)</li>
+            <li>νガンダム (EXVS風)・ガンダムF91 (EXVS風)・デスティニー (EXVS風)・ストライクフリーダム (EXVS風)・ダブルオーライザー (EXVS風)・リボーンズガンダム (EXVS風)</li>
             <li>どれもいつも ON です（ON/OFF の切り替えはできません）</li>
-            <li>カメラ視野角変更・覚醒無限・BGMオフ・M.E.P.E.永続・S.E.E.D.永続・TRANS-AM永続 は入っていません</li>
-            <li>デスティニーガンダムは入っていません</li>
+            <li>カメラ視野角変更・覚醒無限・BGMオフ・M.E.P.E.永続・開幕ビームシールド・S.E.E.D.永続・TRANS-AM永続 は入っていません</li>
           </ul>
         </div>
         <div class="sub">
@@ -687,6 +687,12 @@
           <div class="grp"><span class="tag all">全機体</span><span class="tag sys">EXVSシステム</span>
             <ul>
               <li>覚醒中に L + R で覚醒技を出すと、たまにアシストが出て、覚醒技を使ったことになってしまうバグを修正しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li><span class="new">追加</span>デスティニーガンダムを PSP 実機用にも入れました</li>
+              <li>EXVSシステムと各機体のコードを、PPSSPP 用と同じ最新版にしました</li>
             </ul>
           </div>
         </div>
@@ -1111,17 +1117,17 @@
       toPsp: 'For a real PSP',
       secPsp: 'For a real PSP',
       pspTitle: 'Real PSP version (plugin)',
-      pspLead: 'A plugin that runs the EXVS System and the 5 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
+      pspLead: 'A plugin that runs the EXVS System and the 6 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
       mustLatest: '<a href="#howto">⚠ Be sure to use the <b>latest official version</b> of PPSSPP</a>',
       mustRefresh: '<a href="#howto">⚠ Be sure to set PPSSPP’s Refresh interval to <b>16 ms</b></a>',
       mustCpu: '<a href="#howto">⚠ Be sure to set PPSSPP’s CPU clock to <b>666 MHz</b></a>',
-      updPsp: 'Updated 2026-11-04',
+      updPsp: 'Updated 2026-11-14',
       pspMustLag: '⚠ The game may slow down at times. Thank you for your understanding',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
       pspStep3: 'If you use CWCheat, turn it off by changing the <code>1</code> at the end of the CWCheat line in <code>game.txt</code> to <code>0</code>',
       pspStep4: 'End the USB connection, start the game, pick the unit as <b>Player 1</b> and start a battle (the cheats only affect Player 1’s unit)',
-      listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), Strike Freedom (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E., Infinite S.E.E.D. and Infinite TRANS-AM are not included</li><li>Destiny Gundam is not included</li>',
+      listPsp: '<li>EXVS System</li><li>Nu Gundam (EXVS Style), Gundam F91 (EXVS Style), Destiny Gundam (EXVS Style), Strike Freedom (EXVS Style), 00 Raiser (EXVS Style), Reborns Gundam (EXVS Style)</li><li>All of them are always ON (they cannot be turned on or off)</li><li>Wider Camera FOV, Infinite Awakening, BGM Off, Infinite M.E.P.E., Beam Shield from the Start, Infinite S.E.E.D. and Infinite TRANS-AM are not included</li>',
       pspNote1: 'Tested on a PSP-3000 with CFW ARK (FasterARK) (the previous version also on 6.61 LME). Other CFWs have not been tested',
       pspNote4: 'The cheats start working about 20 seconds after the game is started (so that they do not get in the way of the game starting)',
       pspNote2: 'The plugin writes a small log file (<code>log.txt</code>) in <code>seplugins/exvs</code>',
@@ -1141,6 +1147,10 @@
           '</ul></div>' +
           '<div class="grp"><span class="tag all">All units</span><span class="tag sys">EXVS System</span><ul>' +
             '<li>Fixed the bug where pressing L + R during Awakening sometimes called the assist instead and counted the Awakening Attack as used</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li><span class="new">NEW</span>Added Destiny Gundam to the real PSP version</li>' +
+            '<li>Updated the EXVS System and all unit codes to the same latest version as the PPSSPP files</li>' +
           '</ul></div>' +
         '</div>' +
         '<div class="ent"><p class="d">2026-11-13</p>' +
