@@ -555,10 +555,10 @@
       <p class="readfirst" data-i18n="readFirst"><b>最初にお読みください</b><br>下の <b>6つの手順を、上から順にすべて</b>行ってください。1つでも飛ばすと、チートが効かない・動作が不安定になることがあります。うまくいかないときは、質問や不具合の報告の前に、このページ下の「<b>動かないときのチェック</b>」を上から確認してください</p>
       <ol class="steps">
         <li data-i18n="step1"><b class="st">チートを使えるようにする</b>PPSSPP の「設定」→「システム」で「チートを有効化」を <b>ON</b> にする<br><span class="warn">PPSSPP は公式の最新版を使ってください（動作確認は v1.20.4）。「GLSL 差し替え版」などの古い版・非公式版での動作は保証できません</span></li>
-        <li data-i18n="stepCpu"><b class="st">CPU クロックを 666 にする</b>ゲーム一覧でこのゲームを長押し（Windows は右クリック）→「ゲーム設定を作成」→「ゲーム設定」→「システム」で「CPU クロック」を <b>666</b> にする<br><span class="warn">このゲームだけに効きます。弾が多い場面での重さを減らします</span></li>
+        <li data-i18n="stepCpu"><b class="st">CPU クロックを 666MHz にする</b>ゲーム一覧でこのゲームを長押し（Windows は右クリック）→「ゲーム設定を作成」→「ゲーム設定」→「システム」で「CPU クロック」を <b>666MHz</b> にする<br><span class="warn">このゲームだけに効きます。弾が多い場面での重さを減らします</span></li>
         <li data-i18n="step2"><b class="st">INI ファイルを入れる</b>ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる（フォルダがなければ作る。場所は下の「PSP/Cheats フォルダの場所」）<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
         <li data-i18n="step3"><b class="st">チートが ON か確かめる</b>ゲームを起動し、<b>Esc</b> キー（Android は画面のメニュー）→「チート」を開いて、使うチートが ON になっているか確かめる</li>
-        <li data-i18n="stepRefresh"><b class="st">リフレッシュレートを 16 にする（大事）</b>同じ「チート」の画面で「リフレッシュレート」を <b>16</b> にする<br><span class="warn">初期値の 77 のままだと、チートが正しく動かないことがあります</span></li>
+        <li data-i18n="stepRefresh"><b class="st">リフレッシュレートを 16ms にする（大事）</b>同じ「チート」の画面で「リフレッシュレート」を <b>16ms</b> にする<br><span class="warn">初期値の 77ms のままだと、チートが正しく動かないことがあります</span></li>
         <li data-i18n="step4"><b class="st">1P で機体を選んで試合を始める</b>使いたい機体を <b>1P</b> で選び、<b>CPU 戦</b>（ひとりプレイ）で試合を始める（チートは1Pの機体にだけ効きます）</li>
       </ol>
       <div class="ctl">
@@ -590,13 +590,13 @@
         <div class="sub tips">
           <h3 data-i18n="tips">動かないときのチェック（質問・不具合の報告の前に）</h3>
           <ul class="checks">
-            <li data-i18n="chk1">上の<b>6つの手順をすべて</b>行いましたか？（特に「チートを有効化」「CPU クロック 666」「リフレッシュレート 16」）</li>
+            <li data-i18n="chk1">上の<b>6つの手順をすべて</b>行いましたか？（特に「チートを有効化」「CPU クロック 666MHz」「リフレッシュレート 16ms」）</li>
             <li data-i18n="tip2">ファイル名が <code>NPJH50107.ini.txt</code> などになっていませんか？（正しくは <code>NPJH50107.ini</code>）</li>
             <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）ですか？ほかの版では動きません</li>
             <li data-i18n="chk2">機体を <b>1P</b> で選び、<b>CPU 戦</b>で試していますか？（2P や対人戦では効きません）</li>
             <li data-i18n="tip1">チートの ON/OFF を切り替えたあとは、試合を<b>最初から</b>始め直しましたか？試合の途中で切り替えると、正しく動かないことがあります</li>
             <li data-i18n="chk3">ほかのチートのファイルや、自分で書き足したコードが <code>PSP/Cheats</code> に混ざっていませんか？ファイルは1つだけにしてください</li>
-            <li data-i18n="tipCpu">「CPU クロック」を <b>666</b> にしましたか？（手順2。動きが重い・フリーズするときも、まずここを確かめてください）</li>
+            <li data-i18n="tipCpu">「CPU クロック」を <b>666MHz</b> にしましたか？（手順2。動きが重い・フリーズするときも、まずここを確かめてください）</li>
           </ul>
           <p class="note" data-i18n="askHow">それでも直らないときは、コメントに <b>PPSSPP のバージョン・Windows か Android か・使ったファイル・どの場面でどうなったか</b> を書いてください。それがあると原因を調べやすくなります</p>
           <p class="note" data-i18n="oneFile">どのファイルも同じ名前です。<code>PSP/Cheats</code> に置けるのはどれか1つなので、全部の機体を使うときは「全機体統合版」を選んでください</p>
@@ -860,7 +860,7 @@
             </div>
             <div class="grp"><span class="tag all">全機体</span>
               <ul>
-                <li>「うまく動かないとき」に「動きが重いときは CPU クロックを 666 にする」を追加しました</li>
+                <li>「うまく動かないとき」に「動きが重いときは CPU クロックを 666MHz にする」を追加しました</li>
               </ul>
             </div>
           </div>
@@ -953,12 +953,12 @@
             <div class="grp"><span class="tag all">全機体</span>
               <ul>
                 <li><span class="new">追加</span>「BGMオフ (効果音・ボイスはそのまま)」</li>
-                <li>使い方に「チートのリフレッシュレートを 16 にする」を追加しました（初期値の 77 のままだと、チートが正しく動かないことがあります）</li>
+                <li>使い方に「チートのリフレッシュレートを 16ms にする」を追加しました（初期値の 77ms のままだと、チートが正しく動かないことがあります）</li>
               </ul>
             </div>
             <div class="grp"><span class="tag nu">νガンダム</span>
               <ul>
-                <li>後特格のフィンファンネルバリアのリロード時間を、リフレッシュレート 16 で20秒になるように合わせました</li>
+                <li>後特格のフィンファンネルバリアのリロード時間を、リフレッシュレート 16ms で20秒になるように合わせました</li>
               </ul>
             </div>
             <div class="grp"><span class="tag reb">リボーンズガンダム</span>
@@ -1077,11 +1077,11 @@
       readFirst: '<b>Please read this first</b><br>Do <b>all 6 steps below, in order</b>. If you skip even one, the cheats may not work or the game may become unstable. If something goes wrong, go through “<b>Checklist when it doesn’t work</b>” further down this page before asking a question or reporting a problem',
       step1: '<b class="st">Allow cheats</b>In PPSSPP, go to Settings → System and turn “Enable Cheats” <b>ON</b><br><span class="warn">Use the latest official version of PPSSPP (tested on v1.20.4). Operation on old or unofficial builds, such as the “GLSL replace” version, is not guaranteed</span>',
       step2: '<b class="st">Add the INI file</b>Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder (create the folder if it does not exist; see “Where is the PSP/Cheats folder?” below)<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
-      stepCpu: '<b class="st">Set CPU clock to 666</b>Long-press this game in the game list (right-click on Windows) → “Create game config” → “Game settings” → “System”, and set “CPU clock” to <b>666</b><br><span class="warn">This only affects this game. It reduces slowdown in scenes with many shots</span>',
+      stepCpu: '<b class="st">Set CPU clock to 666 MHz</b>Long-press this game in the game list (right-click on Windows) → “Create game config” → “Game settings” → “System”, and set “CPU clock” to <b>666 MHz</b><br><span class="warn">This only affects this game. It reduces slowdown in scenes with many shots</span>',
       step3: '<b class="st">Check that the cheats are ON</b>Start the game, press <b>Esc</b> (on Android, use the on-screen menu) → open “Cheats”, and check that the cheats you want are turned on',
-      stepRefresh: '<b class="st">Set Refresh interval to 16 (important)</b>On the same “Cheats” screen, set “Refresh interval” to <b>16</b><br><span class="warn">With the default value of 77, the cheats may not work correctly</span>',
+      stepRefresh: '<b class="st">Set Refresh interval to 16 ms (important)</b>On the same “Cheats” screen, set “Refresh interval” to <b>16 ms</b><br><span class="warn">With the default value of 77 ms, the cheats may not work correctly</span>',
       step4: '<b class="st">Pick the unit as Player 1 and start a battle</b>Pick the unit you want as <b>Player 1</b> and start a <b>CPU battle</b> (single player). The cheats only affect Player 1’s unit',
-      chk1: 'Did you do <b>all 6 steps</b> above? (especially “Enable Cheats”, “CPU clock 666” and “Refresh interval 16”)',
+      chk1: 'Did you do <b>all 6 steps</b> above? (especially “Enable Cheats”, “CPU clock 666 MHz” and “Refresh interval 16 ms”)',
       chk2: 'Did you pick the unit as <b>Player 1</b> and play a <b>CPU battle</b>? (The cheats do not work for Player 2 or in versus battles)',
       chk3: 'Are there other cheat files, or code you added yourself, mixed into <code>PSP/Cheats</code>? Keep only one file',
       askHow: 'If it still does not work, please write in your comment <b>your PPSSPP version, Windows or Android, which file you used, and what happened and where</b>. That makes it much easier to find the cause',
@@ -1089,7 +1089,7 @@
       whereWin: 'Windows: usually <code>Documents\\PPSSPP\\PSP\\Cheats</code>',
       whereAndroid: 'Android: <code>PSP/Cheats</code> inside PPSSPP’s memory stick folder (the folder you chose the first time you started PPSSPP)',
       tips: 'Checklist when it doesn’t work (before asking or reporting)',
-      tipCpu: 'Did you set “CPU clock” to <b>666</b>? (Step 2. If the game is slow or freezes, check this first)',
+      tipCpu: 'Did you set “CPU clock” to <b>666 MHz</b>? (Step 2. If the game is slow or freezes, check this first)',
       tip1: 'After turning cheats on or off, did you restart the battle from the <b>beginning</b>? Switching them in the middle of a battle may not work correctly',
       tip2: 'Did the file name become <code>NPJH50107.ini.txt</code> or similar? (It must be <code>NPJH50107.ini</code>)',
       tip3: 'Is the game ID <code>NPJH50107</code> (Japanese version)? Other versions are not supported',
@@ -1262,7 +1262,7 @@
               '<li>Fixed copy mistakes in the original code, such as in the handling for 3P–5P CPUs using Gundam DX and for the 5P CPU’s downs</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag all">All units</span><ul>' +
-              '<li>Added “If the game slows down, set the CPU clock to 666” to If it doesn’t work</li>' +
+              '<li>Added “If the game slows down, set the CPU clock to 666 MHz” to If it doesn’t work</li>' +
             '</ul></div>' +
           '</div>' +
           '<div class="ent"><p class="d">2026-10-23</p>' +
@@ -1324,10 +1324,10 @@
             '</ul></div>' +
             '<div class="grp"><span class="tag all">All units</span><ul>' +
               '<li><span class="new">NEW</span>“BGM Off (Sound Effects and Voices Stay)”</li>' +
-              '<li>Added “Set the cheat Refresh interval to 16” to How to use (with the default value of 77, the cheats may not work correctly)</li>' +
+              '<li>Added “Set the cheat Refresh interval to 16 ms” to How to use (with the default value of 77 ms, the cheats may not work correctly)</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag nu">Nu Gundam</span><ul>' +
-              '<li>Adjusted the Fin Funnel Barrier (back special melee) reload time to 20 seconds at Refresh interval 16</li>' +
+              '<li>Adjusted the Fin Funnel Barrier (back special melee) reload time to 20 seconds at Refresh interval 16 ms</li>' +
             '</ul></div>' +
             '<div class="grp"><span class="tag reb">Reborns Gundam</span><ul>' +
               '<li>Merged the 5 cheats into one, “Reborns Gundam (EXVS Style)”</li>' +
