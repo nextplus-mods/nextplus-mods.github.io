@@ -348,7 +348,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updAll">更新 2026-11-16</p>
+          <p class="meta" data-i18n="updAll">更新 2026-11-17</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
@@ -486,7 +486,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updSf">更新 2026-11-16</p>
+          <p class="meta" data-i18n="updSf">更新 2026-11-17</p>
           <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
           <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
           <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
@@ -675,6 +675,22 @@
   <section id="log">
     <div class="frame"><div class="in panel">
       <div class="log" data-i18n="logList">
+        <div class="ent">
+          <p class="d">2026-11-17</p>
+          <div class="grp"><span class="tag sf">ストライクフリーダム</span>
+            <ul>
+              <li>後覚醒技とN覚醒技の始めに S.E.E.D. が発現するようにしました</li>
+              <li>S.E.E.D. 中の勝利ポーズにオーラが出るようにしました</li>
+              <li>S.E.E.D. 中に特殊射撃を出した瞬間に、光の翼が一瞬消えるバグを修正しました</li>
+              <li>S.E.E.D. 中に横覚醒技を出すと、ドラグーンが二重に表示されるバグを修正しました</li>
+              <li>ミーティア換装で、合体の前にミーティア単体が映る演出を追加しました (アーケードモードでも映ります)</li>
+              <li>ミーティア換装のカットインの直前に「ザッ」という音が鳴るのをなくしました</li>
+              <li>ミーティアからストライクフリーダムに戻った後も、その覚醒中にN覚醒技と後覚醒技を出せるようにしました</li>
+              <li>ミーティアの耐久が 0 になってストライクフリーダムに戻ったとき、撃墜扱い (戦力ゲージが減る) にならないようにしました</li>
+              <li>同じ試合にいるほかのストライクフリーダムに、ドラグーンの動きや技の設定の一部が効いてしまうバグを修正しました</li>
+            </ul>
+          </div>
+        </div>
         <div class="ent">
           <p class="d">2026-11-16</p>
           <div class="grp"><span class="tag de">デスティニーガンダム</span>
@@ -1114,8 +1130,8 @@
       all: 'All Units Combined',
       allLead: 'Nu Gundam, Gundam F91, Destiny Gundam, Strike Freedom, 00 Raiser and Reborns Gundam in one file. The cheats only affect the unit chosen as Player 1',
       contents: 'Included codes',
-      updAll: 'Updated 2026-11-16',
-      updSf: 'Updated 2026-11-16',
+      updAll: 'Updated 2026-11-17',
+      updSf: 'Updated 2026-11-17',
       updDe: 'Updated 2026-11-16',
       updReborns: 'Updated 2026-11-16',
       updNu: 'Updated 2026-11-16',
@@ -1156,6 +1172,19 @@
       pspTip2: 'Check the location and names of <code>seplugins/exvsplug.prx</code> and <code>seplugins/exvs/exvs.bin</code>, and the line in <code>game.txt</code> (<code>PLUGINS.TXT</code> for ARK)',
       log: 'Update history',
       logList:
+        '<div class="ent"><p class="d">2026-11-17</p>' +
+          '<div class="grp"><span class="tag sf">Strike Freedom</span><ul>' +
+            '<li>S.E.E.D. now activates at the start of the back Burst Attack and the neutral Burst Attack</li>' +
+            '<li>Added an aura to the S.E.E.D. victory pose</li>' +
+            '<li>Fixed the bug where the wings of light briefly disappeared when you used the Special Shot during S.E.E.D.</li>' +
+            '<li>Fixed the bug where the Dragoons were shown twice when you used the side Burst Attack during S.E.E.D.</li>' +
+            '<li>Added the shot of the Meteor alone before docking when changing into the Meteor (also in Arcade mode)</li>' +
+            '<li>Removed the static noise just before the cut-in when changing into the Meteor</li>' +
+            '<li>After returning from the Meteor to Strike Freedom, you can now use the neutral and back Burst Attacks during the same Awakening</li>' +
+            '<li>When the Meteor’s durability reaches 0 and you return to Strike Freedom, it no longer counts as being shot down (the team gauge no longer drops)</li>' +
+            '<li>Fixed the bug where some of the Dragoon movements and attack settings also affected the other Strike Freedoms in the same match</li>' +
+          '</ul></div>' +
+        '</div>' +
         '<div class="ent"><p class="d">2026-11-16</p>' +
           '<div class="grp"><span class="tag de">Destiny Gundam</span><ul>' +
             '<li>The wings now stay spread when you use the Burst Attack during S.E.E.D.</li>' +
