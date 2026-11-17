@@ -113,7 +113,10 @@
   .toc a { flex: none; padding: 4px 14px; font-size: 13px; font-weight: 700; color: var(--sub); text-decoration: none; white-space: nowrap; border: 1px solid var(--line); border-radius: 999px; transition: color .15s, border-color .15s; }
   .toc a:hover { color: var(--gold-hi); border-color: var(--gold); }
   .toc a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-  @media (max-width: 480px) { .toc { margin: 0 -16px 22px; padding: 8px 16px; } }
+  @media (max-width: 480px) {
+    .toc { flex-wrap: wrap; justify-content: center; gap: 4px; margin: 0 -16px 22px; padding: 8px 6px; }
+    .toc a { padding: 3px 8px; font-size: 11px; }
+  }
 
   /* setup you need before playing (shown once, above the downloads) */
   .setup { margin: 0 0 26px; }
@@ -268,6 +271,23 @@
   .tag.de { color: var(--de); }
   .tag.psp { color: var(--psp); }
   .new { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 3px; background: var(--gold); color: #111; font-size: 11px; font-weight: 800; line-height: 1.7; vertical-align: 1px; }
+  /* update-log filter (the attribute stays on .log when the language switch rewrites its content) */
+  .logf { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+  .logf button { padding: 4px 12px; font: inherit; font-size: 12px; font-weight: 700; color: var(--sub); background: transparent; border: 1px solid var(--line-hi); border-radius: 999px; cursor: pointer; transition: color .15s, border-color .15s; }
+  .logf button:hover { color: var(--gold-hi); border-color: var(--gold); }
+  .logf button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .logf button[aria-pressed="true"] { color: #111; background: var(--gold); border-color: var(--gold); }
+  .logf-note { margin: 0 0 18px; font-size: 12px; color: var(--sub); }
+  .log[data-f="nu"] .grp:not(:has(.tag.nu, .tag.all)), .log[data-f="nu"] .ent:not(:has(.tag.nu, .tag.all)),
+  .log[data-f="f91"] .grp:not(:has(.tag.f91, .tag.all)), .log[data-f="f91"] .ent:not(:has(.tag.f91, .tag.all)),
+  .log[data-f="de"] .grp:not(:has(.tag.de, .tag.all)), .log[data-f="de"] .ent:not(:has(.tag.de, .tag.all)),
+  .log[data-f="sf"] .grp:not(:has(.tag.sf, .tag.all)), .log[data-f="sf"] .ent:not(:has(.tag.sf, .tag.all)),
+  .log[data-f="oo"] .grp:not(:has(.tag.oo, .tag.all)), .log[data-f="oo"] .ent:not(:has(.tag.oo, .tag.all)),
+  .log[data-f="reb"] .grp:not(:has(.tag.reb, .tag.all)), .log[data-f="reb"] .ent:not(:has(.tag.reb, .tag.all)),
+  .log[data-f="sys"] .grp:not(:has(.tag.sys, .tag.all)), .log[data-f="sys"] .ent:not(:has(.tag.sys, .tag.all)),
+  .log[data-f="psp"] .grp:not(:has(.tag.psp)), .log[data-f="psp"] .ent:not(:has(.tag.psp)) { display: none; }
+  .log[data-f]:not([data-f=""]) .older > summary { display: none; }
+
   .log .older { margin: 0; padding: 0; border: 0; }
   .log .older > summary { margin: 0 0 0 5px; padding: 0 0 18px 22px; border-left: 2px solid var(--line-hi); font-size: 14px; }
   .log .older[open] > summary { padding-bottom: 22px; }
@@ -287,8 +307,18 @@
     .ctl-name { min-width: 0; }
   }
   @media (max-width: 760px) {
-    .units { grid-template-columns: 1fr; }
+    .units { grid-template-columns: 1fr; gap: 12px; }
     .fb, .pt { grid-template-columns: 1fr; gap: 18px; }
+    /* compact unit cards on phones: small picture + name side by side, the rest below */
+    .unit .in { display: grid; grid-template-columns: minmax(0, 44%) minmax(0, 1fr); align-items: center; padding-bottom: 16px; }
+    .unit .shot { grid-column: 1; grid-row: 1; }
+    .unit .ub { display: contents; }
+    .unit .grow { grid-column: 2; grid-row: 1; padding: 8px 14px; }
+    .unit .ub h3 { margin: 2px 0 0; font-size: 16px; line-height: 1.4; }
+    .unit .ub > details, .unit .ub > .dl, .unit .ub > .meta { grid-column: 1 / -1; margin-left: 16px; margin-right: 16px; }
+    .unit .ub > details { margin-top: 12px; margin-bottom: 12px; padding-top: 10px; }
+    .unit .dl { width: auto; padding: 12px 16px; font-size: 15px; }
+    .unit .ub > .meta { margin-top: 6px; margin-bottom: 0; }
   }
   @media (max-width: 480px) {
     :root { --cut: 12px; }
@@ -694,6 +724,18 @@
   <div class="sec" id="sec-log"><span class="sec-en" aria-hidden="true">UPDATE LOG</span><h2 data-i18n="log">更新履歴</h2></div>
   <section id="log">
     <div class="frame"><div class="in panel">
+      <div class="logf" role="group" aria-label="Filter">
+        <button type="button" data-f="" aria-pressed="true" data-i18n="lfAll">すべて</button>
+        <button type="button" data-f="nu" aria-pressed="false" data-i18n="lfNu">νガンダム</button>
+        <button type="button" data-f="f91" aria-pressed="false" data-i18n="lfF91">F91</button>
+        <button type="button" data-f="de" aria-pressed="false" data-i18n="lfDe">デスティニー</button>
+        <button type="button" data-f="sf" aria-pressed="false" data-i18n="lfSf">ストライクフリーダム</button>
+        <button type="button" data-f="oo" aria-pressed="false" data-i18n="lfOo">ダブルオーライザー</button>
+        <button type="button" data-f="reb" aria-pressed="false" data-i18n="lfReb">リボーンズ</button>
+        <button type="button" data-f="sys" aria-pressed="false" data-i18n="lfSys">EXVSシステム</button>
+        <button type="button" data-f="psp" aria-pressed="false" data-i18n="lfPsp">PSP 実機</button>
+      </div>
+      <p class="logf-note" data-i18n="lfNote">機体で絞ると、「全機体」の更新も一緒に出ます</p>
       <div class="log" data-i18n="logList">
         <div class="ent">
           <p class="d">2026-11-17</p>
@@ -1173,6 +1215,16 @@
       secPsp: 'For a real PSP',
       pspTitle: 'Real PSP version (plugin)',
       pspLead: 'A plugin that runs the EXVS System and the 6 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
+      lfAll: 'All',
+      lfNu: 'Nu Gundam',
+      lfF91: 'F91',
+      lfDe: 'Destiny',
+      lfSf: 'Strike Freedom',
+      lfOo: '00 Raiser',
+      lfReb: 'Reborns',
+      lfSys: 'EXVS System',
+      lfPsp: 'Real PSP',
+      lfNote: 'When you pick a unit, updates for “All units” are shown too',
       setupTitle: 'Settings you need first (3)',
       suCheatName: 'Enable Cheats',
       suCheatWhere: 'Settings → System',
@@ -1493,6 +1545,7 @@
       links.forEach(function (a) { a.setAttribute('href', a.getAttribute(lang === 'en' ? 'data-href-en' : 'data-href-ja')); });
       document.documentElement.lang = lang;
       buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+      document.dispatchEvent(new Event('langchange'));   // the update-log filter re-opens the older updates after the log is rewritten
     }
     var lang = null;
     try { lang = new URLSearchParams(location.search).get('lang'); } catch (e) {}
@@ -1501,6 +1554,23 @@
       var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
       lang = /^ja/i.test(nav) ? 'ja' : 'en';
     }
+    // update-log filter: the chosen unit is kept on .log as data-f (CSS hides the rest); older updates are opened while filtering
+    var log = document.querySelector('.log');
+    var fbtns = document.querySelectorAll('.logf button');
+    function openOlder() {
+      var f = log.getAttribute('data-f') || '';
+      var older = log.querySelector('.older');
+      if (older && f) older.open = true;
+    }
+    fbtns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-f');
+        log.setAttribute('data-f', f);
+        fbtns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        openOlder();
+      });
+    });
+    document.addEventListener('langchange', openOlder);
     apply(lang);
     buttons.forEach(function (b) {
       b.addEventListener('click', function () {
