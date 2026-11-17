@@ -674,11 +674,11 @@
           <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと6機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261114/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261117/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updPsp">更新 2026-11-14</p>
+          <p class="meta" data-i18n="updPsp">更新 2026-11-17</p>
           <p class="must" data-i18n="pspMustLag">⚠ 処理落ちすることがあります。あらかじめご了承ください</p>
         </div>
       </div>
@@ -750,6 +750,11 @@
               <li>ミーティアからストライクフリーダムに戻った後も、その覚醒中にN覚醒技と後覚醒技を出せるようにしました</li>
               <li>ミーティアの耐久が 0 になってストライクフリーダムに戻ったとき、撃墜扱い (戦力ゲージが減る) にならないようにしました</li>
               <li>同じ試合にいるほかのストライクフリーダムに、ドラグーンの動きや技の設定の一部が効いてしまうバグを修正しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li>ストライクフリーダムとデスティニーガンダムのコードを、PPSSPP 用と同じ最新版にしました</li>
             </ul>
           </div>
         </div>
@@ -1233,7 +1238,7 @@
       suRefName: 'Refresh interval',
       suRefWhere: 'The “Cheats” screen in the game (the default 77 ms does not work correctly)',
       setupFoot: 'Use the <b>latest official version</b> of PPSSPP. See <a href="#sec-howto">How to use</a> for the full steps',
-      updPsp: 'Updated 2026-11-14',
+      updPsp: 'Updated 2026-11-17',
       pspMustLag: '⚠ The game may slow down at times. Thank you for your understanding',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
       pspStep2: 'Add the following line to <code>seplugins/game.txt</code> (create the file if it does not exist)<pre>ms0:/seplugins/exvsplug.prx 1</pre>With ARK, add the following line to <code>seplugins/PLUGINS.TXT</code> instead<pre>NPJH50107, ms0:/seplugins/exvsplug.prx, on</pre>',
@@ -1261,6 +1266,9 @@
             '<li>After returning from the Meteor to Strike Freedom, you can now use the neutral and back Burst Attacks during the same Awakening</li>' +
             '<li>When the Meteor’s durability reaches 0 and you return to Strike Freedom, it no longer counts as being shot down (the team gauge no longer drops)</li>' +
             '<li>Fixed the bug where some of the Dragoon movements and attack settings also affected the other Strike Freedoms in the same match</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li>Updated the Strike Freedom and Destiny Gundam codes to the same latest version as the PPSSPP files</li>' +
           '</ul></div>' +
         '</div>' +
         '<div class="ent"><p class="d">2026-11-16</p>' +
