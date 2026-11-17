@@ -115,6 +115,31 @@
   .toc a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   @media (max-width: 480px) { .toc { margin: 0 -16px 22px; padding: 8px 16px; } }
 
+  /* setup you need before playing (shown once, above the downloads) */
+  .setup { margin: 0 0 26px; }
+  .setup .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 40%, var(--line-hi) 60%, var(--gold)); }
+  .setup .in { padding: 18px 24px 16px; }
+  .setup-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 0 0 12px; }
+  .setup-head h2 { margin: 0; font-size: 18px; font-weight: 800; }
+  .setup ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: su; }
+  .setup li { counter-increment: su; position: relative; padding: 10px 12px 10px 40px; background: var(--panel-2); border: 1px solid var(--line); }
+  .setup li::before { content: counter(su); position: absolute; left: 12px; top: 10px; font-family: var(--latin); font-size: 18px; font-weight: 700; color: var(--gold); }
+  .su-name { display: block; font-size: 13px; color: var(--sub); }
+  .su-val { display: block; margin: 2px 0; font-family: var(--latin); font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--gold-hi); }
+  .su-where { display: block; font-size: 12px; color: var(--sub); }
+  .setup-foot { margin: 12px 0 0; font-size: 13px; color: var(--sub); }
+  .setup-foot a { color: var(--gold-hi); }
+  .units-note { margin: -6px 0 16px; }
+  @media (max-width: 760px) {
+    .setup ol { grid-template-columns: 1fr; gap: 6px; }
+    .setup .in { padding: 16px 16px 14px; }
+    .setup li { display: grid; grid-template-columns: 1fr auto; align-items: baseline; column-gap: 10px; padding: 8px 12px 8px 36px; }
+    .setup li::before { top: 8px; }
+    .su-name { font-size: 14px; color: var(--text); }
+    .su-val { margin: 0; font-size: 20px; }
+    .su-where { grid-column: 1 / -1; }
+  }
+
   /* All Units Combined */
   .feature .frame { background: linear-gradient(135deg, var(--gold), var(--line-hi) 28%, var(--line-hi) 72%, var(--gold)); }
   .trio { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: #000; }
@@ -318,6 +343,18 @@
     <a href="#sec-log" data-i18n="navLog">更新履歴</a>
   </nav>
 
+  <section class="setup" id="setup" aria-labelledby="setup-title">
+    <div class="frame"><div class="in">
+      <div class="setup-head"><span class="sec-en" aria-hidden="true">BEFORE YOU PLAY</span><h2 id="setup-title" data-i18n="setupTitle">はじめに必要な設定（3つ）</h2></div>
+      <ol>
+        <li><span class="su-name" data-i18n="suCheatName">チートを有効化</span><span class="su-val">ON</span><span class="su-where" data-i18n="suCheatWhere">「設定」→「システム」</span></li>
+        <li><span class="su-name" data-i18n="suCpuName">CPU クロック</span><span class="su-val">666 MHz</span><span class="su-where" data-i18n="suCpuWhere">このゲームの「ゲーム設定」→「システム」</span></li>
+        <li><span class="su-name" data-i18n="suRefName">リフレッシュレート</span><span class="su-val">16 ms</span><span class="su-where" data-i18n="suRefWhere">ゲーム中の「チート」の画面（初期値の 77 ms では正しく動きません）</span></li>
+      </ol>
+      <p class="setup-foot" data-i18n="setupFoot">PPSSPP は<b>公式の最新版</b>を使ってください。くわしい手順は <a href="#sec-howto">使い方</a> にあります</p>
+    </div></div>
+  </section>
+
   <section class="feature" id="all">
     <div class="frame"><div class="in">
       <div class="trio">
@@ -349,9 +386,6 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updAll">更新 2026-11-17</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div>
     </div></div>
@@ -376,14 +410,13 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updExvs">更新 2026-11-14</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div>
     </div></div>
   </section>
 
   <div class="sec" id="units"><span class="sec-en" aria-hidden="true">SELECT UNIT</span><h2 data-i18n="secUnits">機体ごとのファイル</h2></div>
+  <p class="note units-note" data-i18n="oneFile">どのファイルも同じ名前です。<code>PSP/Cheats</code> に置けるのはどれか1つなので、全部の機体を使うときは「全機体統合版」を選んでください</p>
   <div class="units">
     <article class="unit" id="nu" style="--u: var(--nu)">
       <div class="frame"><div class="in">
@@ -405,8 +438,6 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updNu">更新 2026-11-16</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -432,8 +463,6 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updF91">更新 2026-11-16</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -460,8 +489,6 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updDe">更新 2026-11-16</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -487,9 +514,6 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updSf">更新 2026-11-17</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustCpu"><a href="#howto">⚠ PPSSPP の CPU クロックを必ず <b>666MHz</b> に設定してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -515,8 +539,6 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updOo">更新 2026-11-16</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -542,8 +564,6 @@
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
           <p class="meta" data-i18n="updReborns">更新 2026-11-16</p>
-          <p class="must" data-i18n="mustLatest"><a href="#howto">⚠ PPSSPP は<b>公式の最新版</b>を使用してください</a></p>
-          <p class="must" data-i18n="mustRefresh"><a href="#howto">⚠ PPSSPP のリフレッシュレートを必ず <b>16ms</b> に設定してください</a></p>
         </div>
       </div></div>
     </article>
@@ -601,7 +621,6 @@
             <li data-i18n="tipCpu">「CPU クロック」を <b>666MHz</b> にしましたか？（手順2。動きが重い・フリーズするときも、まずここを確かめてください）</li>
           </ul>
           <p class="note" data-i18n="askHow">それでも直らないときは、コメントに <b>PPSSPP のバージョン・Windows か Android か・使ったファイル・どの場面でどうなったか</b> を書いてください。それがあると原因を調べやすくなります</p>
-          <p class="note" data-i18n="oneFile">どのファイルも同じ名前です。<code>PSP/Cheats</code> に置けるのはどれか1つなので、全部の機体を使うときは「全機体統合版」を選んでください</p>
         </div>
       </div>
     </div></div>
@@ -1154,9 +1173,14 @@
       secPsp: 'For a real PSP',
       pspTitle: 'Real PSP version (plugin)',
       pspLead: 'A plugin that runs the EXVS System and the 6 unit cheats on a real PSP with custom firmware (CFW). On PPSSPP, use the ini files above',
-      mustLatest: '<a href="#howto">⚠ Be sure to use the <b>latest official version</b> of PPSSPP</a>',
-      mustRefresh: '<a href="#howto">⚠ Be sure to set PPSSPP’s Refresh interval to <b>16 ms</b></a>',
-      mustCpu: '<a href="#howto">⚠ Be sure to set PPSSPP’s CPU clock to <b>666 MHz</b></a>',
+      setupTitle: 'Settings you need first (3)',
+      suCheatName: 'Enable Cheats',
+      suCheatWhere: 'Settings → System',
+      suCpuName: 'CPU clock',
+      suCpuWhere: 'This game’s “Game settings” → System',
+      suRefName: 'Refresh interval',
+      suRefWhere: 'The “Cheats” screen in the game (the default 77 ms does not work correctly)',
+      setupFoot: 'Use the <b>latest official version</b> of PPSSPP. See <a href="#sec-howto">How to use</a> for the full steps',
       updPsp: 'Updated 2026-11-14',
       pspMustLag: '⚠ The game may slow down at times. Thank you for your understanding',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
