@@ -557,7 +557,7 @@
         <li data-i18n="step1"><b class="st">チートを使えるようにする</b>PPSSPP の「設定」→「システム」で「チートを有効化」を <b>ON</b> にする<br><span class="warn">PPSSPP は公式の最新版を使ってください（動作確認は v1.20.4）。「GLSL 差し替え版」などの古い版・非公式版での動作は保証できません</span></li>
         <li data-i18n="stepCpu"><b class="st">CPU クロックを 666MHz にする</b>ゲーム一覧でこのゲームを長押し（Windows は右クリック）→「ゲーム設定を作成」→「ゲーム設定」→「システム」で「CPU クロック」を <b>666MHz</b> にする<br><span class="warn">このゲームだけに効きます。弾が多い場面での重さを減らします</span></li>
         <li data-i18n="step2"><b class="st">INI ファイルを入れる</b>ダウンロードした <code>NPJH50107.ini</code> を、PPSSPP の <code>PSP/Cheats</code> フォルダに入れる（フォルダがなければ作る。場所は下の「PSP/Cheats フォルダの場所」）<br><span class="warn">同じ名前のファイルがある場合は、上書きする前にバックアップしてください</span></li>
-        <li data-i18n="step3"><b class="st">チートが ON か確かめる</b>ゲームを起動し、<b>Esc</b> キー（Android は画面のメニュー）→「チート」を開いて、使うチートが ON になっているか確かめる</li>
+        <li data-i18n="step3"><b class="st">チートが ON か確かめる</b>ゲームを起動し、<b>Esc</b> キー（Android は画面のメニュー）→「チート」を開いて、使うチートが ON になっているか確かめる<br><span class="warn">機体のチートは「EXVSシステム」と一緒に ON にしてください。EXVSシステムが OFF だと、一部の技が出ません</span></li>
         <li data-i18n="stepRefresh"><b class="st">リフレッシュレートを 16ms にする（大事）</b>同じ「チート」の画面で「リフレッシュレート」を <b>16ms</b> にする<br><span class="warn">初期値の 77ms のままだと、チートが正しく動かないことがあります</span></li>
         <li data-i18n="step4"><b class="st">1P で機体を選んで試合を始める</b>使いたい機体を <b>1P</b> で選び、<b>CPU 戦</b>（ひとりプレイ）で試合を始める（チートは1Pの機体にだけ効きます）</li>
       </ol>
@@ -594,6 +594,7 @@
             <li data-i18n="tip2">ファイル名が <code>NPJH50107.ini.txt</code> などになっていませんか？（正しくは <code>NPJH50107.ini</code>）</li>
             <li data-i18n="tip3">ゲームの ID が <code>NPJH50107</code>（日本版）ですか？ほかの版では動きません</li>
             <li data-i18n="chk2">機体を <b>1P</b> で選び、<b>CPU 戦</b>で試していますか？（2P や対人戦では効きません）</li>
+            <li data-i18n="chkExvs">機体のチートと一緒に「<b>EXVSシステム</b>」も ON にしていますか？OFF だと一部の技が出ません</li>
             <li data-i18n="tip1">チートの ON/OFF を切り替えたあとは、試合を<b>最初から</b>始め直しましたか？試合の途中で切り替えると、正しく動かないことがあります</li>
             <li data-i18n="tipUpd">ini を新しい版に替えたあとは、ゲームを<b>起動し直し</b>ましたか？前の版のときに作ったステートは使わないでください</li>
             <li data-i18n="chk3">ほかのチートのファイルや、自分で書き足したコードが <code>PSP/Cheats</code> に混ざっていませんか？ファイルは1つだけにしてください</li>
@@ -1110,11 +1111,12 @@
       step1: '<b class="st">Allow cheats</b>In PPSSPP, go to Settings → System and turn “Enable Cheats” <b>ON</b><br><span class="warn">Use the latest official version of PPSSPP (tested on v1.20.4). Operation on old or unofficial builds, such as the “GLSL replace” version, is not guaranteed</span>',
       step2: '<b class="st">Add the INI file</b>Put the downloaded <code>NPJH50107.ini</code> into PPSSPP’s <code>PSP/Cheats</code> folder (create the folder if it does not exist; see “Where is the PSP/Cheats folder?” below)<br><span class="warn">If a file with the same name is already there, back it up before overwriting it</span>',
       stepCpu: '<b class="st">Set CPU clock to 666 MHz</b>Long-press this game in the game list (right-click on Windows) → “Create game config” → “Game settings” → “System”, and set “CPU clock” to <b>666 MHz</b><br><span class="warn">This only affects this game. It reduces slowdown in scenes with many shots</span>',
-      step3: '<b class="st">Check that the cheats are ON</b>Start the game, press <b>Esc</b> (on Android, use the on-screen menu) → open “Cheats”, and check that the cheats you want are turned on',
+      step3: '<b class="st">Check that the cheats are ON</b>Start the game, press <b>Esc</b> (on Android, use the on-screen menu) → open “Cheats”, and check that the cheats you want are turned on<br><span class="warn">Turn on the unit cheats together with “EXVS System”. With EXVS System off, some attacks do not come out</span>',
       stepRefresh: '<b class="st">Set Refresh interval to 16 ms (important)</b>On the same “Cheats” screen, set “Refresh interval” to <b>16 ms</b><br><span class="warn">With the default value of 77 ms, the cheats may not work correctly</span>',
       step4: '<b class="st">Pick the unit as Player 1 and start a battle</b>Pick the unit you want as <b>Player 1</b> and start a <b>CPU battle</b> (single player). The cheats only affect Player 1’s unit',
       chk1: 'Did you do <b>all 6 steps</b> above? (especially “Enable Cheats”, “CPU clock 666 MHz” and “Refresh interval 16 ms”)',
       chk2: 'Did you pick the unit as <b>Player 1</b> and play a <b>CPU battle</b>? (The cheats do not work for Player 2 or in versus battles)',
+      chkExvs: 'Is “<b>EXVS System</b>” also ON together with the unit cheats? With it off, some attacks do not come out',
       chk3: 'Are there other cheat files, or code you added yourself, mixed into <code>PSP/Cheats</code>? Keep only one file',
       askHow: 'If it still does not work, please write in your comment <b>your PPSSPP version, Windows or Android, which file you used, and what happened and where</b>. That makes it much easier to find the cause',
       where: 'Where is the PSP/Cheats folder?',
