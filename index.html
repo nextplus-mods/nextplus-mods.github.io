@@ -684,11 +684,11 @@
           <p class="lead" data-i18n="pspLead">CFW の入った PSP 実機で、EXVSシステムと6機体のチートを動かすためのプラグインです。PPSSPP では上の ini ファイルを使ってください</p>
         </div>
         <div>
-          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261117/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
+          <a class="dl" href="https://github.com/nextplus-mods/nextplus-mods.github.io/releases/download/psp-v20261118/NEXTPLUS_Mods_PSP.zip" download="NEXTPLUS_Mods_PSP.zip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
             <span data-i18n="dlShort">ダウンロード</span>
           </a>
-          <p class="meta" data-i18n="updPsp">更新 2026-11-17</p>
+          <p class="meta" data-i18n="updPsp">更新 2026-11-18</p>
           <p class="must" data-i18n="pspMustLag">⚠ 処理落ちすることがあります。あらかじめご了承ください</p>
         </div>
       </div>
@@ -764,6 +764,12 @@
               <li>上の変更に合わせて、時間で数えるもの（νガンダムのフィン・ファンネル バリアのリロードなど）が今までと同じ秒数になるようにしました</li>
               <li>各機体の EXVS風 のチートは、EXVSシステムが OFF だと働かなくなりました。EXVSシステムと一緒に ON にしてください</li>
               <li>僚機の覚醒のカットインで、僚機の口の動きのデータが正しく準備されないことがあるのを修正しました</li>
+            </ul>
+          </div>
+          <div class="grp"><span class="tag psp">PSP 実機</span>
+            <ul>
+              <li>プラグインを 1.15c にしました。試合中は、ゲームの試合の処理から 1 フレームに 1 回チートを当てるので、覚醒技などでまれに止まったり、技の動きがおかしくなったりすることがあったのを防ぎます</li>
+              <li>EXVSシステムと各機体のコードを、PPSSPP 用と同じ最新版（上の変更）にしました</li>
             </ul>
           </div>
         </div>
@@ -1269,7 +1275,7 @@
       suRefName: 'Refresh interval',
       suRefWhere: 'The “Cheats” screen in the game (the default 77 ms does not work correctly)',
       setupFoot: 'Use the <b>latest official version</b> of PPSSPP. See <a href="#sec-howto">How to use</a> for the full steps',
-      updPsp: 'Updated 2026-11-17',
+      updPsp: 'Updated 2026-11-18',
       pspMustLag: '⚠ The game may slow down at times. Thank you for your understanding',
       pspStep1: 'Unzip the downloaded file and copy the <code>seplugins</code> folder inside it to the top of the PSP’s Memory Stick (if <code>seplugins</code> is already there, add the contents to it)',
       cfwLabel: 'Your CFW',
@@ -1299,6 +1305,10 @@
             '<li>With the change above, timers (such as the Nu Gundam Fin Funnel Barrier reload) still last the same number of seconds as before</li>' +
             '<li>The units’ EXVS Style cheats no longer work while EXVS System is off. Please turn them on together with EXVS System</li>' +
             '<li>Fixed the teammate’s mouth-movement data sometimes not being set up correctly during the teammate’s Awakening cut-in</li>' +
+          '</ul></div>' +
+          '<div class="grp"><span class="tag psp">Real PSP</span><ul>' +
+            '<li>Updated the plugin to 1.15c. During battles the cheats are now applied once per frame from the game’s own battle processing, which prevents the rare freezes (such as during Burst Attacks) and odd move behavior</li>' +
+            '<li>Updated the EXVS System and unit codes to the same latest version as the PPSSPP files (the changes above)</li>' +
           '</ul></div>' +
         '</div>' +
         '<div class="ent"><p class="d">2026-11-17</p>' +
